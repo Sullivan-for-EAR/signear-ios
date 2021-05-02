@@ -99,6 +99,9 @@
 		284F0458263EC1A7006B6730 /* signear */ = {
 			isa = PBXGroup;
 			children = (
+				284F0489263EC4C7006B6730 /* Data */,
+				284F048A263EC4CE006B6730 /* Domain */,
+				284F048B263EC4D7006B6730 /* Presentation */,
 				284F0459263EC1A7006B6730 /* AppDelegate.swift */,
 				284F045B263EC1A7006B6730 /* SceneDelegate.swift */,
 				284F045D263EC1A7006B6730 /* ViewController.swift */,
@@ -126,6 +129,27 @@
 				284F047D263EC1A8006B6730 /* Info.plist */,
 			);
 			path = signearUITests;
+			sourceTree = "<group>";
+		};
+		284F0489263EC4C7006B6730 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		284F048A263EC4CE006B6730 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		284F048B263EC4D7006B6730 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
