@@ -1,13 +1,13 @@
 //
-//  SignearUITests.swift
-//  SignearUITests
+//  signearUITests.swift
+//  signearUITests
 //
 //  Created by 신정섭 on 2021/05/02.
 //
 
 import XCTest
 
-class SignearUITests: XCTestCase {
+class signearUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
