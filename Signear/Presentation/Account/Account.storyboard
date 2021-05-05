@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,19 +9,55 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Initial View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InitialViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="InitialViewController" customModule="signear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="쉽고 빠르게 수어 통역을 예약하세요!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0E-1G-UyS">
+                                <rect key="frame" x="66.5" y="417" width="281" height="72"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g4j-Ld-zoX">
                                 <rect key="frame" x="0.0" y="572" width="414" height="290"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smallLogo" translatesAutoresizingMaskIntoConstraints="NO" id="vsg-eQ-OeE">
+                                        <rect key="frame" x="185.5" y="43" width="43" height="53"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXG-zz-h9N">
+                                        <rect key="frame" x="71" y="116" width="272" height="43"/>
+                                        <string key="text">이어에 로그인하면
+더 간편한 수어통역을 경험할 수 있어요</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVH-B3-WCN">
+                                        <rect key="frame" x="22" y="196" width="370" height="57"/>
+                                        <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="57" id="NJ6-U9-Xgi"/>
+                                        </constraints>
+                                        <state key="normal" title="이메일로 시작하기">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="GVH-B3-WCN" secondAttribute="bottom" constant="37" id="1ER-1D-jlp"/>
                                     <constraint firstAttribute="height" constant="290" id="MW4-oy-BJC"/>
+                                    <constraint firstItem="aXG-zz-h9N" firstAttribute="centerX" secondItem="g4j-Ld-zoX" secondAttribute="centerX" id="VHk-aH-R5w"/>
+                                    <constraint firstAttribute="trailing" secondItem="GVH-B3-WCN" secondAttribute="trailing" constant="22" id="Z6m-2q-NjV"/>
+                                    <constraint firstItem="vsg-eQ-OeE" firstAttribute="centerX" secondItem="g4j-Ld-zoX" secondAttribute="centerX" id="h8P-bP-RNV"/>
+                                    <constraint firstItem="vsg-eQ-OeE" firstAttribute="top" secondItem="g4j-Ld-zoX" secondAttribute="top" constant="43" id="lga-VN-li9"/>
+                                    <constraint firstItem="GVH-B3-WCN" firstAttribute="leading" secondItem="g4j-Ld-zoX" secondAttribute="leading" constant="22" id="obA-zq-sy9"/>
+                                    <constraint firstItem="aXG-zz-h9N" firstAttribute="top" secondItem="vsg-eQ-OeE" secondAttribute="bottom" constant="20" id="pkT-77-oDT"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -30,7 +66,9 @@
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="g4j-Ld-zoX" secondAttribute="trailing" id="3Dd-AS-TMO"/>
                             <constraint firstItem="g4j-Ld-zoX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="7Kw-ua-0Hp"/>
+                            <constraint firstItem="F0E-1G-UyS" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="ICy-Bv-WNc"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="g4j-Ld-zoX" secondAttribute="bottom" id="U6e-SI-jHM"/>
+                            <constraint firstItem="F0E-1G-UyS" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="hgj-ZL-cZG"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -40,6 +78,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="smallLogo" width="43" height="53"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
