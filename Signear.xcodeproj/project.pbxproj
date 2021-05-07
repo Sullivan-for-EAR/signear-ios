@@ -16,6 +16,7 @@
 		284F0466263EC1A8006B6730 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284F0464263EC1A8006B6730 /* LaunchScreen.storyboard */; };
 		284F0471263EC1A8006B6730 /* signearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F0470263EC1A8006B6730 /* signearTests.swift */; };
 		284F047C263EC1A8006B6730 /* signearUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F047B263EC1A8006B6730 /* signearUITests.swift */; };
+		FDA38D1B264594C70028117C /* CheckEmailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA38D1A264594C70028117C /* CheckEmailUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		284F0477263EC1A8006B6730 /* signearUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = signearUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		284F047B263EC1A8006B6730 /* signearUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signearUITests.swift; sourceTree = "<group>"; };
 		284F047D263EC1A8006B6730 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDA38D1A264594C70028117C /* CheckEmailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CheckEmailUseCase.swift; path = "../../../../ios-tattooshare-master-remove-hero/tattooshare/Controller/Tattooist/TattooistCustomOrder/bottomSheet/CheckEmailUseCase.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 		284F048A263EC4CE006B6730 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				FDA38D1A264594C70028117C /* CheckEmailUseCase.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -241,7 +244,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 284F0451263EC1A7006B6730 /* Build configuration list for PBXProject "signear" */;
+			buildConfigurationList = 284F0451263EC1A7006B6730 /* Build configuration list for PBXProject "Signear" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -295,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				284F045E263EC1A7006B6730 /* ViewController.swift in Sources */,
+				FDA38D1B264594C70028117C /* CheckEmailUseCase.swift in Sources */,
 				284F045A263EC1A7006B6730 /* AppDelegate.swift in Sources */,
 				284F045C263EC1A7006B6730 /* SceneDelegate.swift in Sources */,
 			);
@@ -596,7 +600,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		284F0451263EC1A7006B6730 /* Build configuration list for PBXProject "signear" */ = {
+		284F0451263EC1A7006B6730 /* Build configuration list for PBXProject "Signear" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				284F047E263EC1A8006B6730 /* Debug */,
