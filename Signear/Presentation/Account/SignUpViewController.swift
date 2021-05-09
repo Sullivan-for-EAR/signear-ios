@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  SignUpViewController.swift
 //  signear
 //
 //  Created by 신정섭 on 2021/05/09.
@@ -7,15 +7,14 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class SignUpViewController: UIViewController {
     
     // MARK : Properties - UI
-    
-    @IBOutlet weak var backImageView: UIImageView!
+    @IBOutlet private weak var backImageView: UIImageView!
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
-    @IBOutlet private weak var nextButton: UIButton!
-    @IBOutlet private weak var findAccountLabel: UILabel!
+    @IBOutlet private weak var phoneTextField: UITextField!
+    @IBOutlet private weak var signUpButton: UIButton!
     
     // MARK : Properties - Private
     
@@ -34,7 +33,7 @@ class LoginViewController: UIViewController {
 
 // MARK : Private
 
-extension LoginViewController {
+extension SignUpViewController {
     
     private func initUI() {
         initBackgroundColor()
@@ -52,3 +51,4 @@ extension LoginViewController {
         
     }
 }
+

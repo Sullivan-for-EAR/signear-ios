@@ -11,6 +11,7 @@ class FindAccountViewController: UIViewController {
     
     // MARK : UI
     
+    @IBOutlet private weak var backImageView: UIImageView!
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var nextButton: UIButton!
     

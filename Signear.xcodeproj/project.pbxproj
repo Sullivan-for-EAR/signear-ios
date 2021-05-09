@@ -12,6 +12,8 @@
 		1A3E2A8599E5D2F59356238E676A1D49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3E1DBDA736EFED47B690C94F3C7F2A /* AppDelegate.swift */; };
 		28397EB72647ED540009C29D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28397EB62647ED540009C29D /* LoginViewController.swift */; };
 		28397EB926480A180009C29D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28397EB826480A180009C29D /* LoginViewModel.swift */; };
+		28397EBB26480F430009C29D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28397EBA26480F430009C29D /* SignUpViewController.swift */; };
+		28397EBD26480F610009C29D /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28397EBC26480F610009C29D /* SignUpViewModel.swift */; };
 		437E8DAAF5B2D51CF4C61D0BB419DE80 /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E941C0B02E372FD0A41108E60B53D5D /* Temp.swift */; };
 		578B7885F7779090F346DCD67650F7B6 /* signearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C4246A20D251AAFF7A925397BBE94C /* signearTests.swift */; };
 		6A85845E16AFABF30BCDC92DB348A595 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE1424039564B4764FF2FE1EAA4B0E35 /* Account.storyboard */; };
@@ -48,6 +50,8 @@
 		264CB63401FCB6A478740241D3C87A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28397EB62647ED540009C29D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		28397EB826480A180009C29D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		28397EBA26480F430009C29D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		28397EBC26480F610009C29D /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		3C07127E8A28D409A07DB1D2E742AA90 /* EmailCheckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCheckViewModel.swift; sourceTree = "<group>"; };
 		72C4246A20D251AAFF7A925397BBE94C /* signearTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signearTests.swift; sourceTree = "<group>"; };
 		792AAA41DA166ADD2A6FC7BE2BB2C63E /* FindAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindAccountViewModel.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 				09656A19B58ECFEB96F79BDA10D8136F /* InitialViewModel.swift */,
 				28397EB62647ED540009C29D /* LoginViewController.swift */,
 				28397EB826480A180009C29D /* LoginViewModel.swift */,
+				28397EBA26480F430009C29D /* SignUpViewController.swift */,
+				28397EBC26480F610009C29D /* SignUpViewModel.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -339,11 +345,13 @@
 				073C3BA9C5CB56375751D26439FA957C /* FindAccountViewController.swift in Sources */,
 				03C8575640D45F060C58D448B9E9F26F /* FindAccountViewModel.swift in Sources */,
 				72D7060CA2AA8730BD941196AB0472C3 /* InitialViewController.swift in Sources */,
+				28397EBD26480F610009C29D /* SignUpViewModel.swift in Sources */,
 				AA5D45D53C07491BDAE1ECB10E06771C /* InitialViewModel.swift in Sources */,
 				E43711AEB7CB397E09BF26BECCCCEC7C /* SceneDelegate.swift in Sources */,
 				28397EB926480A180009C29D /* LoginViewModel.swift in Sources */,
 				437E8DAAF5B2D51CF4C61D0BB419DE80 /* Temp.swift in Sources */,
 				ED3A878E0837950619910ABB1A906C15 /* UIColor+Extension.swift in Sources */,
+				28397EBB26480F430009C29D /* SignUpViewController.swift in Sources */,
 				28397EB72647ED540009C29D /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
