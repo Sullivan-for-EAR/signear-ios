@@ -1,5 +1,5 @@
 //
-//  InitialViewController.swift
+//  EmailCheckViewController.swift
 //  signear
 //
 //  Created by 신정섭 on 2021/05/05.
@@ -7,20 +7,23 @@
 
 import UIKit
 
-class InitialViewController: UIViewController {
+class EmailCheckViewController: UIViewController {
     
-    // MARK : Properties - UI
-    @IBOutlet private weak var startButton: UIButton!
+    // MARK : ProPerties - UI
+    @IBOutlet private weak var backImageView: UIImageView!
+    @IBOutlet private weak var emailTextField: UITextField!
+    @IBOutlet private weak var nextButton: UIButton!
+    @IBOutlet private weak var findAccountLabel: UILabel!
     
     // MARK : Properties - Private
     
-    private var viewModel: InitialViewModelType? {
+    private var viewModel: EmailCheckViewModelType? {
         didSet {
             bindUI()
         }
     }
     
-    // MARK : UI Life Cycle
+    // MARK : Life Cycle
     
     override func viewDidLoad() {
         initUI()
@@ -30,7 +33,7 @@ class InitialViewController: UIViewController {
 
 // MARK : Private
 
-extension InitialViewController {
+extension EmailCheckViewController {
     
     private func initUI() {
         initBackgroundColor()
