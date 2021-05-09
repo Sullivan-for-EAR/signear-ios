@@ -20,7 +20,7 @@ class InitialViewController: UIViewController {
         }
     }
     
-    // MARK : UI Life Cycle
+    // MARK : Life Cycle
     
     override func viewDidLoad() {
         initUI()

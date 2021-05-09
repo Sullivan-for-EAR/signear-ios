@@ -255,7 +255,8 @@
                     </view>
                     <connections>
                         <outlet property="backImageView" destination="zCm-9M-U7g" id="XCG-vw-ZKT"/>
-                        <outlet property="nextButton" destination="Mgz-OJ-bQV" id="Ad7-gu-vh9"/>
+                        <outlet property="emailTextField" destination="LvU-qG-4y2" id="UwG-hW-5tJ"/>
+                        <outlet property="nextButton" destination="Mgz-OJ-bQV" id="1va-Uz-Aw4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G0z-qP-uAl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -358,9 +359,10 @@
                     </view>
                     <connections>
                         <outlet property="backImageView" destination="dGF-E7-MBS" id="U9D-ad-GFf"/>
-                        <outlet property="emailTextField" destination="GTg-hr-uud" id="NQD-sC-TpB"/>
-                        <outlet property="findAccountLabel" destination="Kaq-Ob-gyV" id="W8v-dG-lok"/>
-                        <outlet property="nextButton" destination="2CR-RQ-65e" id="CiL-wY-TkV"/>
+                        <outlet property="emailTextField" destination="uuU-in-Bh6" id="K7C-7D-hlD"/>
+                        <outlet property="findAccountLabel" destination="Kaq-Ob-gyV" id="1a5-t8-6Br"/>
+                        <outlet property="nextButton" destination="2CR-RQ-65e" id="z3y-wg-RaP"/>
+                        <outlet property="passwordTextField" destination="GTg-hr-uud" id="TMm-HL-kjq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aif-cY-DTZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

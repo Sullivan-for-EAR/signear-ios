@@ -9,7 +9,12 @@ import UIKit
 
 class FindAccountViewController: UIViewController {
     
-    // MARK : UI Life Cycle
+    // MARK : UI
+    
+    @IBOutlet private weak var emailTextField: UITextField!
+    @IBOutlet private weak var nextButton: UIButton!
+    
+    // MARK : Life Cycle
     
     override func viewDidLoad() {
         initUI()

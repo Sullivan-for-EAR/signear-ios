@@ -9,6 +9,13 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    // MARK : Properties - UI
+    
+    @IBOutlet private weak var emailTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var nextButton: UIButton!
+    @IBOutlet private weak var findAccountLabel: UILabel!
+    
     // MARK : Properties - Private
     
     private var viewModel: LoginViewModelType? {
@@ -17,7 +24,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    // MARK : UI Life Cycle
+    // MARK : Life Cycle
     
     override func viewDidLoad() {
         initUI()
