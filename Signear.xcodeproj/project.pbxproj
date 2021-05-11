@@ -16,6 +16,8 @@
 		28397EBD26480F610009C29D /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28397EBC26480F610009C29D /* SignUpViewModel.swift */; };
 		28764889264AA90000691A19 /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28764888264AA90000691A19 /* HelloViewController.swift */; };
 		2876488B264AA95400691A19 /* HelloViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876488A264AA95400691A19 /* HelloViewModel.swift */; };
+		2876488D264AAA4700691A19 /* SendEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876488C264AAA4700691A19 /* SendEmailViewController.swift */; };
+		28764890264AAB8400691A19 /* SendEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876488F264AAB8400691A19 /* SendEmailViewModel.swift */; };
 		437E8DAAF5B2D51CF4C61D0BB419DE80 /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E941C0B02E372FD0A41108E60B53D5D /* Temp.swift */; };
 		578B7885F7779090F346DCD67650F7B6 /* signearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C4246A20D251AAFF7A925397BBE94C /* signearTests.swift */; };
 		6A85845E16AFABF30BCDC92DB348A595 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE1424039564B4764FF2FE1EAA4B0E35 /* Account.storyboard */; };
@@ -56,6 +58,8 @@
 		28397EBC26480F610009C29D /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		28764888264AA90000691A19 /* HelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
 		2876488A264AA95400691A19 /* HelloViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloViewModel.swift; sourceTree = "<group>"; };
+		2876488C264AAA4700691A19 /* SendEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendEmailViewController.swift; sourceTree = "<group>"; };
+		2876488F264AAB8400691A19 /* SendEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendEmailViewModel.swift; sourceTree = "<group>"; };
 		3C07127E8A28D409A07DB1D2E742AA90 /* EmailCheckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCheckViewModel.swift; sourceTree = "<group>"; };
 		72C4246A20D251AAFF7A925397BBE94C /* signearTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signearTests.swift; sourceTree = "<group>"; };
 		792AAA41DA166ADD2A6FC7BE2BB2C63E /* FindAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindAccountViewModel.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 				3C07127E8A28D409A07DB1D2E742AA90 /* EmailCheckViewModel.swift */,
 				F7251EDAC05A7F223A9585DD46DBAE6D /* FindAccountViewController.swift */,
 				792AAA41DA166ADD2A6FC7BE2BB2C63E /* FindAccountViewModel.swift */,
+				2876488C264AAA4700691A19 /* SendEmailViewController.swift */,
+				2876488F264AAB8400691A19 /* SendEmailViewModel.swift */,
 				BE8B1113034C8BE6A88937BC7B8C4598 /* InitialViewController.swift */,
 				09656A19B58ECFEB96F79BDA10D8136F /* InitialViewModel.swift */,
 				28397EB62647ED540009C29D /* LoginViewController.swift */,
@@ -348,8 +354,10 @@
 				1A3E2A8599E5D2F59356238E676A1D49 /* AppDelegate.swift in Sources */,
 				85BDCDF29105310CA82ECCBBA8EBE476 /* EmailCheckViewController.swift in Sources */,
 				A351DFEF218363B5C48533C0D22A0778 /* EmailCheckViewModel.swift in Sources */,
+				28764890264AAB8400691A19 /* SendEmailViewModel.swift in Sources */,
 				073C3BA9C5CB56375751D26439FA957C /* FindAccountViewController.swift in Sources */,
 				03C8575640D45F060C58D448B9E9F26F /* FindAccountViewModel.swift in Sources */,
+				2876488D264AAA4700691A19 /* SendEmailViewController.swift in Sources */,
 				72D7060CA2AA8730BD941196AB0472C3 /* InitialViewController.swift in Sources */,
 				28764889264AA90000691A19 /* HelloViewController.swift in Sources */,
 				28397EBD26480F610009C29D /* SignUpViewModel.swift in Sources */,
