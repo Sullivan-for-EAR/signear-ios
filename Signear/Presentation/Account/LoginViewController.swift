@@ -1,20 +1,25 @@
 //
-//  InitialViewController.swift
+//  LoginViewController.swift
 //  signear
 //
-//  Created by 신정섭 on 2021/05/05.
+//  Created by 신정섭 on 2021/05/09.
 //
 
 import UIKit
 
-class InitialViewController: UIViewController {
+class LoginViewController: UIViewController {
     
     // MARK : Properties - UI
-    @IBOutlet private weak var startButton: UIButton!
+    
+    @IBOutlet weak var backImageView: UIImageView!
+    @IBOutlet private weak var emailTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var nextButton: UIButton!
+    @IBOutlet private weak var findAccountLabel: UILabel!
     
     // MARK : Properties - Private
     
-    private var viewModel: InitialViewModelType? {
+    private var viewModel: LoginViewModelType? {
         didSet {
             bindUI()
         }
@@ -25,12 +30,11 @@ class InitialViewController: UIViewController {
     override func viewDidLoad() {
         initUI()
     }
-    
 }
 
 // MARK : Private
 
-extension InitialViewController {
+extension LoginViewController {
     
     private func initUI() {
         initBackgroundColor()

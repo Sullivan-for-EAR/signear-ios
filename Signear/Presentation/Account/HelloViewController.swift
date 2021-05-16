@@ -1,20 +1,17 @@
 //
-//  InitialViewController.swift
+//  HelloViewController.swift
 //  signear
 //
-//  Created by 신정섭 on 2021/05/05.
+//  Created by 신정섭 on 2021/05/11.
 //
 
 import UIKit
 
-class InitialViewController: UIViewController {
-    
-    // MARK : Properties - UI
-    @IBOutlet private weak var startButton: UIButton!
+class HelloViewController: UIViewController {
     
     // MARK : Properties - Private
     
-    private var viewModel: InitialViewModelType? {
+    private var viewModel: HelloViewModelType? {
         didSet {
             bindUI()
         }
@@ -25,12 +22,11 @@ class InitialViewController: UIViewController {
     override func viewDidLoad() {
         initUI()
     }
-    
 }
 
 // MARK : Private
 
-extension InitialViewController {
+extension HelloViewController {
     
     private func initUI() {
         initBackgroundColor()

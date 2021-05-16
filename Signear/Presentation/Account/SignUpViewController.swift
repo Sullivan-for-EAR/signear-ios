@@ -1,20 +1,24 @@
 //
-//  InitialViewController.swift
+//  SignUpViewController.swift
 //  signear
 //
-//  Created by 신정섭 on 2021/05/05.
+//  Created by 신정섭 on 2021/05/09.
 //
 
 import UIKit
 
-class InitialViewController: UIViewController {
+class SignUpViewController: UIViewController {
     
     // MARK : Properties - UI
-    @IBOutlet private weak var startButton: UIButton!
+    @IBOutlet private weak var backImageView: UIImageView!
+    @IBOutlet private weak var emailTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var phoneTextField: UITextField!
+    @IBOutlet private weak var signUpButton: UIButton!
     
     // MARK : Properties - Private
     
-    private var viewModel: InitialViewModelType? {
+    private var viewModel: LoginViewModelType? {
         didSet {
             bindUI()
         }
@@ -25,12 +29,11 @@ class InitialViewController: UIViewController {
     override func viewDidLoad() {
         initUI()
     }
-    
 }
 
 // MARK : Private
 
-extension InitialViewController {
+extension SignUpViewController {
     
     private func initUI() {
         initBackgroundColor()
@@ -48,3 +51,4 @@ extension InitialViewController {
         
     }
 }
+

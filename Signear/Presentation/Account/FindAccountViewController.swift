@@ -1,36 +1,30 @@
 //
-//  InitialViewController.swift
+//  FindAccountViewController.swift
 //  signear
 //
-//  Created by 신정섭 on 2021/05/05.
+//  Created by 신정섭 on 2021/05/09.
 //
 
 import UIKit
 
-class InitialViewController: UIViewController {
+class FindAccountViewController: UIViewController {
     
-    // MARK : Properties - UI
-    @IBOutlet private weak var startButton: UIButton!
+    // MARK : UI
     
-    // MARK : Properties - Private
-    
-    private var viewModel: InitialViewModelType? {
-        didSet {
-            bindUI()
-        }
-    }
+    @IBOutlet private weak var backImageView: UIImageView!
+    @IBOutlet private weak var emailTextField: UITextField!
+    @IBOutlet private weak var nextButton: UIButton!
     
     // MARK : Life Cycle
     
     override func viewDidLoad() {
         initUI()
     }
-    
 }
 
 // MARK : Private
 
-extension InitialViewController {
+extension FindAccountViewController {
     
     private func initUI() {
         initBackgroundColor()

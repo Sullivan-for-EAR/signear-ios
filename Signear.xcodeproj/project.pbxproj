@@ -3,27 +3,43 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03C8575640D45F060C58D448B9E9F26F /* FindAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792AAA41DA166ADD2A6FC7BE2BB2C63E /* FindAccountViewModel.swift */; };
+		073C3BA9C5CB56375751D26439FA957C /* FindAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7251EDAC05A7F223A9585DD46DBAE6D /* FindAccountViewController.swift */; };
+		190B3C05857A13D732D2A2E9F86778C3 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976449BF5DB9B201357AA81142405CEB /* LoginUseCase.swift */; };
 		1A3E2A8599E5D2F59356238E676A1D49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3E1DBDA736EFED47B690C94F3C7F2A /* AppDelegate.swift */; };
-		28FCC2D7264AB0BF0021CF75 /* Reservation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28FCC2D6264AB0BF0021CF75 /* Reservation.storyboard */; };
-		28FCC2D9264AB2120021CF75 /* ReservationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FCC2D8264AB2120021CF75 /* ReservationListViewController.swift */; };
-		28FCC2DB264AB22F0021CF75 /* ReservationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FCC2DA264AB22F0021CF75 /* ReservationListViewModel.swift */; };
-		28FCC2E1264AB4190021CF75 /* ReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FCC2E0264AB4190021CF75 /* ReservationTableViewCell.swift */; };
-		437E8DAAF5B2D51CF4C61D0BB419DE80 /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E941C0B02E372FD0A41108E60B53D5D /* Temp.swift */; };
+		289DE26B265160320009D594 /* ReservationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289DE267265160320009D594 /* ReservationListViewController.swift */; };
+		289DE26C265160320009D594 /* ReservationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289DE268265160320009D594 /* ReservationListViewModel.swift */; };
+		289DE26D265160320009D594 /* Reservation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289DE269265160320009D594 /* Reservation.storyboard */; };
+		289DE26E265160320009D594 /* ReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289DE26A265160320009D594 /* ReservationTableViewCell.swift */; };
+		43158C320522EC91D8DF73522152DC4C /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE49E4082FB8726A3A682A2C9AADAD8C /* HelloViewController.swift */; };
+		4644A82448E21718041F7EF252607E1B /* Pods_signearTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE05C9B1AA34F367DC4DA75116E08DD /* Pods_signearTests.framework */; };
+		51A78F3114CA9DF3BC2BBA45C1C55CC5 /* HelloViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D47F6A69D798BDFF0C2B1ECB10A6B1 /* HelloViewModel.swift */; };
 		578B7885F7779090F346DCD67650F7B6 /* signearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C4246A20D251AAFF7A925397BBE94C /* signearTests.swift */; };
 		6A85845E16AFABF30BCDC92DB348A595 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE1424039564B4764FF2FE1EAA4B0E35 /* Account.storyboard */; };
 		707BDEB8119DAAA79F629A2A071E3B6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F040257CF1CF27D2205DFE8C99F94E28 /* Assets.xcassets */; };
 		72D7060CA2AA8730BD941196AB0472C3 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8B1113034C8BE6A88937BC7B8C4598 /* InitialViewController.swift */; };
 		85BDCDF29105310CA82ECCBBA8EBE476 /* EmailCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12AF7AF4EFA42A42D8C81F2C017BB49 /* EmailCheckViewController.swift */; };
+		8D1BE1DC832EC2EE64D25F2A90365EED /* Pods_signear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6B3A3A206C1092600D19BA1A75439B /* Pods_signear.framework */; };
+		94BF951A2BF56959EF966D1E22D3FF9A /* LostEmailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED2C7B3FFD59803D73004575C8FB0E6 /* LostEmailUseCase.swift */; };
+		A161C38C333ACBB1D294B1EA44C4EF69 /* Pods_signear_signearUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4BBA7B67ABB3DD639977E3A88C8073 /* Pods_signear_signearUITests.framework */; };
 		A351DFEF218363B5C48533C0D22A0778 /* EmailCheckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07127E8A28D409A07DB1D2E742AA90 /* EmailCheckViewModel.swift */; };
 		AA5D45D53C07491BDAE1ECB10E06771C /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09656A19B58ECFEB96F79BDA10D8136F /* InitialViewModel.swift */; };
+		C7C8C419215D6D2791A7FD149D4838D8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E65A1E91197BDB214E4D804113A0E2 /* LoginViewModel.swift */; };
 		C91D19803AB54E6A31F113472CB9E7EA /* signearUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB278AB68F9871641EC4F6758C56E67 /* signearUITests.swift */; };
+		CC41309A08036977D7C472DFF0D6EB9F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6365C6C387580EEC98D4DE402C826A7D /* SignUpViewController.swift */; };
+		DC7D381EF54471BE85FBFBF4936A6F32 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D484994687164CDBD13B8C52317F6 /* SignUpViewModel.swift */; };
+		E2FCB1213B7142D064C737148E336C44 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36EC3122CE8AC23FA4B8E0E88E580B5 /* LoginViewController.swift */; };
 		E43711AEB7CB397E09BF26BECCCCEC7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15BABD1EB65B8B12469BF32B15DA524 /* SceneDelegate.swift */; };
 		ED3A878E0837950619910ABB1A906C15 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D49494B5F46935E40F5D9BE90A6C3 /* UIColor+Extension.swift */; };
+		EED7C329944D60EEF81440E00BBE3FF3 /* SignUpUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF91755246920FD74DB459861DD3BD24 /* SignUpUseCase.swift */; };
+		F0B35AA0E1746782DB31D939C11040C7 /* EmailCheckUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50067E5752E3D380E08A93D851F5445D /* EmailCheckUseCase.swift */; };
+		F44563EAF43720B1C8C4F3E22D99ABF0 /* SendEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65475D5C035AC709F8F0EEF8AD8BB0FC /* SendEmailViewModel.swift */; };
 		FBC192600D033E5E1019EEA87505C6CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96416CA09497E0A56D47CE727DAD95E8 /* LaunchScreen.storyboard */; };
+		FEF807652D2B13B21DC2C0F11163F87B /* SendEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7972FBD4407F166330769B195A0BC06 /* SendEmailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,28 +61,50 @@
 
 /* Begin PBXFileReference section */
 		09656A19B58ECFEB96F79BDA10D8136F /* InitialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModel.swift; sourceTree = "<group>"; };
+		0A4BBA7B67ABB3DD639977E3A88C8073 /* Pods_signear_signearUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_signear_signearUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FE05C9B1AA34F367DC4DA75116E08DD /* Pods_signearTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_signearTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		264CB63401FCB6A478740241D3C87A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		28FCC2D6264AB0BF0021CF75 /* Reservation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reservation.storyboard; sourceTree = "<group>"; };
-		28FCC2D8264AB2120021CF75 /* ReservationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationListViewController.swift; sourceTree = "<group>"; };
-		28FCC2DA264AB22F0021CF75 /* ReservationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationListViewModel.swift; sourceTree = "<group>"; };
-		28FCC2E0264AB4190021CF75 /* ReservationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTableViewCell.swift; sourceTree = "<group>"; };
+		289DE267265160320009D594 /* ReservationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationListViewController.swift; sourceTree = "<group>"; };
+		289DE268265160320009D594 /* ReservationListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationListViewModel.swift; sourceTree = "<group>"; };
+		289DE269265160320009D594 /* Reservation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Reservation.storyboard; sourceTree = "<group>"; };
+		289DE26A265160320009D594 /* ReservationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationTableViewCell.swift; sourceTree = "<group>"; };
 		3C07127E8A28D409A07DB1D2E742AA90 /* EmailCheckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCheckViewModel.swift; sourceTree = "<group>"; };
+		48E65A1E91197BDB214E4D804113A0E2 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		50067E5752E3D380E08A93D851F5445D /* EmailCheckUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EmailCheckUseCase.swift; path = Signear/Domain/UseCase/EmailCheckUseCase.swift; sourceTree = SOURCE_ROOT; };
+		5C77BEE5338CCE34711564A083207C80 /* Pods-signear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signear.debug.xcconfig"; path = "Target Support Files/Pods-signear/Pods-signear.debug.xcconfig"; sourceTree = "<group>"; };
+		6365C6C387580EEC98D4DE402C826A7D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		65475D5C035AC709F8F0EEF8AD8BB0FC /* SendEmailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendEmailViewModel.swift; sourceTree = "<group>"; };
 		72C4246A20D251AAFF7A925397BBE94C /* signearTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signearTests.swift; sourceTree = "<group>"; };
+		792AAA41DA166ADD2A6FC7BE2BB2C63E /* FindAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindAccountViewModel.swift; sourceTree = "<group>"; };
 		90C623B7F146D706C775D80A91BAAC79 /* signearTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = signearTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9291E91E78A1A8E28BED7B4F02883D58 /* Pods-signearTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signearTests.release.xcconfig"; path = "Target Support Files/Pods-signearTests/Pods-signearTests.release.xcconfig"; sourceTree = "<group>"; };
+		976449BF5DB9B201357AA81142405CEB /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginUseCase.swift; path = Signear/Domain/UseCase/LoginUseCase.swift; sourceTree = SOURCE_ROOT; };
 		986D49494B5F46935E40F5D9BE90A6C3 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		9B1190D3307A14F493D5225727BCF689 /* Pods-signearTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signearTests.debug.xcconfig"; path = "Target Support Files/Pods-signearTests/Pods-signearTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9BB278AB68F9871641EC4F6758C56E67 /* signearUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signearUITests.swift; sourceTree = "<group>"; };
 		9DD633B733F2BD073715E83D5611AFA4 /* signearUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = signearUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E941C0B02E372FD0A41108E60B53D5D /* Temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temp.swift; sourceTree = "<group>"; };
 		A13A54BEB6018C628F615477D5CDDAF6 /* signear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = signear.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A36EC3122CE8AC23FA4B8E0E88E580B5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BB3E1DBDA736EFED47B690C94F3C7F2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE1424039564B4764FF2FE1EAA4B0E35 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		BE8B1113034C8BE6A88937BC7B8C4598 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		BED2C7B3FFD59803D73004575C8FB0E6 /* LostEmailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LostEmailUseCase.swift; path = Signear/Domain/UseCase/LostEmailUseCase.swift; sourceTree = SOURCE_ROOT; };
 		C15BABD1EB65B8B12469BF32B15DA524 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CC53EA3D4D0124A831C1B8ADEF6DCF8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE49E4082FB8726A3A682A2C9AADAD8C /* HelloViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
 		D12AF7AF4EFA42A42D8C81F2C017BB49 /* EmailCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCheckViewController.swift; sourceTree = "<group>"; };
 		DCB0AB31A1A8DB952CD48FE69D603436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DF91755246920FD74DB459861DD3BD24 /* SignUpUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpUseCase.swift; path = Signear/Domain/UseCase/SignUpUseCase.swift; sourceTree = SOURCE_ROOT; };
+		E7972FBD4407F166330769B195A0BC06 /* SendEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendEmailViewController.swift; sourceTree = "<group>"; };
 		E9DCEFCDE630E489CFBE071B0FF15548 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA6B3A3A206C1092600D19BA1A75439B /* Pods_signear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_signear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE0D484994687164CDBD13B8C52317F6 /* SignUpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		F040257CF1CF27D2205DFE8C99F94E28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7251EDAC05A7F223A9585DD46DBAE6D /* FindAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindAccountViewController.swift; sourceTree = "<group>"; };
+		F7D47F6A69D798BDFF0C2B1ECB10A6B1 /* HelloViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloViewModel.swift; sourceTree = "<group>"; };
+		F8A9632BE67F2508395B045FD704C15A /* Pods-signear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signear.release.xcconfig"; path = "Target Support Files/Pods-signear/Pods-signear.release.xcconfig"; sourceTree = "<group>"; };
+		FB6784DB4A2F5F282EF425AA1F8AF15F /* Pods-signear-signearUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signear-signearUITests.release.xcconfig"; path = "Target Support Files/Pods-signear-signearUITests/Pods-signear-signearUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FD40C7BBD49EAD5E6EAE9E71DF0C2E9C /* Pods-signear-signearUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signear-signearUITests.debug.xcconfig"; path = "Target Support Files/Pods-signear-signearUITests/Pods-signear-signearUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D1BE1DC832EC2EE64D25F2A90365EED /* Pods_signear.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A161C38C333ACBB1D294B1EA44C4EF69 /* Pods_signear_signearUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,12 +128,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4644A82448E21718041F7EF252607E1B /* Pods_signearTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04C2F5F892BD0405F0DD3FC791F988DC /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				50067E5752E3D380E08A93D851F5445D /* EmailCheckUseCase.swift */,
+				976449BF5DB9B201357AA81142405CEB /* LoginUseCase.swift */,
+				BED2C7B3FFD59803D73004575C8FB0E6 /* LostEmailUseCase.swift */,
+				DF91755246920FD74DB459861DD3BD24 /* SignUpUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
 		0FE0E0E61E7F8122CCAA63A9CE476398 /* signear */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,25 +162,58 @@
 			path = signear;
 			sourceTree = "<group>";
 		};
+		14E33BCC80FBCA0B39DB9170676ACDCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA6B3A3A206C1092600D19BA1A75439B /* Pods_signear.framework */,
+				0FE05C9B1AA34F367DC4DA75116E08DD /* Pods_signearTests.framework */,
+				0A4BBA7B67ABB3DD639977E3A88C8073 /* Pods_signear_signearUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		17423A746B8B973CF11C0AF998B230CF /* Account */ = {
 			isa = PBXGroup;
 			children = (
 				BE1424039564B4764FF2FE1EAA4B0E35 /* Account.storyboard */,
 				D12AF7AF4EFA42A42D8C81F2C017BB49 /* EmailCheckViewController.swift */,
 				3C07127E8A28D409A07DB1D2E742AA90 /* EmailCheckViewModel.swift */,
+				F7251EDAC05A7F223A9585DD46DBAE6D /* FindAccountViewController.swift */,
+				792AAA41DA166ADD2A6FC7BE2BB2C63E /* FindAccountViewModel.swift */,
+				CE49E4082FB8726A3A682A2C9AADAD8C /* HelloViewController.swift */,
+				F7D47F6A69D798BDFF0C2B1ECB10A6B1 /* HelloViewModel.swift */,
 				BE8B1113034C8BE6A88937BC7B8C4598 /* InitialViewController.swift */,
 				09656A19B58ECFEB96F79BDA10D8136F /* InitialViewModel.swift */,
+				A36EC3122CE8AC23FA4B8E0E88E580B5 /* LoginViewController.swift */,
+				48E65A1E91197BDB214E4D804113A0E2 /* LoginViewModel.swift */,
+				E7972FBD4407F166330769B195A0BC06 /* SendEmailViewController.swift */,
+				65475D5C035AC709F8F0EEF8AD8BB0FC /* SendEmailViewModel.swift */,
+				6365C6C387580EEC98D4DE402C826A7D /* SignUpViewController.swift */,
+				EE0D484994687164CDBD13B8C52317F6 /* SignUpViewModel.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
 		};
-		28FCC2D5264AB0B00021CF75 /* Reservation */ = {
+		1F8F743569EBCD1C91F83A29EE4F7F8F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				28FCC2D6264AB0BF0021CF75 /* Reservation.storyboard */,
-				28FCC2D8264AB2120021CF75 /* ReservationListViewController.swift */,
-				28FCC2DA264AB22F0021CF75 /* ReservationListViewModel.swift */,
-				28FCC2E0264AB4190021CF75 /* ReservationTableViewCell.swift */,
+				FD40C7BBD49EAD5E6EAE9E71DF0C2E9C /* Pods-signear-signearUITests.debug.xcconfig */,
+				FB6784DB4A2F5F282EF425AA1F8AF15F /* Pods-signear-signearUITests.release.xcconfig */,
+				5C77BEE5338CCE34711564A083207C80 /* Pods-signear.debug.xcconfig */,
+				F8A9632BE67F2508395B045FD704C15A /* Pods-signear.release.xcconfig */,
+				9B1190D3307A14F493D5225727BCF689 /* Pods-signearTests.debug.xcconfig */,
+				9291E91E78A1A8E28BED7B4F02883D58 /* Pods-signearTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		289DE266265160320009D594 /* Reservation */ = {
+			isa = PBXGroup;
+			children = (
+				289DE267265160320009D594 /* ReservationListViewController.swift */,
+				289DE268265160320009D594 /* ReservationListViewModel.swift */,
+				289DE269265160320009D594 /* Reservation.storyboard */,
+				289DE26A265160320009D594 /* ReservationTableViewCell.swift */,
 			);
 			path = Reservation;
 			sourceTree = "<group>";
@@ -136,7 +221,7 @@
 		35FDC902132009C06727BAC3499415FB /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				28FCC2D5264AB0B00021CF75 /* Reservation */,
+				289DE266265160320009D594 /* Reservation */,
 				17423A746B8B973CF11C0AF998B230CF /* Account */,
 			);
 			path = Presentation;
@@ -154,7 +239,7 @@
 		3F0E8258C5163FB6251B16FCA5049C8C /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				9E941C0B02E372FD0A41108E60B53D5D /* Temp.swift */,
+				04C2F5F892BD0405F0DD3FC791F988DC /* UseCase */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -171,6 +256,8 @@
 		7BFA2C0D6377FAE8D028F8FDB72B60CF = {
 			isa = PBXGroup;
 			children = (
+				14E33BCC80FBCA0B39DB9170676ACDCC /* Frameworks */,
+				1F8F743569EBCD1C91F83A29EE4F7F8F /* Pods */,
 				88BD450A78741658455CDF2B069F6C9F /* Products */,
 				0FE0E0E61E7F8122CCAA63A9CE476398 /* signear */,
 				4B7DB86823F8A666BD4D6C0FBF7ED0B1 /* signearTests */,
@@ -218,6 +305,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1FB22EF9541ACAB057968A005816CB08 /* Build configuration list for PBXNativeTarget "signearTests" */;
 			buildPhases = (
+				068162E64D182F5913A36C03EC83BF2F /* [CP] Check Pods Manifest.lock */,
 				86243C12389528B019B4DE335877DD99 /* Sources */,
 				DC6AE16A15A339E1D6C837ABBAB54E6C /* Frameworks */,
 				66DCEA727487463CB857AA4271293DF6 /* Resources */,
@@ -236,9 +324,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B494F1AD1B1252C7FC1B95295E56BBF0 /* Build configuration list for PBXNativeTarget "signear" */;
 			buildPhases = (
+				26C8D14D87C5E378C8588E2EA26A9C1A /* [CP] Check Pods Manifest.lock */,
 				079976E55F6CD770C0B7B7D31079C0FE /* Sources */,
 				092CBF58CB19742E3C5A80F61D835AAA /* Frameworks */,
 				DB3EDB127C87FF106615A2384B456F3F /* Resources */,
+				B94494996746A37341B31AD521781EDB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,9 +343,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7FFC54D1E892650A42CEF8B0E4515603 /* Build configuration list for PBXNativeTarget "signearUITests" */;
 			buildPhases = (
+				315B93A963DDF121FAD4A701FEECF1E9 /* [CP] Check Pods Manifest.lock */,
 				249A0A832D00A65D5C7EB4B01801420D /* Sources */,
 				60F9CCCF4A5FEC8D7C00432DDB9CE3C9 /* Frameworks */,
 				5793E6259AEA97E35A0B8D94D27935BD /* Resources */,
+				18B4A5564399D3ED4E954D827406E166 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -331,11 +423,114 @@
 				6A85845E16AFABF30BCDC92DB348A595 /* Account.storyboard in Resources */,
 				707BDEB8119DAAA79F629A2A071E3B6F /* Assets.xcassets in Resources */,
 				FBC192600D033E5E1019EEA87505C6CA /* LaunchScreen.storyboard in Resources */,
-				28FCC2D7264AB0BF0021CF75 /* Reservation.storyboard in Resources */,
+				289DE26D265160320009D594 /* Reservation.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		068162E64D182F5913A36C03EC83BF2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-signearTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		18B4A5564399D3ED4E954D827406E166 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-signear-signearUITests/Pods-signear-signearUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-signear-signearUITests/Pods-signear-signearUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-signear-signearUITests/Pods-signear-signearUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26C8D14D87C5E378C8588E2EA26A9C1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-signear-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		315B93A963DDF121FAD4A701FEECF1E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-signear-signearUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B94494996746A37341B31AD521781EDB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-signear/Pods-signear-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-signear/Pods-signear-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-signear/Pods-signear-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		079976E55F6CD770C0B7B7D31079C0FE /* Sources */ = {
@@ -343,15 +538,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A3E2A8599E5D2F59356238E676A1D49 /* AppDelegate.swift in Sources */,
+				F0B35AA0E1746782DB31D939C11040C7 /* EmailCheckUseCase.swift in Sources */,
 				85BDCDF29105310CA82ECCBBA8EBE476 /* EmailCheckViewController.swift in Sources */,
 				A351DFEF218363B5C48533C0D22A0778 /* EmailCheckViewModel.swift in Sources */,
-				28FCC2DB264AB22F0021CF75 /* ReservationListViewModel.swift in Sources */,
-				28FCC2E1264AB4190021CF75 /* ReservationTableViewCell.swift in Sources */,
+				289DE26C265160320009D594 /* ReservationListViewModel.swift in Sources */,
+				073C3BA9C5CB56375751D26439FA957C /* FindAccountViewController.swift in Sources */,
+				03C8575640D45F060C58D448B9E9F26F /* FindAccountViewModel.swift in Sources */,
+				43158C320522EC91D8DF73522152DC4C /* HelloViewController.swift in Sources */,
+				51A78F3114CA9DF3BC2BBA45C1C55CC5 /* HelloViewModel.swift in Sources */,
 				72D7060CA2AA8730BD941196AB0472C3 /* InitialViewController.swift in Sources */,
-				28FCC2D9264AB2120021CF75 /* ReservationListViewController.swift in Sources */,
 				AA5D45D53C07491BDAE1ECB10E06771C /* InitialViewModel.swift in Sources */,
+				190B3C05857A13D732D2A2E9F86778C3 /* LoginUseCase.swift in Sources */,
+				E2FCB1213B7142D064C737148E336C44 /* LoginViewController.swift in Sources */,
+				C7C8C419215D6D2791A7FD149D4838D8 /* LoginViewModel.swift in Sources */,
+				289DE26E265160320009D594 /* ReservationTableViewCell.swift in Sources */,
+				94BF951A2BF56959EF966D1E22D3FF9A /* LostEmailUseCase.swift in Sources */,
 				E43711AEB7CB397E09BF26BECCCCEC7C /* SceneDelegate.swift in Sources */,
-				437E8DAAF5B2D51CF4C61D0BB419DE80 /* Temp.swift in Sources */,
+				289DE26B265160320009D594 /* ReservationListViewController.swift in Sources */,
+				FEF807652D2B13B21DC2C0F11163F87B /* SendEmailViewController.swift in Sources */,
+				F44563EAF43720B1C8C4F3E22D99ABF0 /* SendEmailViewModel.swift in Sources */,
+				EED7C329944D60EEF81440E00BBE3FF3 /* SignUpUseCase.swift in Sources */,
+				CC41309A08036977D7C472DFF0D6EB9F /* SignUpViewController.swift in Sources */,
+				DC7D381EF54471BE85FBFBF4936A6F32 /* SignUpViewModel.swift in Sources */,
 				ED3A878E0837950619910ABB1A906C15 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,6 +726,7 @@
 		};
 		4F9E5C9CD84F75160FD97453857BD905 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B1190D3307A14F493D5225727BCF689 /* Pods-signearTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -540,6 +749,7 @@
 		};
 		550837DE35D52F9AFCC38DB260EAB426 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8A9632BE67F2508395B045FD704C15A /* Pods-signear.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -560,6 +770,7 @@
 		};
 		A65656E217DE3C22F201512FF8E3884D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9291E91E78A1A8E28BED7B4F02883D58 /* Pods-signearTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -582,6 +793,7 @@
 		};
 		DBE018670A66950DB068404E26052C2A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB6784DB4A2F5F282EF425AA1F8AF15F /* Pods-signear-signearUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -602,6 +814,7 @@
 		};
 		E50DFFFCE290F6B553C70942428B6EA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD40C7BBD49EAD5E6EAE9E71DF0C2E9C /* Pods-signear-signearUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -622,6 +835,7 @@
 		};
 		FD7856169D9D7DF470E1D668319534CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C77BEE5338CCE34711564A083207C80 /* Pods-signear.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
