@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		03C8575640D45F060C58D448B9E9F26F /* FindAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792AAA41DA166ADD2A6FC7BE2BB2C63E /* FindAccountViewModel.swift */; };
+		04E5B062DBC0848139554D00CD5C7149 /* MakeReservationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E43BCC24F62AAA68ED001D91CCE16F /* MakeReservationUseCase.swift */; };
 		073C3BA9C5CB56375751D26439FA957C /* FindAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7251EDAC05A7F223A9585DD46DBAE6D /* FindAccountViewController.swift */; };
 		190B3C05857A13D732D2A2E9F86778C3 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976449BF5DB9B201357AA81142405CEB /* LoginUseCase.swift */; };
 		1A3E2A8599E5D2F59356238E676A1D49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3E1DBDA736EFED47B690C94F3C7F2A /* AppDelegate.swift */; };
@@ -35,7 +36,6 @@
 		F0B35AA0E1746782DB31D939C11040C7 /* EmailCheckUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50067E5752E3D380E08A93D851F5445D /* EmailCheckUseCase.swift */; };
 		F44563EAF43720B1C8C4F3E22D99ABF0 /* SendEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65475D5C035AC709F8F0EEF8AD8BB0FC /* SendEmailViewModel.swift */; };
 		FBC192600D033E5E1019EEA87505C6CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96416CA09497E0A56D47CE727DAD95E8 /* LaunchScreen.storyboard */; };
-		FD43A50D2651610500A76530 /* MakeReservationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD43A50C2651610500A76530 /* MakeReservationUseCase.swift */; };
 		FEF807652D2B13B21DC2C0F11163F87B /* SendEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7972FBD4407F166330769B195A0BC06 /* SendEmailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +71,7 @@
 		792AAA41DA166ADD2A6FC7BE2BB2C63E /* FindAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindAccountViewModel.swift; sourceTree = "<group>"; };
 		90C623B7F146D706C775D80A91BAAC79 /* signearTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = signearTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9291E91E78A1A8E28BED7B4F02883D58 /* Pods-signearTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signearTests.release.xcconfig"; path = "Target Support Files/Pods-signearTests/Pods-signearTests.release.xcconfig"; sourceTree = "<group>"; };
+		96E43BCC24F62AAA68ED001D91CCE16F /* MakeReservationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MakeReservationUseCase.swift; path = Signear/Domain/UseCase/MakeReservationUseCase.swift; sourceTree = SOURCE_ROOT; };
 		976449BF5DB9B201357AA81142405CEB /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginUseCase.swift; path = Signear/Domain/UseCase/LoginUseCase.swift; sourceTree = SOURCE_ROOT; };
 		986D49494B5F46935E40F5D9BE90A6C3 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		9B1190D3307A14F493D5225727BCF689 /* Pods-signearTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signearTests.debug.xcconfig"; path = "Target Support Files/Pods-signearTests/Pods-signearTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -98,7 +99,6 @@
 		F8A9632BE67F2508395B045FD704C15A /* Pods-signear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signear.release.xcconfig"; path = "Target Support Files/Pods-signear/Pods-signear.release.xcconfig"; sourceTree = "<group>"; };
 		FB6784DB4A2F5F282EF425AA1F8AF15F /* Pods-signear-signearUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signear-signearUITests.release.xcconfig"; path = "Target Support Files/Pods-signear-signearUITests/Pods-signear-signearUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FD40C7BBD49EAD5E6EAE9E71DF0C2E9C /* Pods-signear-signearUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signear-signearUITests.debug.xcconfig"; path = "Target Support Files/Pods-signear-signearUITests/Pods-signear-signearUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		FD43A50C2651610500A76530 /* MakeReservationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MakeReservationUseCase.swift; path = Signear/Domain/UseCase/MakeReservationUseCase.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,8 +135,8 @@
 				50067E5752E3D380E08A93D851F5445D /* EmailCheckUseCase.swift */,
 				976449BF5DB9B201357AA81142405CEB /* LoginUseCase.swift */,
 				BED2C7B3FFD59803D73004575C8FB0E6 /* LostEmailUseCase.swift */,
+				96E43BCC24F62AAA68ED001D91CCE16F /* MakeReservationUseCase.swift */,
 				DF91755246920FD74DB459861DD3BD24 /* SignUpUseCase.swift */,
-				FD43A50C2651610500A76530 /* MakeReservationUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -533,9 +533,9 @@
 				E2FCB1213B7142D064C737148E336C44 /* LoginViewController.swift in Sources */,
 				C7C8C419215D6D2791A7FD149D4838D8 /* LoginViewModel.swift in Sources */,
 				94BF951A2BF56959EF966D1E22D3FF9A /* LostEmailUseCase.swift in Sources */,
+				04E5B062DBC0848139554D00CD5C7149 /* MakeReservationUseCase.swift in Sources */,
 				E43711AEB7CB397E09BF26BECCCCEC7C /* SceneDelegate.swift in Sources */,
 				FEF807652D2B13B21DC2C0F11163F87B /* SendEmailViewController.swift in Sources */,
-				FD43A50D2651610500A76530 /* MakeReservationUseCase.swift in Sources */,
 				F44563EAF43720B1C8C4F3E22D99ABF0 /* SendEmailViewModel.swift in Sources */,
 				EED7C329944D60EEF81440E00BBE3FF3 /* SignUpUseCase.swift in Sources */,
 				CC41309A08036977D7C472DFF0D6EB9F /* SignUpViewController.swift in Sources */,
