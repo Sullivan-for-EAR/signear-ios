@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class ReservationListViewController: UIViewController {
     
@@ -15,6 +17,8 @@ class ReservationListViewController: UIViewController {
     @IBOutlet private weak var reservationButton: UIButton!
     
     // MARK: Properties - Private
+    
+    private let disposeBag = DisposeBag()
     
     private var viewModel: ReservationListViewModelType? {
         didSet {
@@ -26,7 +30,13 @@ class ReservationListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = ReservationListViewModel()
         configureUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel?.inputs.fetchReservations()
     }
 }
 
@@ -35,10 +45,32 @@ class ReservationListViewController: UIViewController {
 extension ReservationListViewController {
     
     private func configureUI() {
-        // TODO
+        tableView.register(UINib(nibName: "ReservationTableViewCell", bundle: nil), forCellReuseIdentifier: "ReservationTableViewCell")
+        tableView.estimatedRowHeight = UITableView.automaticDimension
+    
+        tableView.rx.modelSelected(ReservationModel.self)
+            .subscribe(onNext: { [weak self] reservation in
+                self?.showReservation(reservation)
+            }).disposed(by: disposeBag)
+        
+        reservationButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.makeReservation()
+            }).disposed(by: disposeBag)
     }
     
     private func bindUI() {
+        viewModel?.outputs.reservations
+            .drive(tableView.rx.items(cellIdentifier: "ReservationTableViewCell", cellType: ReservationTableViewCell.self)) ({ index, reservation, cell in
+                cell.setReservation(reservation)
+            }).disposed(by: disposeBag)
+    }
+    
+    private func showReservation(_ reservation: ReservationModel) {
+        // TODO
+    }
+    
+    private func makeReservation() {
         // TODO
     }
 }
