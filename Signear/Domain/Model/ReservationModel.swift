@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct ReservationModel {
+struct ReservationModel: Equatable {
     let title: String
     let date: String
     let status: ReservationStatus

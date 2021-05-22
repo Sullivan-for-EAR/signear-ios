@@ -54,7 +54,8 @@ extension ReservationListViewController {
             }).disposed(by: disposeBag)
         
         reservationButton.rx.tap
-            .subscribe(onNext: { [weak self] in
+            .asDriver()
+            .drive(onNext: { [weak self] in
                 self?.makeReservation()
             }).disposed(by: disposeBag)
     }

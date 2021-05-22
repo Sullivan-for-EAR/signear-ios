@@ -28,16 +28,16 @@ class ReservationListViewModel: ReservationListViewModelType {
     
     private let disposeBag = DisposeBag()
     private let useCase: FetchReservationsUseCaseType
-    private var _reservations: BehaviorRelay<[ReservationModel]> = .init(value: [])
+    private var _reservations: PublishRelay<[ReservationModel]> = .init()
     
     // MARK: - Constructor
     
-    convenience init() {
-        self.init(useCase: FetchReservationsUseCase())
-    }
-    
     init(useCase: FetchReservationsUseCaseType) {
         self.useCase = useCase
+    }
+    
+    convenience init() {
+        self.init(useCase: FetchReservationsUseCase())
     }
 }
 
@@ -49,6 +49,7 @@ extension ReservationListViewModel: ReservationListViewModelInputs {
     
     func fetchReservations() {
         useCase.fetchReservations()
+            .catchAndReturn([])
             .bind(to: _reservations)
             .disposed(by: disposeBag)
     }
