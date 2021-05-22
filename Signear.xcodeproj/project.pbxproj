@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		03C8575640D45F060C58D448B9E9F26F /* FindAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792AAA41DA166ADD2A6FC7BE2BB2C63E /* FindAccountViewModel.swift */; };
+		04E5B062DBC0848139554D00CD5C7149 /* MakeReservationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E43BCC24F62AAA68ED001D91CCE16F /* MakeReservationUseCase.swift */; };
 		073C3BA9C5CB56375751D26439FA957C /* FindAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7251EDAC05A7F223A9585DD46DBAE6D /* FindAccountViewController.swift */; };
 		190B3C05857A13D732D2A2E9F86778C3 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976449BF5DB9B201357AA81142405CEB /* LoginUseCase.swift */; };
 		1A3E2A8599E5D2F59356238E676A1D49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3E1DBDA736EFED47B690C94F3C7F2A /* AppDelegate.swift */; };
-		289DE26B265160320009D594 /* ReservationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289DE267265160320009D594 /* ReservationListViewController.swift */; };
-		289DE26C265160320009D594 /* ReservationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289DE268265160320009D594 /* ReservationListViewModel.swift */; };
-		289DE26D265160320009D594 /* Reservation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289DE269265160320009D594 /* Reservation.storyboard */; };
-		289DE26E265160320009D594 /* ReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289DE26A265160320009D594 /* ReservationTableViewCell.swift */; };
+		28BD457E2658CCAD00390D23 /* ReservationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BD457A2658CCAD00390D23 /* ReservationListViewController.swift */; };
+		28BD457F2658CCAD00390D23 /* ReservationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BD457B2658CCAD00390D23 /* ReservationListViewModel.swift */; };
+		28BD45802658CCAD00390D23 /* Reservation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28BD457C2658CCAD00390D23 /* Reservation.storyboard */; };
+		28BD45812658CCAD00390D23 /* ReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BD457D2658CCAD00390D23 /* ReservationTableViewCell.swift */; };
 		43158C320522EC91D8DF73522152DC4C /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE49E4082FB8726A3A682A2C9AADAD8C /* HelloViewController.swift */; };
 		4644A82448E21718041F7EF252607E1B /* Pods_signearTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE05C9B1AA34F367DC4DA75116E08DD /* Pods_signearTests.framework */; };
 		51A78F3114CA9DF3BC2BBA45C1C55CC5 /* HelloViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D47F6A69D798BDFF0C2B1ECB10A6B1 /* HelloViewModel.swift */; };
@@ -64,10 +65,10 @@
 		0A4BBA7B67ABB3DD639977E3A88C8073 /* Pods_signear_signearUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_signear_signearUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE05C9B1AA34F367DC4DA75116E08DD /* Pods_signearTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_signearTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		264CB63401FCB6A478740241D3C87A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		289DE267265160320009D594 /* ReservationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationListViewController.swift; sourceTree = "<group>"; };
-		289DE268265160320009D594 /* ReservationListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationListViewModel.swift; sourceTree = "<group>"; };
-		289DE269265160320009D594 /* Reservation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Reservation.storyboard; sourceTree = "<group>"; };
-		289DE26A265160320009D594 /* ReservationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationTableViewCell.swift; sourceTree = "<group>"; };
+		28BD457A2658CCAD00390D23 /* ReservationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationListViewController.swift; sourceTree = "<group>"; };
+		28BD457B2658CCAD00390D23 /* ReservationListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationListViewModel.swift; sourceTree = "<group>"; };
+		28BD457C2658CCAD00390D23 /* Reservation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Reservation.storyboard; sourceTree = "<group>"; };
+		28BD457D2658CCAD00390D23 /* ReservationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationTableViewCell.swift; sourceTree = "<group>"; };
 		3C07127E8A28D409A07DB1D2E742AA90 /* EmailCheckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCheckViewModel.swift; sourceTree = "<group>"; };
 		48E65A1E91197BDB214E4D804113A0E2 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		50067E5752E3D380E08A93D851F5445D /* EmailCheckUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EmailCheckUseCase.swift; path = Signear/Domain/UseCase/EmailCheckUseCase.swift; sourceTree = SOURCE_ROOT; };
@@ -78,6 +79,7 @@
 		792AAA41DA166ADD2A6FC7BE2BB2C63E /* FindAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindAccountViewModel.swift; sourceTree = "<group>"; };
 		90C623B7F146D706C775D80A91BAAC79 /* signearTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = signearTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9291E91E78A1A8E28BED7B4F02883D58 /* Pods-signearTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signearTests.release.xcconfig"; path = "Target Support Files/Pods-signearTests/Pods-signearTests.release.xcconfig"; sourceTree = "<group>"; };
+		96E43BCC24F62AAA68ED001D91CCE16F /* MakeReservationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MakeReservationUseCase.swift; path = Signear/Domain/UseCase/MakeReservationUseCase.swift; sourceTree = SOURCE_ROOT; };
 		976449BF5DB9B201357AA81142405CEB /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginUseCase.swift; path = Signear/Domain/UseCase/LoginUseCase.swift; sourceTree = SOURCE_ROOT; };
 		986D49494B5F46935E40F5D9BE90A6C3 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		9B1190D3307A14F493D5225727BCF689 /* Pods-signearTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signearTests.debug.xcconfig"; path = "Target Support Files/Pods-signearTests/Pods-signearTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				50067E5752E3D380E08A93D851F5445D /* EmailCheckUseCase.swift */,
 				976449BF5DB9B201357AA81142405CEB /* LoginUseCase.swift */,
 				BED2C7B3FFD59803D73004575C8FB0E6 /* LostEmailUseCase.swift */,
+				96E43BCC24F62AAA68ED001D91CCE16F /* MakeReservationUseCase.swift */,
 				DF91755246920FD74DB459861DD3BD24 /* SignUpUseCase.swift */,
 			);
 			path = UseCase;
@@ -207,13 +210,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		289DE266265160320009D594 /* Reservation */ = {
+		28BD45792658CCAD00390D23 /* Reservation */ = {
 			isa = PBXGroup;
 			children = (
-				289DE267265160320009D594 /* ReservationListViewController.swift */,
-				289DE268265160320009D594 /* ReservationListViewModel.swift */,
-				289DE269265160320009D594 /* Reservation.storyboard */,
-				289DE26A265160320009D594 /* ReservationTableViewCell.swift */,
+				28BD457A2658CCAD00390D23 /* ReservationListViewController.swift */,
+				28BD457B2658CCAD00390D23 /* ReservationListViewModel.swift */,
+				28BD457C2658CCAD00390D23 /* Reservation.storyboard */,
+				28BD457D2658CCAD00390D23 /* ReservationTableViewCell.swift */,
 			);
 			path = Reservation;
 			sourceTree = "<group>";
@@ -221,8 +224,8 @@
 		35FDC902132009C06727BAC3499415FB /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				289DE266265160320009D594 /* Reservation */,
 				17423A746B8B973CF11C0AF998B230CF /* Account */,
+				28BD45792658CCAD00390D23 /* Reservation */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -423,7 +426,7 @@
 				6A85845E16AFABF30BCDC92DB348A595 /* Account.storyboard in Resources */,
 				707BDEB8119DAAA79F629A2A071E3B6F /* Assets.xcassets in Resources */,
 				FBC192600D033E5E1019EEA87505C6CA /* LaunchScreen.storyboard in Resources */,
-				289DE26D265160320009D594 /* Reservation.storyboard in Resources */,
+				28BD45802658CCAD00390D23 /* Reservation.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,20 +544,21 @@
 				F0B35AA0E1746782DB31D939C11040C7 /* EmailCheckUseCase.swift in Sources */,
 				85BDCDF29105310CA82ECCBBA8EBE476 /* EmailCheckViewController.swift in Sources */,
 				A351DFEF218363B5C48533C0D22A0778 /* EmailCheckViewModel.swift in Sources */,
-				289DE26C265160320009D594 /* ReservationListViewModel.swift in Sources */,
 				073C3BA9C5CB56375751D26439FA957C /* FindAccountViewController.swift in Sources */,
+				28BD457E2658CCAD00390D23 /* ReservationListViewController.swift in Sources */,
 				03C8575640D45F060C58D448B9E9F26F /* FindAccountViewModel.swift in Sources */,
 				43158C320522EC91D8DF73522152DC4C /* HelloViewController.swift in Sources */,
+				28BD45812658CCAD00390D23 /* ReservationTableViewCell.swift in Sources */,
 				51A78F3114CA9DF3BC2BBA45C1C55CC5 /* HelloViewModel.swift in Sources */,
 				72D7060CA2AA8730BD941196AB0472C3 /* InitialViewController.swift in Sources */,
 				AA5D45D53C07491BDAE1ECB10E06771C /* InitialViewModel.swift in Sources */,
+				28BD457F2658CCAD00390D23 /* ReservationListViewModel.swift in Sources */,
 				190B3C05857A13D732D2A2E9F86778C3 /* LoginUseCase.swift in Sources */,
 				E2FCB1213B7142D064C737148E336C44 /* LoginViewController.swift in Sources */,
 				C7C8C419215D6D2791A7FD149D4838D8 /* LoginViewModel.swift in Sources */,
-				289DE26E265160320009D594 /* ReservationTableViewCell.swift in Sources */,
 				94BF951A2BF56959EF966D1E22D3FF9A /* LostEmailUseCase.swift in Sources */,
+				04E5B062DBC0848139554D00CD5C7149 /* MakeReservationUseCase.swift in Sources */,
 				E43711AEB7CB397E09BF26BECCCCEC7C /* SceneDelegate.swift in Sources */,
-				289DE26B265160320009D594 /* ReservationListViewController.swift in Sources */,
 				FEF807652D2B13B21DC2C0F11163F87B /* SendEmailViewController.swift in Sources */,
 				F44563EAF43720B1C8C4F3E22D99ABF0 /* SendEmailViewModel.swift in Sources */,
 				EED7C329944D60EEF81440E00BBE3FF3 /* SignUpUseCase.swift in Sources */,
