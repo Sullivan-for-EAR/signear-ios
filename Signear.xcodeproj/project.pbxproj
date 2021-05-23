@@ -40,6 +40,12 @@
 		F0B35AA0E1746782DB31D939C11040C7 /* EmailCheckUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50067E5752E3D380E08A93D851F5445D /* EmailCheckUseCase.swift */; };
 		F44563EAF43720B1C8C4F3E22D99ABF0 /* SendEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65475D5C035AC709F8F0EEF8AD8BB0FC /* SendEmailViewModel.swift */; };
 		FBC192600D033E5E1019EEA87505C6CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96416CA09497E0A56D47CE727DAD95E8 /* LaunchScreen.storyboard */; };
+		FD4892172658CF620062EB5A /* MakeReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4892162658CF620062EB5A /* MakeReservationViewController.swift */; };
+		FD48921C2658D20E0062EB5A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD48921B2658D20E0062EB5A /* UIView+Extension.swift */; };
+		FD4892222658D3540062EB5A /* MakeReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4892202658D3540062EB5A /* MakeReservationTableViewCell.swift */; };
+		FD4892232658D3540062EB5A /* MakeReservationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD4892212658D3540062EB5A /* MakeReservationTableViewCell.xib */; };
+		FD4892282658F3150062EB5A /* MakeReservationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4892272658F3150062EB5A /* MakeReservationViewModel.swift */; };
+		FD489233265A939E0062EB5A /* MakeReservationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD489232265A939E0062EB5A /* MakeReservationModel.swift */; };
 		FEF807652D2B13B21DC2C0F11163F87B /* SendEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7972FBD4407F166330769B195A0BC06 /* SendEmailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +113,12 @@
 		F8A9632BE67F2508395B045FD704C15A /* Pods-signear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signear.release.xcconfig"; path = "Target Support Files/Pods-signear/Pods-signear.release.xcconfig"; sourceTree = "<group>"; };
 		FB6784DB4A2F5F282EF425AA1F8AF15F /* Pods-signear-signearUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signear-signearUITests.release.xcconfig"; path = "Target Support Files/Pods-signear-signearUITests/Pods-signear-signearUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FD40C7BBD49EAD5E6EAE9E71DF0C2E9C /* Pods-signear-signearUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signear-signearUITests.debug.xcconfig"; path = "Target Support Files/Pods-signear-signearUITests/Pods-signear-signearUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FD4892162658CF620062EB5A /* MakeReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MakeReservationViewController.swift; path = Signear/Presentation/Reservation/MakeReservationViewController.swift; sourceTree = SOURCE_ROOT; };
+		FD48921B2658D20E0062EB5A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "Signear/Util/Extension/UIView+Extension.swift"; sourceTree = SOURCE_ROOT; };
+		FD4892202658D3540062EB5A /* MakeReservationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MakeReservationTableViewCell.swift; path = Signear/Presentation/Reservation/MakeReservationTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		FD4892212658D3540062EB5A /* MakeReservationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MakeReservationTableViewCell.xib; path = Signear/Presentation/Reservation/MakeReservationTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		FD4892272658F3150062EB5A /* MakeReservationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MakeReservationViewModel.swift; path = Signear/Presentation/Reservation/MakeReservationViewModel.swift; sourceTree = SOURCE_ROOT; };
+		FD489232265A939E0062EB5A /* MakeReservationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MakeReservationModel.swift; path = Signear/Presentation/Reservation/MakeReservationModel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,17 +222,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		506A9131DFFB970619E03CD129091C92 /* Reservation */ = {
-			isa = PBXGroup;
-			children = (
-				9153FAFB2FA9BBE87ADAF13F94E0878E /* Reservation.storyboard */,
-				8CB85B3AAFB9EEF79E395BE256C76853 /* ReservationListViewController.swift */,
-				EA4226BD575979DF2683F21FFEDD44BE /* ReservationListViewModel.swift */,
-				3064FB63ADE3FB2457BE5893A9F351D0 /* ReservationTableViewCell.swift */,
-			);
-			path = Reservation;
-			sourceTree = "<group>";
-		};
 		35FDC902132009C06727BAC3499415FB /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +255,22 @@
 				72C4246A20D251AAFF7A925397BBE94C /* signearTests.swift */,
 			);
 			path = signearTests;
+			sourceTree = "<group>";
+		};
+		506A9131DFFB970619E03CD129091C92 /* Reservation */ = {
+			isa = PBXGroup;
+			children = (
+				9153FAFB2FA9BBE87ADAF13F94E0878E /* Reservation.storyboard */,
+				8CB85B3AAFB9EEF79E395BE256C76853 /* ReservationListViewController.swift */,
+				EA4226BD575979DF2683F21FFEDD44BE /* ReservationListViewModel.swift */,
+				3064FB63ADE3FB2457BE5893A9F351D0 /* ReservationTableViewCell.swift */,
+				FD4892162658CF620062EB5A /* MakeReservationViewController.swift */,
+				FD4892202658D3540062EB5A /* MakeReservationTableViewCell.swift */,
+				FD4892212658D3540062EB5A /* MakeReservationTableViewCell.xib */,
+				FD4892272658F3150062EB5A /* MakeReservationViewModel.swift */,
+				FD489232265A939E0062EB5A /* MakeReservationModel.swift */,
+			);
+			path = Reservation;
 			sourceTree = "<group>";
 		};
 		7BFA2C0D6377FAE8D028F8FDB72B60CF = {
@@ -297,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				986D49494B5F46935E40F5D9BE90A6C3 /* UIColor+Extension.swift */,
+				FD48921B2658D20E0062EB5A /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -425,6 +443,7 @@
 			files = (
 				6A85845E16AFABF30BCDC92DB348A595 /* Account.storyboard in Resources */,
 				707BDEB8119DAAA79F629A2A071E3B6F /* Assets.xcassets in Resources */,
+				FD4892232658D3540062EB5A /* MakeReservationTableViewCell.xib in Resources */,
 				FBC192600D033E5E1019EEA87505C6CA /* LaunchScreen.storyboard in Resources */,
 				7F1D9FC02203F29B57675241AA230176 /* Reservation.storyboard in Resources */,
 			);
@@ -544,6 +563,7 @@
 				F0B35AA0E1746782DB31D939C11040C7 /* EmailCheckUseCase.swift in Sources */,
 				85BDCDF29105310CA82ECCBBA8EBE476 /* EmailCheckViewController.swift in Sources */,
 				A351DFEF218363B5C48533C0D22A0778 /* EmailCheckViewModel.swift in Sources */,
+				FD4892222658D3540062EB5A /* MakeReservationTableViewCell.swift in Sources */,
 				073C3BA9C5CB56375751D26439FA957C /* FindAccountViewController.swift in Sources */,
 				03C8575640D45F060C58D448B9E9F26F /* FindAccountViewModel.swift in Sources */,
 				43158C320522EC91D8DF73522152DC4C /* HelloViewController.swift in Sources */,
@@ -551,7 +571,9 @@
 				72D7060CA2AA8730BD941196AB0472C3 /* InitialViewController.swift in Sources */,
 				AA5D45D53C07491BDAE1ECB10E06771C /* InitialViewModel.swift in Sources */,
 				190B3C05857A13D732D2A2E9F86778C3 /* LoginUseCase.swift in Sources */,
+				FD4892282658F3150062EB5A /* MakeReservationViewModel.swift in Sources */,
 				E2FCB1213B7142D064C737148E336C44 /* LoginViewController.swift in Sources */,
+				FD48921C2658D20E0062EB5A /* UIView+Extension.swift in Sources */,
 				C7C8C419215D6D2791A7FD149D4838D8 /* LoginViewModel.swift in Sources */,
 				94BF951A2BF56959EF966D1E22D3FF9A /* LostEmailUseCase.swift in Sources */,
 				04E5B062DBC0848139554D00CD5C7149 /* MakeReservationUseCase.swift in Sources */,
@@ -559,11 +581,13 @@
 				DF2520A6D3E7DD50241615B919E3A847 /* ReservationListViewModel.swift in Sources */,
 				6878CD7C55E7992B8D4BC5ABEE8A2683 /* ReservationTableViewCell.swift in Sources */,
 				E43711AEB7CB397E09BF26BECCCCEC7C /* SceneDelegate.swift in Sources */,
+				FD4892172658CF620062EB5A /* MakeReservationViewController.swift in Sources */,
 				FEF807652D2B13B21DC2C0F11163F87B /* SendEmailViewController.swift in Sources */,
 				F44563EAF43720B1C8C4F3E22D99ABF0 /* SendEmailViewModel.swift in Sources */,
 				EED7C329944D60EEF81440E00BBE3FF3 /* SignUpUseCase.swift in Sources */,
 				CC41309A08036977D7C472DFF0D6EB9F /* SignUpViewController.swift in Sources */,
 				DC7D381EF54471BE85FBFBF4936A6F32 /* SignUpViewModel.swift in Sources */,
+				FD489233265A939E0062EB5A /* MakeReservationModel.swift in Sources */,
 				ED3A878E0837950619910ABB1A906C15 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -759,7 +783,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 84CPTZ438W;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = signear/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -845,7 +869,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 84CPTZ438W;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = signear/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
