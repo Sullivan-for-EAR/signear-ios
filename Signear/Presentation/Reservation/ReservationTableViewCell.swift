@@ -9,17 +9,18 @@ import UIKit
 
 class ReservationTableViewCell: UITableViewCell {
     
-    // MARK: - Properties : Private
+    // MARK: - Properties : UI
     
-    private var reservationTitleLabel: UILabel = UILabel()
-    private var reservationDateLabel: UILabel = UILabel()
-    private var reservateionStatusLabel: UILabel = UILabel()
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var dateLabel: UILabel!
+    @IBOutlet private weak var reservationStatusImageView: UIImageView!
+    
+    // MARK: - Properties : Private
     
     // MARK: - Life Cycle
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        configureUI()
     }
     
     required init?(coder: NSCoder) {
@@ -28,19 +29,23 @@ class ReservationTableViewCell: UITableViewCell {
     }
 }
 
-// MARK: Private
+// MARK: - Internal
 
 extension ReservationTableViewCell {
-    private func configureUI() {
-        self.contentView.addSubview(reservationTitleLabel)
-        reservationTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        reservationTitleLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 24).isActive = true
-        reservationTitleLabel.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 20).isActive = true
-        
-        self.contentView.addSubview(reservationDateLabel)
-        reservationDateLabel.translatesAutoresizingMaskIntoConstraints = false
-        reservationDateLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 24).isActive = true
-        reservationDateLabel.topAnchor.constraint(equalTo: self.reservationTitleLabel.bottomAnchor, constant: 3).isActive = true
-        reservationDateLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -20).isActive = true
+    
+    func setReservation(_ reservaion: ReservationModel) {
+        titleLabel.text = reservaion.title
+        dateLabel.text = reservaion.date
+        reservationStatusImageView.image = reservaion.status.getImage()
     }
 }
+
+// MARK: - Private
+
+extension ReservationTableViewCell {
+    
+    func configureUI() {
+        // TODO
+    }
+}
+
