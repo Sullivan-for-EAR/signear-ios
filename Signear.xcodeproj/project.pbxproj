@@ -10,20 +10,12 @@
 		03C8575640D45F060C58D448B9E9F26F /* FindAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792AAA41DA166ADD2A6FC7BE2BB2C63E /* FindAccountViewModel.swift */; };
 		04E5B062DBC0848139554D00CD5C7149 /* MakeReservationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E43BCC24F62AAA68ED001D91CCE16F /* MakeReservationUseCase.swift */; };
 		073C3BA9C5CB56375751D26439FA957C /* FindAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7251EDAC05A7F223A9585DD46DBAE6D /* FindAccountViewController.swift */; };
+		18F9011BA3C1B8E2C567116A65CF8F32 /* MakeReservationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016F464315919567B34612433A916208 /* MakeReservationModel.swift */; };
 		190B3C05857A13D732D2A2E9F86778C3 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976449BF5DB9B201357AA81142405CEB /* LoginUseCase.swift */; };
 		1A3E2A8599E5D2F59356238E676A1D49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3E1DBDA736EFED47B690C94F3C7F2A /* AppDelegate.swift */; };
 		1AFFE5AFEC4859B04837793893A69CBA /* ReservationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB85B3AAFB9EEF79E395BE256C76853 /* ReservationListViewController.swift */; };
 		1B2DAF8FAB7DE5AC5130EC48377D09AE /* ReservationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF6EA73599CC9A4D34E09C8B2DA361D4 /* ReservationTableViewCell.xib */; };
 		1DBF8ED0E353E580EC3293CF8E755922 /* ReservationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6222AFD7DD977D018A354F94766DCE /* ReservationModel.swift */; };
-		28102F6C265E93390097B216 /* Emergency.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28102F6B265E93390097B216 /* Emergency.storyboard */; };
-		28102F70265E93710097B216 /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28102F6F265E93710097B216 /* EmergencyViewController.swift */; };
-		28102F72265E938A0097B216 /* EmergencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28102F71265E938A0097B216 /* EmergencyViewModel.swift */; };
-		28102F74265E99C70097B216 /* RequestEmergencyTranslationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28102F73265E99C70097B216 /* RequestEmergencyTranslationUseCase.swift */; };
-		28A73DF9265D2F3B00F67CDA /* MakeReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A73DF5265D2F3B00F67CDA /* MakeReservationTableViewCell.swift */; };
-		28A73DFB265D2F3B00F67CDA /* MakeReservationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28A73DF7265D2F3B00F67CDA /* MakeReservationTableViewCell.xib */; };
-		28A73DFD265D2F5F00F67CDA /* MakeReservationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A73DFC265D2F5F00F67CDA /* MakeReservationModel.swift */; };
-		28DB234D265D30E8003B58A6 /* MakeReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DB234B265D30E8003B58A6 /* MakeReservationViewController.swift */; };
-		28DB234E265D30E8003B58A6 /* MakeReservationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DB234C265D30E8003B58A6 /* MakeReservationViewModel.swift */; };
 		43158C320522EC91D8DF73522152DC4C /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE49E4082FB8726A3A682A2C9AADAD8C /* HelloViewController.swift */; };
 		4644A82448E21718041F7EF252607E1B /* Pods_signearTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE05C9B1AA34F367DC4DA75116E08DD /* Pods_signearTests.framework */; };
 		51A78F3114CA9DF3BC2BBA45C1C55CC5 /* HelloViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D47F6A69D798BDFF0C2B1ECB10A6B1 /* HelloViewModel.swift */; };
@@ -31,28 +23,36 @@
 		6878CD7C55E7992B8D4BC5ABEE8A2683 /* ReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3064FB63ADE3FB2457BE5893A9F351D0 /* ReservationTableViewCell.swift */; };
 		6A85845E16AFABF30BCDC92DB348A595 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE1424039564B4764FF2FE1EAA4B0E35 /* Account.storyboard */; };
 		6B9C71C2D259A29E57D0BCCF123C6936 /* ReservationListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5540BF507967F5D054164784C261FB2E /* ReservationListViewModelTests.swift */; };
+		6D776E7BE3FC42E43CC504A52778FDD7 /* MakeReservationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA9A73CDEA0EA6CE77A9E3E9CEEBED7C /* MakeReservationTableViewCell.xib */; };
 		707BDEB8119DAAA79F629A2A071E3B6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F040257CF1CF27D2205DFE8C99F94E28 /* Assets.xcassets */; };
 		72D7060CA2AA8730BD941196AB0472C3 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8B1113034C8BE6A88937BC7B8C4598 /* InitialViewController.swift */; };
 		7511ECDA6579AB3FB5CF32F3A383193F /* FetchReservationsUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933EC82381D3EB18EC6060C617D87D85 /* FetchReservationsUseCaseMock.swift */; };
+		7C917BB6A920588B64E202AA7931C613 /* MakeReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5ED4B57E5272E356F5DB16D500B8CDE /* MakeReservationTableViewCell.swift */; };
 		7F1D9FC02203F29B57675241AA230176 /* Reservation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9153FAFB2FA9BBE87ADAF13F94E0878E /* Reservation.storyboard */; };
 		85BDCDF29105310CA82ECCBBA8EBE476 /* EmailCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12AF7AF4EFA42A42D8C81F2C017BB49 /* EmailCheckViewController.swift */; };
 		8D1BE1DC832EC2EE64D25F2A90365EED /* Pods_signear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6B3A3A206C1092600D19BA1A75439B /* Pods_signear.framework */; };
 		946F7836F8938103A71F4CCD3F145923 /* FetchReservationsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF81E39E2D1BC5FC40F64DA0DE3E3185 /* FetchReservationsUseCase.swift */; };
+		947195716C199A5CBBD46E59AAC797FC /* RequestEmergencyTranslationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77277CDFFBBE8218BD2D7E79F9082B64 /* RequestEmergencyTranslationUseCase.swift */; };
 		94BF951A2BF56959EF966D1E22D3FF9A /* LostEmailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED2C7B3FFD59803D73004575C8FB0E6 /* LostEmailUseCase.swift */; };
 		A161C38C333ACBB1D294B1EA44C4EF69 /* Pods_signear_signearUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4BBA7B67ABB3DD639977E3A88C8073 /* Pods_signear_signearUITests.framework */; };
 		A351DFEF218363B5C48533C0D22A0778 /* EmailCheckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07127E8A28D409A07DB1D2E742AA90 /* EmailCheckViewModel.swift */; };
 		AA5D45D53C07491BDAE1ECB10E06771C /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09656A19B58ECFEB96F79BDA10D8136F /* InitialViewModel.swift */; };
+		AB17964C832AA93F7CB59730F2BB4EEE /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593D8F04EA0C39EB4A0826402677411A /* EmergencyViewController.swift */; };
 		C7C8C419215D6D2791A7FD149D4838D8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E65A1E91197BDB214E4D804113A0E2 /* LoginViewModel.swift */; };
 		C91D19803AB54E6A31F113472CB9E7EA /* signearUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB278AB68F9871641EC4F6758C56E67 /* signearUITests.swift */; };
 		CC41309A08036977D7C472DFF0D6EB9F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6365C6C387580EEC98D4DE402C826A7D /* SignUpViewController.swift */; };
 		DC7D381EF54471BE85FBFBF4936A6F32 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D484994687164CDBD13B8C52317F6 /* SignUpViewModel.swift */; };
+		DDA5BED781E95794700595CC1174B234 /* MakeReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F8091C6292B4AA12FD16BC11A1F48B /* MakeReservationViewController.swift */; };
+		DE6D2524A9B73AB9CC52AF6C339C2016 /* MakeReservationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37720F258A8D9DA1706898194F44742F /* MakeReservationViewModel.swift */; };
 		DF2520A6D3E7DD50241615B919E3A847 /* ReservationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4226BD575979DF2683F21FFEDD44BE /* ReservationListViewModel.swift */; };
 		E2FCB1213B7142D064C737148E336C44 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36EC3122CE8AC23FA4B8E0E88E580B5 /* LoginViewController.swift */; };
 		E43711AEB7CB397E09BF26BECCCCEC7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15BABD1EB65B8B12469BF32B15DA524 /* SceneDelegate.swift */; };
 		ED3A878E0837950619910ABB1A906C15 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D49494B5F46935E40F5D9BE90A6C3 /* UIColor+Extension.swift */; };
 		EED7C329944D60EEF81440E00BBE3FF3 /* SignUpUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF91755246920FD74DB459861DD3BD24 /* SignUpUseCase.swift */; };
 		F0B35AA0E1746782DB31D939C11040C7 /* EmailCheckUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50067E5752E3D380E08A93D851F5445D /* EmailCheckUseCase.swift */; };
+		F253B24A81335C4EB47234B538F168FF /* Emergency.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD240579F6DD21157E5C83066300436D /* Emergency.storyboard */; };
 		F44563EAF43720B1C8C4F3E22D99ABF0 /* SendEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65475D5C035AC709F8F0EEF8AD8BB0FC /* SendEmailViewModel.swift */; };
+		F908D298AB48EE35B2B0404C9F143E0C /* EmergencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7A75FF0A6062F8DF31949F40663F18 /* EmergencyViewModel.swift */; };
 		FBC192600D033E5E1019EEA87505C6CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96416CA09497E0A56D47CE727DAD95E8 /* LaunchScreen.storyboard */; };
 		FEF807652D2B13B21DC2C0F11163F87B /* SendEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7972FBD4407F166330769B195A0BC06 /* SendEmailViewController.swift */; };
 /* End PBXBuildFile section */
@@ -75,28 +75,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		016F464315919567B34612433A916208 /* MakeReservationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeReservationModel.swift; sourceTree = "<group>"; };
 		09656A19B58ECFEB96F79BDA10D8136F /* InitialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModel.swift; sourceTree = "<group>"; };
 		0A4BBA7B67ABB3DD639977E3A88C8073 /* Pods_signear_signearUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_signear_signearUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE05C9B1AA34F367DC4DA75116E08DD /* Pods_signearTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_signearTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		264CB63401FCB6A478740241D3C87A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		28102F6B265E93390097B216 /* Emergency.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Emergency.storyboard; sourceTree = "<group>"; };
-		28102F6F265E93710097B216 /* EmergencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyViewController.swift; sourceTree = "<group>"; };
-		28102F71265E938A0097B216 /* EmergencyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyViewModel.swift; sourceTree = "<group>"; };
-		28102F73265E99C70097B216 /* RequestEmergencyTranslationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestEmergencyTranslationUseCase.swift; sourceTree = "<group>"; };
-		28A73DF5265D2F3B00F67CDA /* MakeReservationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeReservationTableViewCell.swift; sourceTree = "<group>"; };
-		28A73DF7265D2F3B00F67CDA /* MakeReservationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakeReservationTableViewCell.xib; sourceTree = "<group>"; };
-		28A73DFC265D2F5F00F67CDA /* MakeReservationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeReservationModel.swift; sourceTree = "<group>"; };
-		28DB234B265D30E8003B58A6 /* MakeReservationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeReservationViewController.swift; sourceTree = "<group>"; };
-		28DB234C265D30E8003B58A6 /* MakeReservationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeReservationViewModel.swift; sourceTree = "<group>"; };
 		3064FB63ADE3FB2457BE5893A9F351D0 /* ReservationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationTableViewCell.swift; sourceTree = "<group>"; };
+		37720F258A8D9DA1706898194F44742F /* MakeReservationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeReservationViewModel.swift; sourceTree = "<group>"; };
 		3C07127E8A28D409A07DB1D2E742AA90 /* EmailCheckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCheckViewModel.swift; sourceTree = "<group>"; };
 		48E65A1E91197BDB214E4D804113A0E2 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		50067E5752E3D380E08A93D851F5445D /* EmailCheckUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EmailCheckUseCase.swift; path = Signear/Domain/UseCase/EmailCheckUseCase.swift; sourceTree = SOURCE_ROOT; };
 		5540BF507967F5D054164784C261FB2E /* ReservationListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationListViewModelTests.swift; sourceTree = "<group>"; };
+		593D8F04EA0C39EB4A0826402677411A /* EmergencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyViewController.swift; sourceTree = "<group>"; };
 		5C77BEE5338CCE34711564A083207C80 /* Pods-signear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signear.debug.xcconfig"; path = "Target Support Files/Pods-signear/Pods-signear.debug.xcconfig"; sourceTree = "<group>"; };
 		6365C6C387580EEC98D4DE402C826A7D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		65475D5C035AC709F8F0EEF8AD8BB0FC /* SendEmailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendEmailViewModel.swift; sourceTree = "<group>"; };
 		72C4246A20D251AAFF7A925397BBE94C /* signearTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signearTests.swift; sourceTree = "<group>"; };
+		77277CDFFBBE8218BD2D7E79F9082B64 /* RequestEmergencyTranslationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestEmergencyTranslationUseCase.swift; sourceTree = "<group>"; };
 		792AAA41DA166ADD2A6FC7BE2BB2C63E /* FindAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindAccountViewModel.swift; sourceTree = "<group>"; };
 		8746528048E2B09824BCF57691B29031 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "Signear/Util/Extension/UIView+Extension.swift"; sourceTree = SOURCE_ROOT; };
 		8CB85B3AAFB9EEF79E395BE256C76853 /* ReservationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationListViewController.swift; sourceTree = "<group>"; };
@@ -110,21 +105,26 @@
 		9B1190D3307A14F493D5225727BCF689 /* Pods-signearTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signearTests.debug.xcconfig"; path = "Target Support Files/Pods-signearTests/Pods-signearTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9BB278AB68F9871641EC4F6758C56E67 /* signearUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signearUITests.swift; sourceTree = "<group>"; };
 		9DD633B733F2BD073715E83D5611AFA4 /* signearUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = signearUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E7A75FF0A6062F8DF31949F40663F18 /* EmergencyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyViewModel.swift; sourceTree = "<group>"; };
 		A13A54BEB6018C628F615477D5CDDAF6 /* signear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = signear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A36EC3122CE8AC23FA4B8E0E88E580B5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AD240579F6DD21157E5C83066300436D /* Emergency.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Emergency.storyboard; sourceTree = "<group>"; };
 		BB3E1DBDA736EFED47B690C94F3C7F2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE1424039564B4764FF2FE1EAA4B0E35 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		BE6222AFD7DD977D018A354F94766DCE /* ReservationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationModel.swift; sourceTree = "<group>"; };
 		BE8B1113034C8BE6A88937BC7B8C4598 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		BED2C7B3FFD59803D73004575C8FB0E6 /* LostEmailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LostEmailUseCase.swift; path = Signear/Domain/UseCase/LostEmailUseCase.swift; sourceTree = SOURCE_ROOT; };
 		C15BABD1EB65B8B12469BF32B15DA524 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CA9A73CDEA0EA6CE77A9E3E9CEEBED7C /* MakeReservationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakeReservationTableViewCell.xib; sourceTree = "<group>"; };
 		CC53EA3D4D0124A831C1B8ADEF6DCF8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE49E4082FB8726A3A682A2C9AADAD8C /* HelloViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
 		CF6EA73599CC9A4D34E09C8B2DA361D4 /* ReservationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationTableViewCell.xib; sourceTree = "<group>"; };
 		CF81E39E2D1BC5FC40F64DA0DE3E3185 /* FetchReservationsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchReservationsUseCase.swift; sourceTree = "<group>"; };
 		D12AF7AF4EFA42A42D8C81F2C017BB49 /* EmailCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCheckViewController.swift; sourceTree = "<group>"; };
+		D1F8091C6292B4AA12FD16BC11A1F48B /* MakeReservationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeReservationViewController.swift; sourceTree = "<group>"; };
 		DCB0AB31A1A8DB952CD48FE69D603436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF91755246920FD74DB459861DD3BD24 /* SignUpUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpUseCase.swift; path = Signear/Domain/UseCase/SignUpUseCase.swift; sourceTree = SOURCE_ROOT; };
+		E5ED4B57E5272E356F5DB16D500B8CDE /* MakeReservationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeReservationTableViewCell.swift; sourceTree = "<group>"; };
 		E7972FBD4407F166330769B195A0BC06 /* SendEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendEmailViewController.swift; sourceTree = "<group>"; };
 		E9DCEFCDE630E489CFBE071B0FF15548 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA4226BD575979DF2683F21FFEDD44BE /* ReservationListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationListViewModel.swift; sourceTree = "<group>"; };
@@ -172,10 +172,10 @@
 				50067E5752E3D380E08A93D851F5445D /* EmailCheckUseCase.swift */,
 				CF81E39E2D1BC5FC40F64DA0DE3E3185 /* FetchReservationsUseCase.swift */,
 				933EC82381D3EB18EC6060C617D87D85 /* FetchReservationsUseCaseMock.swift */,
-				28102F73265E99C70097B216 /* RequestEmergencyTranslationUseCase.swift */,
 				976449BF5DB9B201357AA81142405CEB /* LoginUseCase.swift */,
 				BED2C7B3FFD59803D73004575C8FB0E6 /* LostEmailUseCase.swift */,
 				96E43BCC24F62AAA68ED001D91CCE16F /* MakeReservationUseCase.swift */,
+				77277CDFFBBE8218BD2D7E79F9082B64 /* RequestEmergencyTranslationUseCase.swift */,
 				DF91755246920FD74DB459861DD3BD24 /* SignUpUseCase.swift */,
 			);
 			path = UseCase;
@@ -242,12 +242,12 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		28102F6A265E930A0097B216 /* Emergency */ = {
+		CCF4B24692B3D62BB2599967C6B50CCF /* Emergency */ = {
 			isa = PBXGroup;
 			children = (
-				28102F6B265E93390097B216 /* Emergency.storyboard */,
-				28102F6F265E93710097B216 /* EmergencyViewController.swift */,
-				28102F71265E938A0097B216 /* EmergencyViewModel.swift */,
+				AD240579F6DD21157E5C83066300436D /* Emergency.storyboard */,
+				593D8F04EA0C39EB4A0826402677411A /* EmergencyViewController.swift */,
+				9E7A75FF0A6062F8DF31949F40663F18 /* EmergencyViewModel.swift */,
 			);
 			path = Emergency;
 			sourceTree = "<group>";
@@ -255,8 +255,8 @@
 		35FDC902132009C06727BAC3499415FB /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				28102F6A265E930A0097B216 /* Emergency */,
 				17423A746B8B973CF11C0AF998B230CF /* Account */,
+				CCF4B24692B3D62BB2599967C6B50CCF /* Emergency */,
 				506A9131DFFB970619E03CD129091C92 /* Reservation */,
 			);
 			path = Presentation;
@@ -293,11 +293,11 @@
 		506A9131DFFB970619E03CD129091C92 /* Reservation */ = {
 			isa = PBXGroup;
 			children = (
+				E5ED4B57E5272E356F5DB16D500B8CDE /* MakeReservationTableViewCell.swift */,
+				CA9A73CDEA0EA6CE77A9E3E9CEEBED7C /* MakeReservationTableViewCell.xib */,
+				D1F8091C6292B4AA12FD16BC11A1F48B /* MakeReservationViewController.swift */,
+				37720F258A8D9DA1706898194F44742F /* MakeReservationViewModel.swift */,
 				9153FAFB2FA9BBE87ADAF13F94E0878E /* Reservation.storyboard */,
-				28A73DF5265D2F3B00F67CDA /* MakeReservationTableViewCell.swift */,
-				28A73DF7265D2F3B00F67CDA /* MakeReservationTableViewCell.xib */,
-				28DB234B265D30E8003B58A6 /* MakeReservationViewController.swift */,
-				28DB234C265D30E8003B58A6 /* MakeReservationViewModel.swift */,
 				8CB85B3AAFB9EEF79E395BE256C76853 /* ReservationListViewController.swift */,
 				EA4226BD575979DF2683F21FFEDD44BE /* ReservationListViewModel.swift */,
 				3064FB63ADE3FB2457BE5893A9F351D0 /* ReservationTableViewCell.swift */,
@@ -339,7 +339,7 @@
 		B6659EE89307ABD4507E361F2494E247 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				28A73DFC265D2F5F00F67CDA /* MakeReservationModel.swift */,
+				016F464315919567B34612433A916208 /* MakeReservationModel.swift */,
 				BE6222AFD7DD977D018A354F94766DCE /* ReservationModel.swift */,
 			);
 			path = Model;
@@ -502,9 +502,9 @@
 			files = (
 				6A85845E16AFABF30BCDC92DB348A595 /* Account.storyboard in Resources */,
 				707BDEB8119DAAA79F629A2A071E3B6F /* Assets.xcassets in Resources */,
-				28102F6C265E93390097B216 /* Emergency.storyboard in Resources */,
-				28A73DFB265D2F3B00F67CDA /* MakeReservationTableViewCell.xib in Resources */,
+				F253B24A81335C4EB47234B538F168FF /* Emergency.storyboard in Resources */,
 				FBC192600D033E5E1019EEA87505C6CA /* LaunchScreen.storyboard in Resources */,
+				6D776E7BE3FC42E43CC504A52778FDD7 /* MakeReservationTableViewCell.xib in Resources */,
 				7F1D9FC02203F29B57675241AA230176 /* Reservation.storyboard in Resources */,
 				1B2DAF8FAB7DE5AC5130EC48377D09AE /* ReservationTableViewCell.xib in Resources */,
 			);
@@ -641,9 +641,10 @@
 				F0B35AA0E1746782DB31D939C11040C7 /* EmailCheckUseCase.swift in Sources */,
 				85BDCDF29105310CA82ECCBBA8EBE476 /* EmailCheckViewController.swift in Sources */,
 				A351DFEF218363B5C48533C0D22A0778 /* EmailCheckViewModel.swift in Sources */,
+				AB17964C832AA93F7CB59730F2BB4EEE /* EmergencyViewController.swift in Sources */,
+				F908D298AB48EE35B2B0404C9F143E0C /* EmergencyViewModel.swift in Sources */,
 				946F7836F8938103A71F4CCD3F145923 /* FetchReservationsUseCase.swift in Sources */,
 				7511ECDA6579AB3FB5CF32F3A383193F /* FetchReservationsUseCaseMock.swift in Sources */,
-				28A73DFD265D2F5F00F67CDA /* MakeReservationModel.swift in Sources */,
 				073C3BA9C5CB56375751D26439FA957C /* FindAccountViewController.swift in Sources */,
 				03C8575640D45F060C58D448B9E9F26F /* FindAccountViewModel.swift in Sources */,
 				43158C320522EC91D8DF73522152DC4C /* HelloViewController.swift in Sources */,
@@ -654,15 +655,16 @@
 				E2FCB1213B7142D064C737148E336C44 /* LoginViewController.swift in Sources */,
 				C7C8C419215D6D2791A7FD149D4838D8 /* LoginViewModel.swift in Sources */,
 				94BF951A2BF56959EF966D1E22D3FF9A /* LostEmailUseCase.swift in Sources */,
-				28A73DF9265D2F3B00F67CDA /* MakeReservationTableViewCell.swift in Sources */,
+				18F9011BA3C1B8E2C567116A65CF8F32 /* MakeReservationModel.swift in Sources */,
+				7C917BB6A920588B64E202AA7931C613 /* MakeReservationTableViewCell.swift in Sources */,
 				04E5B062DBC0848139554D00CD5C7149 /* MakeReservationUseCase.swift in Sources */,
+				DDA5BED781E95794700595CC1174B234 /* MakeReservationViewController.swift in Sources */,
+				DE6D2524A9B73AB9CC52AF6C339C2016 /* MakeReservationViewModel.swift in Sources */,
+				947195716C199A5CBBD46E59AAC797FC /* RequestEmergencyTranslationUseCase.swift in Sources */,
 				1AFFE5AFEC4859B04837793893A69CBA /* ReservationListViewController.swift in Sources */,
-				28DB234D265D30E8003B58A6 /* MakeReservationViewController.swift in Sources */,
-				28DB234E265D30E8003B58A6 /* MakeReservationViewModel.swift in Sources */,
 				DF2520A6D3E7DD50241615B919E3A847 /* ReservationListViewModel.swift in Sources */,
 				1DBF8ED0E353E580EC3293CF8E755922 /* ReservationModel.swift in Sources */,
 				6878CD7C55E7992B8D4BC5ABEE8A2683 /* ReservationTableViewCell.swift in Sources */,
-				28102F74265E99C70097B216 /* RequestEmergencyTranslationUseCase.swift in Sources */,
 				E43711AEB7CB397E09BF26BECCCCEC7C /* SceneDelegate.swift in Sources */,
 				FEF807652D2B13B21DC2C0F11163F87B /* SendEmailViewController.swift in Sources */,
 				F44563EAF43720B1C8C4F3E22D99ABF0 /* SendEmailViewModel.swift in Sources */,
@@ -670,8 +672,6 @@
 				CC41309A08036977D7C472DFF0D6EB9F /* SignUpViewController.swift in Sources */,
 				DC7D381EF54471BE85FBFBF4936A6F32 /* SignUpViewModel.swift in Sources */,
 				ED3A878E0837950619910ABB1A906C15 /* UIColor+Extension.swift in Sources */,
-				28102F72265E938A0097B216 /* EmergencyViewModel.swift in Sources */,
-				28102F70265E93710097B216 /* EmergencyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
