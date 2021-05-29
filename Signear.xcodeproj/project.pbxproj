@@ -50,6 +50,9 @@
 		F0B35AA0E1746782DB31D939C11040C7 /* EmailCheckUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50067E5752E3D380E08A93D851F5445D /* EmailCheckUseCase.swift */; };
 		F44563EAF43720B1C8C4F3E22D99ABF0 /* SendEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65475D5C035AC709F8F0EEF8AD8BB0FC /* SendEmailViewModel.swift */; };
 		FBC192600D033E5E1019EEA87505C6CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96416CA09497E0A56D47CE727DAD95E8 /* LaunchScreen.storyboard */; };
+		FD261E322660B8A4000F2496 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746528048E2B09824BCF57691B29031 /* UIView+Extension.swift */; };
+		FD261E3726612FA9000F2496 /* MakeReservationUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD261E3626612FA9000F2496 /* MakeReservationUseCaseMock.swift */; };
+		FD261E3C26613737000F2496 /* MakeReservationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD261E3B26613737000F2496 /* MakeReservationViewModelTests.swift */; };
 		FEF807652D2B13B21DC2C0F11163F87B /* SendEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7972FBD4407F166330769B195A0BC06 /* SendEmailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +130,8 @@
 		F7D47F6A69D798BDFF0C2B1ECB10A6B1 /* HelloViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloViewModel.swift; sourceTree = "<group>"; };
 		F8A9632BE67F2508395B045FD704C15A /* Pods-signear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signear.release.xcconfig"; path = "Target Support Files/Pods-signear/Pods-signear.release.xcconfig"; sourceTree = "<group>"; };
 		FB6784DB4A2F5F282EF425AA1F8AF15F /* Pods-signear-signearUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signear-signearUITests.release.xcconfig"; path = "Target Support Files/Pods-signear-signearUITests/Pods-signear-signearUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FD261E3626612FA9000F2496 /* MakeReservationUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MakeReservationUseCaseMock.swift; path = Signear/Domain/UseCase/MakeReservationUseCaseMock.swift; sourceTree = SOURCE_ROOT; };
+		FD261E3B26613737000F2496 /* MakeReservationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MakeReservationViewModelTests.swift; path = SignearTests/Presentation/Reservation/MakeReservationViewModelTests.swift; sourceTree = SOURCE_ROOT; };
 		FD40C7BBD49EAD5E6EAE9E71DF0C2E9C /* Pods-signear-signearUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signear-signearUITests.debug.xcconfig"; path = "Target Support Files/Pods-signear-signearUITests/Pods-signear-signearUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,6 +173,7 @@
 				BED2C7B3FFD59803D73004575C8FB0E6 /* LostEmailUseCase.swift */,
 				96E43BCC24F62AAA68ED001D91CCE16F /* MakeReservationUseCase.swift */,
 				DF91755246920FD74DB459861DD3BD24 /* SignUpUseCase.swift */,
+				FD261E3626612FA9000F2496 /* MakeReservationUseCaseMock.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -329,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				5540BF507967F5D054164784C261FB2E /* ReservationListViewModelTests.swift */,
+				FD261E3B26613737000F2496 /* MakeReservationViewModelTests.swift */,
 			);
 			path = Reservation;
 			sourceTree = "<group>";
@@ -616,6 +623,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD261E322660B8A4000F2496 /* UIView+Extension.swift in Sources */,
 				1A3E2A8599E5D2F59356238E676A1D49 /* AppDelegate.swift in Sources */,
 				F0B35AA0E1746782DB31D939C11040C7 /* EmailCheckUseCase.swift in Sources */,
 				85BDCDF29105310CA82ECCBBA8EBE476 /* EmailCheckViewController.swift in Sources */,
@@ -641,6 +649,7 @@
 				DF2520A6D3E7DD50241615B919E3A847 /* ReservationListViewModel.swift in Sources */,
 				1DBF8ED0E353E580EC3293CF8E755922 /* ReservationModel.swift in Sources */,
 				6878CD7C55E7992B8D4BC5ABEE8A2683 /* ReservationTableViewCell.swift in Sources */,
+				FD261E3726612FA9000F2496 /* MakeReservationUseCaseMock.swift in Sources */,
 				E43711AEB7CB397E09BF26BECCCCEC7C /* SceneDelegate.swift in Sources */,
 				FEF807652D2B13B21DC2C0F11163F87B /* SendEmailViewController.swift in Sources */,
 				F44563EAF43720B1C8C4F3E22D99ABF0 /* SendEmailViewModel.swift in Sources */,
@@ -665,6 +674,7 @@
 			files = (
 				6B9C71C2D259A29E57D0BCCF123C6936 /* ReservationListViewModelTests.swift in Sources */,
 				578B7885F7779090F346DCD67650F7B6 /* signearTests.swift in Sources */,
+				FD261E3C26613737000F2496 /* MakeReservationViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

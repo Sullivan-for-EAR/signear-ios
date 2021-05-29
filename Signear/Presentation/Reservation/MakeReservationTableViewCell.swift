@@ -15,8 +15,8 @@ protocol MakeReservationTableViewCellDelegate: class {
     func endTimeBtnPressed()
     func centerBtnPressed()
     func locationTextFieldInput(_ locationText: String)
-    func offlineBtnPressed()
-    func onlineBtnPressed()
+    func offlineBtnPressed(_ isOfflineSelected: Bool)
+    func onlineBtnPressed(_ isOfflineSelected: Bool)
     func requestsTextViewChanged(_ requestText: String)
     func makeReservationBtnPressed()
 }
@@ -44,32 +44,38 @@ class MakeReservationTableViewCell: UITableViewCell {
     @IBOutlet private weak var makeReservationButton: UIButton!
     
     // MARK: Properties - Private
-    private var delegate: MakeReservationTableViewCellDelegate?
+    var delegate: MakeReservationTableViewCellDelegate?
     private let disposeBag = DisposeBag()
-    
-    
     
     // MARK: - Life Cycle
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+        self.configureUI()
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        // Configure the view for the selected state
     }
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.endEditing(true)
     }
-    
-    
-    
 }
 
 // MARK: - Internal
 
-extension MakeReservationTableViewCell {
+extension MakeReservationTableViewCell: UITextFieldDelegate {
     func setReservation(_ reservation: MakeReservationModel) {
         // Example
         self.dateButton.setTitle(reservation.date, for: .normal)
+
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.delegate?.locationTextFieldInput(textField.text!)
     }
 }
 
@@ -79,6 +85,8 @@ extension MakeReservationTableViewCell {
     private func configureUI() {
         // TODO
         self.selectionStyle = .none
+        
+        self.locationTextfield.delegate = self
         
         self.dateButton.rx.tap
             .asDriver()
@@ -110,17 +118,28 @@ extension MakeReservationTableViewCell {
                 self.delegate?.locationTextFieldInput(text)
             }).disposed(by: disposeBag)
         
-        
         self.offlineButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] in
-                self?.delegate?.offlineBtnPressed()
+                self?.offlineButton.backgroundColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 0.05)
+                self?.offlineButton.layer.borderWidth = 2.0
+                self?.offlineButton.layer.borderColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
+                self?.onlineButton.layer.borderWidth = 1.0
+                self?.onlineButton.layer.borderColor = #colorLiteral(red: 0.8700304627, green: 0.8700509667, blue: 0.8700398803, alpha: 1)
+                self?.onlineButton.backgroundColor = .clear
+                self?.delegate?.offlineBtnPressed(true)
             }).disposed(by: disposeBag)
         
         self.onlineButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] in
-                self?.delegate?.onlineBtnPressed()
+                self?.onlineButton.backgroundColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 0.05)
+                self?.onlineButton.layer.borderWidth = 2.0
+                self?.onlineButton.layer.borderColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
+                self?.offlineButton.backgroundColor = .clear
+                self?.offlineButton.layer.borderWidth = 1.0
+                self?.offlineButton.layer.borderColor = #colorLiteral(red: 0.8700304627, green: 0.8700509667, blue: 0.8700398803, alpha: 1)
+                self?.delegate?.onlineBtnPressed(false)
             }).disposed(by: disposeBag)
         
         self.requestsTextView.rx.didEndEditing
