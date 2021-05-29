@@ -41,11 +41,13 @@
 		85BDCDF29105310CA82ECCBBA8EBE476 /* EmailCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12AF7AF4EFA42A42D8C81F2C017BB49 /* EmailCheckViewController.swift */; };
 		8D1BE1DC832EC2EE64D25F2A90365EED /* Pods_signear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6B3A3A206C1092600D19BA1A75439B /* Pods_signear.framework */; };
 		946F7836F8938103A71F4CCD3F145923 /* FetchReservationsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF81E39E2D1BC5FC40F64DA0DE3E3185 /* FetchReservationsUseCase.swift */; };
+		947195716C199A5CBBD46E59AAC797FC /* RequestEmergencyTranslationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77277CDFFBBE8218BD2D7E79F9082B64 /* RequestEmergencyTranslationUseCase.swift */; };
 		94BF951A2BF56959EF966D1E22D3FF9A /* LostEmailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED2C7B3FFD59803D73004575C8FB0E6 /* LostEmailUseCase.swift */; };
 		A161C38C333ACBB1D294B1EA44C4EF69 /* Pods_signear_signearUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4BBA7B67ABB3DD639977E3A88C8073 /* Pods_signear_signearUITests.framework */; };
 		A2BF681AB307443BE08F2894FE892381 /* ReservationHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB6414525490DD68A901FD0D331CC3 /* ReservationHistoryViewController.swift */; };
 		A351DFEF218363B5C48533C0D22A0778 /* EmailCheckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07127E8A28D409A07DB1D2E742AA90 /* EmailCheckViewModel.swift */; };
 		AA5D45D53C07491BDAE1ECB10E06771C /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09656A19B58ECFEB96F79BDA10D8136F /* InitialViewModel.swift */; };
+		AB17964C832AA93F7CB59730F2BB4EEE /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593D8F04EA0C39EB4A0826402677411A /* EmergencyViewController.swift */; };
 		B4971BD2CEB0E74812E2442B51BF2014 /* ReservationHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFE7C82B0EE8CE6F0F4F74325670652 /* ReservationHistoryTableViewCell.swift */; };
 		C02C0321A155F8B9835A5E1C6C767AFF /* MyPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959B0EE30734F67B8AF38938E71221DB /* MyPageTableViewCell.swift */; };
 		C17829B03CB049939DA150FF5261B9C2 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F810EA086D985415F019E7B7476E0033 /* MyPage.storyboard */; };
@@ -63,9 +65,11 @@
 		ED3A878E0837950619910ABB1A906C15 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986D49494B5F46935E40F5D9BE90A6C3 /* UIColor+Extension.swift */; };
 		EED7C329944D60EEF81440E00BBE3FF3 /* SignUpUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF91755246920FD74DB459861DD3BD24 /* SignUpUseCase.swift */; };
 		F0B35AA0E1746782DB31D939C11040C7 /* EmailCheckUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50067E5752E3D380E08A93D851F5445D /* EmailCheckUseCase.swift */; };
+		F253B24A81335C4EB47234B538F168FF /* Emergency.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD240579F6DD21157E5C83066300436D /* Emergency.storyboard */; };
 		F44563EAF43720B1C8C4F3E22D99ABF0 /* SendEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65475D5C035AC709F8F0EEF8AD8BB0FC /* SendEmailViewModel.swift */; };
 		F5A3F86C1663D64A64E7401BB7CF85E4 /* FetchProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA97667157D7C69B28DB3C709B86071 /* FetchProfileUseCase.swift */; };
 		F65C460FF4726CB79D870E344E669ABA /* FetchReservationHistoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0EEC42CA211B89E6DAC74AEA2FBCA /* FetchReservationHistoryUseCase.swift */; };
+		F908D298AB48EE35B2B0404C9F143E0C /* EmergencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7A75FF0A6062F8DF31949F40663F18 /* EmergencyViewModel.swift */; };
 		FBC192600D033E5E1019EEA87505C6CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96416CA09497E0A56D47CE727DAD95E8 /* LaunchScreen.storyboard */; };
 		FEF807652D2B13B21DC2C0F11163F87B /* SendEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7972FBD4407F166330769B195A0BC06 /* SendEmailViewController.swift */; };
 /* End PBXBuildFile section */
@@ -103,10 +107,12 @@
 		50067E5752E3D380E08A93D851F5445D /* EmailCheckUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EmailCheckUseCase.swift; path = Signear/Domain/UseCase/EmailCheckUseCase.swift; sourceTree = SOURCE_ROOT; };
 		52B11649CC4096A00D6ABBA412768B03 /* EmergencyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmergencyTableViewCell.xib; sourceTree = "<group>"; };
 		5540BF507967F5D054164784C261FB2E /* ReservationListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationListViewModelTests.swift; sourceTree = "<group>"; };
+		593D8F04EA0C39EB4A0826402677411A /* EmergencyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyViewController.swift; sourceTree = "<group>"; };
 		5C77BEE5338CCE34711564A083207C80 /* Pods-signear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signear.debug.xcconfig"; path = "Target Support Files/Pods-signear/Pods-signear.debug.xcconfig"; sourceTree = "<group>"; };
 		6365C6C387580EEC98D4DE402C826A7D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		65475D5C035AC709F8F0EEF8AD8BB0FC /* SendEmailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendEmailViewModel.swift; sourceTree = "<group>"; };
 		72C4246A20D251AAFF7A925397BBE94C /* signearTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signearTests.swift; sourceTree = "<group>"; };
+		77277CDFFBBE8218BD2D7E79F9082B64 /* RequestEmergencyTranslationUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestEmergencyTranslationUseCase.swift; sourceTree = "<group>"; };
 		792AAA41DA166ADD2A6FC7BE2BB2C63E /* FindAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindAccountViewModel.swift; sourceTree = "<group>"; };
 		8746528048E2B09824BCF57691B29031 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "Signear/Util/Extension/UIView+Extension.swift"; sourceTree = SOURCE_ROOT; };
 		8CB85B3AAFB9EEF79E395BE256C76853 /* ReservationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationListViewController.swift; sourceTree = "<group>"; };
@@ -121,9 +127,11 @@
 		9B1190D3307A14F493D5225727BCF689 /* Pods-signearTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signearTests.debug.xcconfig"; path = "Target Support Files/Pods-signearTests/Pods-signearTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9BB278AB68F9871641EC4F6758C56E67 /* signearUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signearUITests.swift; sourceTree = "<group>"; };
 		9DD633B733F2BD073715E83D5611AFA4 /* signearUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = signearUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E7A75FF0A6062F8DF31949F40663F18 /* EmergencyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyViewModel.swift; sourceTree = "<group>"; };
 		A13A54BEB6018C628F615477D5CDDAF6 /* signear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = signear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A36EC3122CE8AC23FA4B8E0E88E580B5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A9B78FA5766EF015A3F008D2F2F682FF /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		AD240579F6DD21157E5C83066300436D /* Emergency.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Emergency.storyboard; sourceTree = "<group>"; };
 		ADA97667157D7C69B28DB3C709B86071 /* FetchProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchProfileUseCase.swift; sourceTree = "<group>"; };
 		BA58F53DEE7A5F0B7ED74668E525FD47 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		BB3E1DBDA736EFED47B690C94F3C7F2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +211,7 @@
 				976449BF5DB9B201357AA81142405CEB /* LoginUseCase.swift */,
 				BED2C7B3FFD59803D73004575C8FB0E6 /* LostEmailUseCase.swift */,
 				96E43BCC24F62AAA68ED001D91CCE16F /* MakeReservationUseCase.swift */,
+				77277CDFFBBE8218BD2D7E79F9082B64 /* RequestEmergencyTranslationUseCase.swift */,
 				DF91755246920FD74DB459861DD3BD24 /* SignUpUseCase.swift */,
 			);
 			path = UseCase;
@@ -269,22 +278,21 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		47B89ADD350D8A93C5AAF68A3B0DFC7A /* ReservationHistory */ = {
+		CCF4B24692B3D62BB2599967C6B50CCF /* Emergency */ = {
 			isa = PBXGroup;
 			children = (
-				175864A064EDEC754F697BDFE3201F54 /* ReservationHistory.storyboard */,
-				FCFE7C82B0EE8CE6F0F4F74325670652 /* ReservationHistoryTableViewCell.swift */,
-				36694D0CFADDA0282DA3884E7986B3B1 /* ReservationHistoryTableViewCell.xib */,
-				D9FB6414525490DD68A901FD0D331CC3 /* ReservationHistoryViewController.swift */,
-				C3885CC1BEF29F6BAEB034BAE50CC23F /* ReservationHistoryViewModel.swift */,
+				AD240579F6DD21157E5C83066300436D /* Emergency.storyboard */,
+				593D8F04EA0C39EB4A0826402677411A /* EmergencyViewController.swift */,
+				9E7A75FF0A6062F8DF31949F40663F18 /* EmergencyViewModel.swift */,
 			);
-			path = ReservationHistory;
+			path = Emergency;
 			sourceTree = "<group>";
 		};
 		35FDC902132009C06727BAC3499415FB /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
 				17423A746B8B973CF11C0AF998B230CF /* Account */,
+				CCF4B24692B3D62BB2599967C6B50CCF /* Emergency */,
 				801797E4381784CA0668E3138290DC42 /* MyPage */,
 				506A9131DFFB970619E03CD129091C92 /* Reservation */,
 				47B89ADD350D8A93C5AAF68A3B0DFC7A /* ReservationHistory */,
@@ -308,6 +316,18 @@
 				04C2F5F892BD0405F0DD3FC791F988DC /* UseCase */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		47B89ADD350D8A93C5AAF68A3B0DFC7A /* ReservationHistory */ = {
+			isa = PBXGroup;
+			children = (
+				175864A064EDEC754F697BDFE3201F54 /* ReservationHistory.storyboard */,
+				FCFE7C82B0EE8CE6F0F4F74325670652 /* ReservationHistoryTableViewCell.swift */,
+				36694D0CFADDA0282DA3884E7986B3B1 /* ReservationHistoryTableViewCell.xib */,
+				D9FB6414525490DD68A901FD0D331CC3 /* ReservationHistoryViewController.swift */,
+				C3885CC1BEF29F6BAEB034BAE50CC23F /* ReservationHistoryViewModel.swift */,
+			);
+			path = ReservationHistory;
 			sourceTree = "<group>";
 		};
 		4B7DB86823F8A666BD4D6C0FBF7ED0B1 /* signearTests */ = {
@@ -549,6 +569,7 @@
 			files = (
 				6A85845E16AFABF30BCDC92DB348A595 /* Account.storyboard in Resources */,
 				707BDEB8119DAAA79F629A2A071E3B6F /* Assets.xcassets in Resources */,
+				F253B24A81335C4EB47234B538F168FF /* Emergency.storyboard in Resources */,
 				791977DF0F5861A8CD6FDDE032DD48AB /* EmergencyTableViewCell.xib in Resources */,
 				FBC192600D033E5E1019EEA87505C6CA /* LaunchScreen.storyboard in Resources */,
 				6D776E7BE3FC42E43CC504A52778FDD7 /* MakeReservationTableViewCell.xib in Resources */,
@@ -693,6 +714,8 @@
 				F0B35AA0E1746782DB31D939C11040C7 /* EmailCheckUseCase.swift in Sources */,
 				85BDCDF29105310CA82ECCBBA8EBE476 /* EmailCheckViewController.swift in Sources */,
 				A351DFEF218363B5C48533C0D22A0778 /* EmailCheckViewModel.swift in Sources */,
+				AB17964C832AA93F7CB59730F2BB4EEE /* EmergencyViewController.swift in Sources */,
+				F908D298AB48EE35B2B0404C9F143E0C /* EmergencyViewModel.swift in Sources */,
 				F5A3F86C1663D64A64E7401BB7CF85E4 /* FetchProfileUseCase.swift in Sources */,
 				F65C460FF4726CB79D870E344E669ABA /* FetchReservationHistoryUseCase.swift in Sources */,
 				946F7836F8938103A71F4CCD3F145923 /* FetchReservationsUseCase.swift in Sources */,
@@ -717,6 +740,7 @@
 				60CBBD6614232DB895C065EC25565B3E /* MyPageViewModel.swift in Sources */,
 				357ED405F653E08B6CC0EBBE7E26A76F /* ProfileModel.swift in Sources */,
 				5038F00BB6B1A2DA6E54E4D124861C7F /* ProfileTableViewCell.swift in Sources */,
+				947195716C199A5CBBD46E59AAC797FC /* RequestEmergencyTranslationUseCase.swift in Sources */,
 				4B3AFB16ADA2DAB35BD718A603D2FFC6 /* ReservationHistoryModel.swift in Sources */,
 				B4971BD2CEB0E74812E2442B51BF2014 /* ReservationHistoryTableViewCell.swift in Sources */,
 				A2BF681AB307443BE08F2894FE892381 /* ReservationHistoryViewController.swift in Sources */,
