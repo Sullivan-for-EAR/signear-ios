@@ -64,10 +64,13 @@ extension EmergencyViewController {
     }
     
     private func createReservation() {
-        // TODO
+        let storyboard = UIStoryboard.init(name: "Reservation", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "MakeReservationViewController") as? MakeReservationViewController else { return }
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     private func showReservations() {
-        // TODO
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.switchRootViewToReservationListView()
     }
 }
