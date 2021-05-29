@@ -17,8 +17,8 @@
 		1B2DAF8FAB7DE5AC5130EC48377D09AE /* ReservationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF6EA73599CC9A4D34E09C8B2DA361D4 /* ReservationTableViewCell.xib */; };
 		1DBF8ED0E353E580EC3293CF8E755922 /* ReservationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6222AFD7DD977D018A354F94766DCE /* ReservationModel.swift */; };
 		270086DCAE7CB7208D3D5ED259BFFFD0 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B78FA5766EF015A3F008D2F2F682FF /* MyPageViewController.swift */; };
-		285CA84F2662954C0064BB4B /* ReservationBackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 285CA84E2662954C0064BB4B /* ReservationBackgroundView.xib */; };
 		357ED405F653E08B6CC0EBBE7E26A76F /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA58F53DEE7A5F0B7ED74668E525FD47 /* ProfileModel.swift */; };
+		36EA48E012B3BDADAB0A83E87B2C5E19 /* ReservationBackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E09BF31FC148D62BB3E672A22BC6D0C8 /* ReservationBackgroundView.xib */; };
 		4117E2C1F43A9861EE431D7562D12C84 /* MyPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1814C65AC782BC0985FBEFADE1306CB /* MyPageTableViewCell.xib */; };
 		43158C320522EC91D8DF73522152DC4C /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE49E4082FB8726A3A682A2C9AADAD8C /* HelloViewController.swift */; };
 		4644A82448E21718041F7EF252607E1B /* Pods_signearTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE05C9B1AA34F367DC4DA75116E08DD /* Pods_signearTests.framework */; };
@@ -100,7 +100,6 @@
 		175864A064EDEC754F697BDFE3201F54 /* ReservationHistory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReservationHistory.storyboard; sourceTree = "<group>"; };
 		18F0EEC42CA211B89E6DAC74AEA2FBCA /* FetchReservationHistoryUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchReservationHistoryUseCase.swift; sourceTree = "<group>"; };
 		264CB63401FCB6A478740241D3C87A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		285CA84E2662954C0064BB4B /* ReservationBackgroundView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationBackgroundView.xib; sourceTree = "<group>"; };
 		3064FB63ADE3FB2457BE5893A9F351D0 /* ReservationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationTableViewCell.swift; sourceTree = "<group>"; };
 		36694D0CFADDA0282DA3884E7986B3B1 /* ReservationHistoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReservationHistoryTableViewCell.xib; sourceTree = "<group>"; };
 		37720F258A8D9DA1706898194F44742F /* MakeReservationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeReservationViewModel.swift; sourceTree = "<group>"; };
@@ -155,6 +154,7 @@
 		D9FB6414525490DD68A901FD0D331CC3 /* ReservationHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationHistoryViewController.swift; sourceTree = "<group>"; };
 		DCB0AB31A1A8DB952CD48FE69D603436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF91755246920FD74DB459861DD3BD24 /* SignUpUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpUseCase.swift; path = Signear/Domain/UseCase/SignUpUseCase.swift; sourceTree = SOURCE_ROOT; };
+		E09BF31FC148D62BB3E672A22BC6D0C8 /* ReservationBackgroundView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationBackgroundView.xib; sourceTree = "<group>"; };
 		E0D9FA23B8C60512360E8EA167521382 /* MyPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewModel.swift; sourceTree = "<group>"; };
 		E5ED4B57E5272E356F5DB16D500B8CDE /* MakeReservationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeReservationTableViewCell.swift; sourceTree = "<group>"; };
 		E7972FBD4407F166330769B195A0BC06 /* SendEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendEmailViewController.swift; sourceTree = "<group>"; };
@@ -340,7 +340,7 @@
 				D1F8091C6292B4AA12FD16BC11A1F48B /* MakeReservationViewController.swift */,
 				37720F258A8D9DA1706898194F44742F /* MakeReservationViewModel.swift */,
 				9153FAFB2FA9BBE87ADAF13F94E0878E /* Reservation.storyboard */,
-				285CA84E2662954C0064BB4B /* ReservationBackgroundView.xib */,
+				E09BF31FC148D62BB3E672A22BC6D0C8 /* ReservationBackgroundView.xib */,
 				8CB85B3AAFB9EEF79E395BE256C76853 /* ReservationListViewController.swift */,
 				EA4226BD575979DF2683F21FFEDD44BE /* ReservationListViewModel.swift */,
 				3064FB63ADE3FB2457BE5893A9F351D0 /* ReservationTableViewCell.swift */,
@@ -580,10 +580,10 @@
 				4117E2C1F43A9861EE431D7562D12C84 /* MyPageTableViewCell.xib in Resources */,
 				CDE9DFF2603AE81C548323D721C2C1E8 /* ProfileTableViewCell.xib in Resources */,
 				7F1D9FC02203F29B57675241AA230176 /* Reservation.storyboard in Resources */,
+				36EA48E012B3BDADAB0A83E87B2C5E19 /* ReservationBackgroundView.xib in Resources */,
 				4B1CBE9010C6A66857CC3D35EDD808FF /* ReservationHistory.storyboard in Resources */,
 				E94C6CD2A73C6F19477774C2D68917E7 /* ReservationHistoryTableViewCell.xib in Resources */,
 				1B2DAF8FAB7DE5AC5130EC48377D09AE /* ReservationTableViewCell.xib in Resources */,
-				285CA84F2662954C0064BB4B /* ReservationBackgroundView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
