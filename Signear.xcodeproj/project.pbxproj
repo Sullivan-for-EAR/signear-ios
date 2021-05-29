@@ -278,16 +278,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		CCF4B24692B3D62BB2599967C6B50CCF /* Emergency */ = {
-			isa = PBXGroup;
-			children = (
-				AD240579F6DD21157E5C83066300436D /* Emergency.storyboard */,
-				593D8F04EA0C39EB4A0826402677411A /* EmergencyViewController.swift */,
-				9E7A75FF0A6062F8DF31949F40663F18 /* EmergencyViewModel.swift */,
-			);
-			path = Emergency;
-			sourceTree = "<group>";
-		};
 		35FDC902132009C06727BAC3499415FB /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,6 +416,16 @@
 				C057EB7DF16A2C738B0FA783D1963E7D /* Reservation */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		CCF4B24692B3D62BB2599967C6B50CCF /* Emergency */ = {
+			isa = PBXGroup;
+			children = (
+				AD240579F6DD21157E5C83066300436D /* Emergency.storyboard */,
+				593D8F04EA0C39EB4A0826402677411A /* EmergencyViewController.swift */,
+				9E7A75FF0A6062F8DF31949F40663F18 /* EmergencyViewModel.swift */,
+			);
+			path = Emergency;
 			sourceTree = "<group>";
 		};
 		D65C76E67460DB5DA75406F247880156 /* Data */ = {
