@@ -19,7 +19,7 @@ class ReservationListViewController: UIViewController {
     // MARK: Properties - Private
     
     private let disposeBag = DisposeBag()
-    
+    private let tableViewBackgroundView =  Bundle.main.loadNibNamed("ReservationBackgroundView", owner: nil, options: nil)?.first as! UIView
     private var viewModel: ReservationListViewModelType? {
         didSet {
             bindUI()
@@ -45,6 +45,16 @@ class ReservationListViewController: UIViewController {
 extension ReservationListViewController {
     
     private func configureUI() {
+        let profileNavigationItem = UIBarButtonItem(image: .init(named: "profileIcon"), style: .plain, target: self, action: nil)
+        navigationItem.rightBarButtonItem = profileNavigationItem
+        profileNavigationItem.rx.tap
+            .asDriver()
+            .drive(onNext: { [weak self] in
+                self?.showMyPage()
+            }).disposed(by: disposeBag)
+        
+        tableView.rx.setDelegate(self)
+            .disposed(by: disposeBag)
         tableView.register(UINib(nibName: "ReservationTableViewCell", bundle: nil), forCellReuseIdentifier: "ReservationTableViewCell")
         tableView.estimatedRowHeight = UITableView.automaticDimension
     
@@ -62,6 +72,10 @@ extension ReservationListViewController {
     
     private func bindUI() {
         viewModel?.outputs.reservations
+            .do { [weak self] reservations in
+                guard let self = self else { return }
+                self.tableView.backgroundView = reservations.count > 0 ? nil : self.tableViewBackgroundView
+            }
             .drive(tableView.rx.items(cellIdentifier: "ReservationTableViewCell", cellType: ReservationTableViewCell.self)) ({ index, reservation, cell in
                 cell.setReservation(reservation)
             }).disposed(by: disposeBag)
@@ -72,6 +86,22 @@ extension ReservationListViewController {
     }
     
     private func makeReservation() {
-        // TODO
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "MakeReservationViewController") as? MakeReservationViewController else { return }
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func showMyPage() {
+        let storyboard = UIStoryboard.init(name: "MyPage", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "MyPageViewController") as? MyPageViewController else { return }
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+// MARK: - UITableViewDelegate
+
+extension ReservationListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        // Delete tableHeaderView
+        return .leastNormalMagnitude
     }
 }
