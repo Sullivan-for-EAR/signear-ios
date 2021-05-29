@@ -70,7 +70,6 @@ extension EmergencyViewController {
     }
     
     private func showReservations() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.switchRootViewToReservationListView()
+        navigationController?.popToRootViewController(animated: true)
     }
 }

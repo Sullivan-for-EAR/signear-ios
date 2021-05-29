@@ -40,16 +40,6 @@ class MyPageViewController: UIViewController {
         viewModel = MyPageViewModel()
         configureUI()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.isNavigationBarHidden = false
-    }
 }
 
 // MARK: - Private
@@ -102,7 +92,8 @@ extension MyPageViewController {
     }
     
     private func logout() {
-        navigationController?.popToRootViewController(animated: true)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.switchRootViewToInitialView()
     }
 }
 
