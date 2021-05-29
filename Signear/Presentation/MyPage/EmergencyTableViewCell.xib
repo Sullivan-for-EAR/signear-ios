@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="EmergencyTableViewCell" id="2P6-Ce-ldw" customClass="EmergencyTableViewCell" customModule="signear" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2P6-Ce-ldw" id="A7z-xe-qXh">
+                <rect key="frame" x="0.0" y="0.0" width="384.5" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sosIcon" translatesAutoresizingMaskIntoConstraints="NO" id="vF5-rV-LCS">
+                        <rect key="frame" x="15" y="17" width="74" height="46"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="긴급통역 신청" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kce-eW-Wr6">
+                        <rect key="frame" x="101" y="16" width="135.5" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="zyA-aP-oXa"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="교통사고, 응급환자, 경찰조사" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Liz-b9-IXc">
+                        <rect key="frame" x="101" y="48" width="161" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Liz-b9-IXc" firstAttribute="leading" secondItem="Kce-eW-Wr6" secondAttribute="leading" id="3fD-Kp-pxw"/>
+                    <constraint firstItem="Kce-eW-Wr6" firstAttribute="top" secondItem="A7z-xe-qXh" secondAttribute="top" constant="16" id="6rj-Ml-1dG"/>
+                    <constraint firstAttribute="bottom" secondItem="vF5-rV-LCS" secondAttribute="bottom" constant="17" id="CDm-KR-hsS"/>
+                    <constraint firstItem="vF5-rV-LCS" firstAttribute="leading" secondItem="A7z-xe-qXh" secondAttribute="leading" constant="15" id="Fbv-GV-xNR"/>
+                    <constraint firstItem="Liz-b9-IXc" firstAttribute="top" secondItem="Kce-eW-Wr6" secondAttribute="bottom" constant="2" id="Oom-9Q-vAY"/>
+                    <constraint firstItem="vF5-rV-LCS" firstAttribute="centerY" secondItem="A7z-xe-qXh" secondAttribute="centerY" id="izs-DQ-aPg"/>
+                    <constraint firstItem="vF5-rV-LCS" firstAttribute="top" secondItem="A7z-xe-qXh" secondAttribute="top" constant="17" id="uMM-2E-d1m"/>
+                    <constraint firstItem="Kce-eW-Wr6" firstAttribute="leading" secondItem="vF5-rV-LCS" secondAttribute="trailing" constant="12" id="ylW-9d-sia"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="1" green="0.27058823529999998" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+            <point key="canvasLocation" x="-150" y="35"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="sosIcon" width="74" height="46"/>
+    </resources>
+</document>
