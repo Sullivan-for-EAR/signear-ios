@@ -17,6 +17,10 @@
 		1B2DAF8FAB7DE5AC5130EC48377D09AE /* ReservationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF6EA73599CC9A4D34E09C8B2DA361D4 /* ReservationTableViewCell.xib */; };
 		1DBF8ED0E353E580EC3293CF8E755922 /* ReservationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6222AFD7DD977D018A354F94766DCE /* ReservationModel.swift */; };
 		270086DCAE7CB7208D3D5ED259BFFFD0 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B78FA5766EF015A3F008D2F2F682FF /* MyPageViewController.swift */; };
+		2870763F2663DCA400135E20 /* LoginDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2870763E2663DCA400135E20 /* LoginDTO.swift */; };
+		287076422663DD1900135E20 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287076412663DD1900135E20 /* LoginRepository.swift */; };
+		287076452663DD6600135E20 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287076442663DD6600135E20 /* APIManager.swift */; };
+		287076472663DE3E00135E20 /* APIManager+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287076462663DE3E00135E20 /* APIManager+Login.swift */; };
 		357ED405F653E08B6CC0EBBE7E26A76F /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA58F53DEE7A5F0B7ED74668E525FD47 /* ProfileModel.swift */; };
 		36EA48E012B3BDADAB0A83E87B2C5E19 /* ReservationBackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E09BF31FC148D62BB3E672A22BC6D0C8 /* ReservationBackgroundView.xib */; };
 		4117E2C1F43A9861EE431D7562D12C84 /* MyPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1814C65AC782BC0985FBEFADE1306CB /* MyPageTableViewCell.xib */; };
@@ -105,6 +109,10 @@
 		175864A064EDEC754F697BDFE3201F54 /* ReservationHistory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReservationHistory.storyboard; sourceTree = "<group>"; };
 		18F0EEC42CA211B89E6DAC74AEA2FBCA /* FetchReservationHistoryUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchReservationHistoryUseCase.swift; sourceTree = "<group>"; };
 		264CB63401FCB6A478740241D3C87A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2870763E2663DCA400135E20 /* LoginDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDTO.swift; sourceTree = "<group>"; };
+		287076412663DD1900135E20 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		287076442663DD6600135E20 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		287076462663DE3E00135E20 /* APIManager+Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager+Login.swift"; sourceTree = "<group>"; };
 		28E5453218C8E909A9B1D7AB024BFE71 /* CancelReservationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelReservationUseCase.swift; sourceTree = "<group>"; };
 		3064FB63ADE3FB2457BE5893A9F351D0 /* ReservationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationTableViewCell.swift; sourceTree = "<group>"; };
 		36694D0CFADDA0282DA3884E7986B3B1 /* ReservationHistoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReservationHistoryTableViewCell.xib; sourceTree = "<group>"; };
@@ -292,6 +300,31 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		2870763D2663DC7800135E20 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2870763E2663DCA400135E20 /* LoginDTO.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		287076402663DD0200135E20 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				287076412663DD1900135E20 /* LoginRepository.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		287076432663DD4200135E20 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				287076442663DD6600135E20 /* APIManager.swift */,
+				287076462663DE3E00135E20 /* APIManager+Login.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
 		35FDC902132009C06727BAC3499415FB /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +351,7 @@
 			children = (
 				B6659EE89307ABD4507E361F2494E247 /* Model */,
 				04C2F5F892BD0405F0DD3FC791F988DC /* UseCase */,
+				287076402663DD0200135E20 /* Interface */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -449,6 +483,8 @@
 		D65C76E67460DB5DA75406F247880156 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				2870763D2663DC7800135E20 /* Entity */,
+				287076432663DD4200135E20 /* Remote */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -739,6 +775,7 @@
 				F5A3F86C1663D64A64E7401BB7CF85E4 /* FetchProfileUseCase.swift in Sources */,
 				F65C460FF4726CB79D870E344E669ABA /* FetchReservationHistoryUseCase.swift in Sources */,
 				C0510DAEB63D0F9631763D0693DC580B /* FetchReservationInfoUseCase.swift in Sources */,
+				287076472663DE3E00135E20 /* APIManager+Login.swift in Sources */,
 				946F7836F8938103A71F4CCD3F145923 /* FetchReservationsUseCase.swift in Sources */,
 				7511ECDA6579AB3FB5CF32F3A383193F /* FetchReservationsUseCaseMock.swift in Sources */,
 				073C3BA9C5CB56375751D26439FA957C /* FindAccountViewController.swift in Sources */,
@@ -746,6 +783,7 @@
 				43158C320522EC91D8DF73522152DC4C /* HelloViewController.swift in Sources */,
 				51A78F3114CA9DF3BC2BBA45C1C55CC5 /* HelloViewModel.swift in Sources */,
 				72D7060CA2AA8730BD941196AB0472C3 /* InitialViewController.swift in Sources */,
+				287076422663DD1900135E20 /* LoginRepository.swift in Sources */,
 				AA5D45D53C07491BDAE1ECB10E06771C /* InitialViewModel.swift in Sources */,
 				190B3C05857A13D732D2A2E9F86778C3 /* LoginUseCase.swift in Sources */,
 				E2FCB1213B7142D064C737148E336C44 /* LoginViewController.swift in Sources */,
@@ -758,6 +796,8 @@
 				DE6D2524A9B73AB9CC52AF6C339C2016 /* MakeReservationViewModel.swift in Sources */,
 				C02C0321A155F8B9835A5E1C6C767AFF /* MyPageTableViewCell.swift in Sources */,
 				270086DCAE7CB7208D3D5ED259BFFFD0 /* MyPageViewController.swift in Sources */,
+				287076452663DD6600135E20 /* APIManager.swift in Sources */,
+				2870763F2663DCA400135E20 /* LoginDTO.swift in Sources */,
 				60CBBD6614232DB895C065EC25565B3E /* MyPageViewModel.swift in Sources */,
 				357ED405F653E08B6CC0EBBE7E26A76F /* ProfileModel.swift in Sources */,
 				5038F00BB6B1A2DA6E54E4D124861C7F /* ProfileTableViewCell.swift in Sources */,
