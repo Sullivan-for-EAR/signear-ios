@@ -53,6 +53,7 @@
 		F0B35AA0E1746782DB31D939C11040C7 /* EmailCheckUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50067E5752E3D380E08A93D851F5445D /* EmailCheckUseCase.swift */; };
 		F44563EAF43720B1C8C4F3E22D99ABF0 /* SendEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65475D5C035AC709F8F0EEF8AD8BB0FC /* SendEmailViewModel.swift */; };
 		FBC192600D033E5E1019EEA87505C6CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96416CA09497E0A56D47CE727DAD95E8 /* LaunchScreen.storyboard */; };
+		FD4676FB26629201001D4B7B /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4676FA26629200001D4B7B /* UIButton+Extension.swift */; };
 		FEF807652D2B13B21DC2C0F11163F87B /* SendEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7972FBD4407F166330769B195A0BC06 /* SendEmailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +134,7 @@
 		F8A9632BE67F2508395B045FD704C15A /* Pods-signear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signear.release.xcconfig"; path = "Target Support Files/Pods-signear/Pods-signear.release.xcconfig"; sourceTree = "<group>"; };
 		FB6784DB4A2F5F282EF425AA1F8AF15F /* Pods-signear-signearUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signear-signearUITests.release.xcconfig"; path = "Target Support Files/Pods-signear-signearUITests/Pods-signear-signearUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FD40C7BBD49EAD5E6EAE9E71DF0C2E9C /* Pods-signear-signearUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-signear-signearUITests.debug.xcconfig"; path = "Target Support Files/Pods-signear-signearUITests/Pods-signear-signearUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FD4676FA26629200001D4B7B /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIButton+Extension.swift"; path = "Signear/Util/Extension/UIButton+Extension.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,6 +362,7 @@
 			children = (
 				986D49494B5F46935E40F5D9BE90A6C3 /* UIColor+Extension.swift */,
 				8746528048E2B09824BCF57691B29031 /* UIView+Extension.swift */,
+				FD4676FA26629200001D4B7B /* UIButton+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 				72D7060CA2AA8730BD941196AB0472C3 /* InitialViewController.swift in Sources */,
 				AA5D45D53C07491BDAE1ECB10E06771C /* InitialViewModel.swift in Sources */,
 				190B3C05857A13D732D2A2E9F86778C3 /* LoginUseCase.swift in Sources */,
+				FD4676FB26629201001D4B7B /* UIButton+Extension.swift in Sources */,
 				E2FCB1213B7142D064C737148E336C44 /* LoginViewController.swift in Sources */,
 				C7C8C419215D6D2791A7FD149D4838D8 /* LoginViewModel.swift in Sources */,
 				94BF951A2BF56959EF966D1E22D3FF9A /* LostEmailUseCase.swift in Sources */,

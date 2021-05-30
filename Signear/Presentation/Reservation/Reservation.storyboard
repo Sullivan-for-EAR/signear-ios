@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hxe-GJ-LQA">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -87,7 +87,7 @@
                                 <locale key="locale" localeIdentifier="ko_KR"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1H-GA-Wil">
-                                <rect key="frame" x="368" y="74.5" width="46" height="30"/>
+                                <rect key="frame" x="368" y="237" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
                         </subviews>
@@ -102,7 +102,7 @@
                             <constraint firstItem="vX7-0n-RB5" firstAttribute="top" secondItem="uO6-Zg-QHu" secondAttribute="bottom" constant="10" id="JZv-MH-zlu"/>
                             <constraint firstItem="mCH-7Q-K66" firstAttribute="bottom" secondItem="vX7-0n-RB5" secondAttribute="bottom" id="Lma-8S-w9H"/>
                             <constraint firstItem="mCH-7Q-K66" firstAttribute="trailing" secondItem="vX7-0n-RB5" secondAttribute="trailing" id="RCh-E3-Vni"/>
-                            <constraint firstItem="eRu-6J-Gof" firstAttribute="top" secondItem="G1H-GA-Wil" secondAttribute="bottom" constant="172.5" id="TER-dh-tTj"/>
+                            <constraint firstItem="eRu-6J-Gof" firstAttribute="top" secondItem="G1H-GA-Wil" secondAttribute="bottom" constant="10" id="TER-dh-tTj"/>
                             <constraint firstItem="eRu-6J-Gof" firstAttribute="leading" secondItem="mCH-7Q-K66" secondAttribute="leading" id="WB4-cD-qhf"/>
                             <constraint firstItem="4hm-s4-XQ1" firstAttribute="leading" secondItem="mCH-7Q-K66" secondAttribute="leading" constant="16" id="WiU-uZ-5Eu"/>
                             <constraint firstItem="mCH-7Q-K66" firstAttribute="trailing" secondItem="PKc-h1-rd8" secondAttribute="trailing" id="czk-Dv-fOc"/>

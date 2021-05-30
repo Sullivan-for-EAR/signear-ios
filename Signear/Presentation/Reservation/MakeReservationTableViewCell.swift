@@ -44,7 +44,7 @@ class MakeReservationTableViewCell: UITableViewCell {
     @IBOutlet private weak var makeReservationButton: UIButton!
     
     // MARK: Properties - Private
-    var delegate: MakeReservationTableViewCellDelegate?
+    weak var delegate: MakeReservationTableViewCellDelegate?
     private let disposeBag = DisposeBag()
     
     // MARK: - Life Cycle
@@ -52,7 +52,7 @@ class MakeReservationTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.configureUI()
+        configureUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -70,12 +70,12 @@ class MakeReservationTableViewCell: UITableViewCell {
 extension MakeReservationTableViewCell: UITextFieldDelegate {
     func setReservation(_ reservation: MakeReservationModel) {
         // Example
-        self.dateButton.setTitle(reservation.date, for: .normal)
+        dateButton.setTitle(reservation.date, for: .normal)
 
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        self.delegate?.locationTextFieldInput(textField.text!)
+        delegate?.locationTextFieldInput(textField.text!)
     }
 }
 
@@ -84,71 +84,63 @@ extension MakeReservationTableViewCell: UITextFieldDelegate {
 extension MakeReservationTableViewCell {
     private func configureUI() {
         // TODO
-        self.selectionStyle = .none
+        selectionStyle = .none
         
-        self.locationTextfield.delegate = self
+        locationTextfield.delegate = self
         
-        self.dateButton.rx.tap
+        dateButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] in
                 self?.delegate?.dateBtnPressed()
             }).disposed(by: disposeBag)
         
-        self.startTimeButton.rx.tap
+        startTimeButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] in
                 self?.delegate?.startTimeBtnPressed()
             }).disposed(by: disposeBag)
         
-        self.endTimeButton.rx.tap
+        endTimeButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] in
                 self?.delegate?.endTimeBtnPressed()
             }).disposed(by: disposeBag)
         
-        self.centerButton.rx.tap
+        centerButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] in
                 self?.delegate?.centerBtnPressed()
             }).disposed(by: disposeBag)
         
-        self.locationTextfield.rx.controlEvent([.editingDidEnd])
+        locationTextfield.rx.controlEvent([.editingDidEnd])
             .withLatestFrom(locationTextfield.rx.text.orEmpty)
             .subscribe(onNext: { text in
                 self.delegate?.locationTextFieldInput(text)
             }).disposed(by: disposeBag)
         
-        self.offlineButton.rx.tap
+        offlineButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] in
-                self?.offlineButton.backgroundColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 0.05)
-                self?.offlineButton.layer.borderWidth = 2.0
-                self?.offlineButton.layer.borderColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
-                self?.onlineButton.layer.borderWidth = 1.0
-                self?.onlineButton.layer.borderColor = #colorLiteral(red: 0.8700304627, green: 0.8700509667, blue: 0.8700398803, alpha: 1)
-                self?.onlineButton.backgroundColor = .clear
+                self?.offlineButton.setButton(state: .selected)
+                self?.onlineButton.setButton(state: .normal)
                 self?.delegate?.offlineBtnPressed(true)
             }).disposed(by: disposeBag)
         
-        self.onlineButton.rx.tap
+        onlineButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] in
-                self?.onlineButton.backgroundColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 0.05)
-                self?.onlineButton.layer.borderWidth = 2.0
-                self?.onlineButton.layer.borderColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
-                self?.offlineButton.backgroundColor = .clear
-                self?.offlineButton.layer.borderWidth = 1.0
-                self?.offlineButton.layer.borderColor = #colorLiteral(red: 0.8700304627, green: 0.8700509667, blue: 0.8700398803, alpha: 1)
+                self?.offlineButton.setButton(state: .normal)
+                self?.onlineButton.setButton(state: .selected)
                 self?.delegate?.onlineBtnPressed(false)
             }).disposed(by: disposeBag)
         
-        self.requestsTextView.rx.didEndEditing
+        requestsTextView.rx.didEndEditing
             .withLatestFrom(requestsTextView.rx.text.orEmpty)
             .subscribe(onNext: { text in
                 self.delegate?.requestsTextViewChanged(text)
             }).disposed(by: disposeBag)
         
-        self.makeReservationButton.rx.tap
+        makeReservationButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] in
                 self?.delegate?.makeReservationBtnPressed()

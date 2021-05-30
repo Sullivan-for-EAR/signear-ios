@@ -23,7 +23,7 @@ class MakeReservationViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var dateTimePicker: UIDatePicker!
     @IBOutlet private weak var centerPickerView: UIPickerView!
-    @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet private weak var doneButton: UIButton!
     
     // MARK: Properties - Private
     
@@ -44,7 +44,7 @@ class MakeReservationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = MakeReservationViewModel()
-        self.configureUI()
+        configureUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -71,10 +71,16 @@ class MakeReservationViewController: UIViewController {
 // MARK: - Private
 extension MakeReservationViewController {
     private func configureUI() {
-        self.backgroundView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.6071275685)
-        self.backgroundView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: UIScreen.main.bounds.height)
+        navigationItem.title = "예약하기"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "leftArrowIcon"),
+                                                           style: .plain,
+                                                           target: self,
+                                                           action: #selector(pressedClose))
         
-        self.dateTimePicker.locale = Locale(identifier: "ko_kr")
+        backgroundView.backgroundColor = UIColor(rgb: 0x000000, alpha: 0.61)
+        backgroundView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: UIScreen.main.bounds.height)
+        
+        dateTimePicker.locale = Locale(identifier: "ko_kr")
         
         centerPickerView.delegate = self
         centerPickerView.dataSource = self
@@ -87,13 +93,13 @@ extension MakeReservationViewController {
                 // TODO
             }).disposed(by: disposeBag)
         
-        self.doneButton.rx.tap
+        doneButton.rx.tap
             .asDriver()
-            .drive(onNext: {
+            .drive(onNext: { [self] in
                 self.setPickerResult()
             }).disposed(by: disposeBag)
         
-        self.backButton.rx.tap
+        backButton.rx.tap
             .asDriver()
             .drive(onNext: {
                 //self.dismiss(animated: true, completion: nil)
@@ -107,6 +113,31 @@ extension MakeReservationViewController {
                 cell.setReservation(reservation)
                 
             }).disposed(by: disposeBag)
+    }
+    
+    private func showPicker(type: PickerType) {
+        pickerType = type
+        if #available(iOS 14.0, *) {
+            switch type {
+            case .date:
+                dateTimePicker.preferredDatePickerStyle = .inline
+                dateTimePicker.datePickerMode = .date
+            case .startTime:
+                dateTimePicker.preferredDatePickerStyle = .wheels
+                dateTimePicker.datePickerMode = .time
+            case .endTime:
+                dateTimePicker.preferredDatePickerStyle = .wheels
+                dateTimePicker.datePickerMode = .time
+            }
+            view.addSubview(backgroundView)
+            view.bringSubviewToFront(dateTimePicker)
+            view.bringSubviewToFront(doneButton)
+            dateTimePicker.isHidden = false
+            dateTimePicker.backgroundColor = .white
+        } else {
+            // Fallback on earlier versions
+        }
+        
     }
     
     // MARK: uitest
@@ -146,43 +177,39 @@ extension MakeReservationViewController {
         print("dict: \(self.MakeReservationModelDict)")
     }
     
+    @objc func pressedClose() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @objc func keyboardWillShow(_ notification: Notification) {
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
             guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {
                 return
             }
             
             let keyboardHeight: CGFloat
             if #available(iOS 11.0, *) {
-                keyboardHeight = keyboardFrame.cgRectValue.height - self.view.safeAreaInsets.bottom
+                keyboardHeight = keyboardFrame.cgRectValue.height - self!.view.safeAreaInsets.bottom
             } else {
                 keyboardHeight = keyboardFrame.cgRectValue.height
             }
             
-            self.view.frame = CGRect(x: 0, y: -keyboardHeight, width: UIScreen.main.bounds.width, height: self.view.frame.height)
-            self.view.layoutIfNeeded()
+            self!.view.frame = CGRect(x: 0, y: -keyboardHeight, width: UIScreen.main.bounds.width, height: self!.view.frame.height)
+            self!.view.layoutIfNeeded()
             let indexPath = IndexPath(row: 0, section: 0)
-            self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+            self!.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
         }
         
     }
     
     @objc func keyboardWillHide(_ notification: Notification) {
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
             guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {
                 return
             }
             
-            let keyboardHeight: CGFloat
-            if #available(iOS 11.0, *) {
-                keyboardHeight = keyboardFrame.cgRectValue.height - self.view.safeAreaInsets.bottom
-            } else {
-                keyboardHeight = keyboardFrame.cgRectValue.height
-            }
-            
-            self.view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: self.view.frame.height)
-            self.view.layoutIfNeeded()
-            
+            self!.view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: self!.view.frame.height)
+            self!.view.layoutIfNeeded()
         }
         
     }
@@ -212,52 +239,19 @@ extension MakeReservationViewController: UIPickerViewDelegate, UIPickerViewDataS
 
 extension MakeReservationViewController: MakeReservationTableViewCellDelegate {
     func dateBtnPressed() {
-        self.pickerType = .date
-        if #available(iOS 14.0, *) {
-            self.view.addSubview(self.backgroundView)
-            self.view.bringSubviewToFront(self.dateTimePicker)
-            self.view.bringSubviewToFront(self.doneButton)
-            self.dateTimePicker.preferredDatePickerStyle = .inline
-            self.dateTimePicker.datePickerMode = .date
-            self.dateTimePicker.isHidden = false
-            self.dateTimePicker.backgroundColor = .white
-        } else {
-            // Fallback on earlier versions
-        }
+        showPicker(type: .date)
     }
     
     func startTimeBtnPressed() {
-        self.pickerType = .startTime
-        if #available(iOS 14.0, *) {
-            self.view.addSubview(self.backgroundView)
-            self.view.bringSubviewToFront(self.dateTimePicker)
-            self.view.bringSubviewToFront(self.doneButton)
-            self.dateTimePicker.preferredDatePickerStyle = .wheels
-            self.dateTimePicker.datePickerMode = .time
-            self.dateTimePicker.isHidden = false
-            self.dateTimePicker.backgroundColor = .white
-        } else {
-            // Fallback on earlier versions
-        }
+        showPicker(type: .startTime)
     }
     
     func endTimeBtnPressed() {
+        showPicker(type: .endTime)
         self.pickerType = .endTime
-        if #available(iOS 14.0, *) {
-            self.view.addSubview(self.backgroundView)
-            self.view.bringSubviewToFront(self.dateTimePicker)
-            self.view.bringSubviewToFront(self.doneButton)
-            self.dateTimePicker.preferredDatePickerStyle = .wheels
-            self.dateTimePicker.datePickerMode = .time
-            self.dateTimePicker.isHidden = false
-            self.dateTimePicker.backgroundColor = .white
-        } else {
-            // Fallback on earlier versions
-        }
     }
     
     func centerBtnPressed() {
-        // TODO
         self.view.addSubview(self.backgroundView)
         self.view.bringSubviewToFront(self.centerPickerView)
         self.view.bringSubviewToFront(self.doneButton)
