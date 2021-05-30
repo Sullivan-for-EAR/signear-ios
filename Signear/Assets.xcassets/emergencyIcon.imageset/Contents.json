@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "checkReservationIcon.png",
+      "filename" : "emergencyIcon.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "checkReservationIcon@2x.png",
+      "filename" : "emergencyIcon@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "checkReservationIconicon@3x.png",
+      "filename" : "emergencyIcon@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

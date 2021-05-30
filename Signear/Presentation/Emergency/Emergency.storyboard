@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Emergency View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="EmergencyViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="EmergencyViewController" customModule="signear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emergencyIcon" translatesAutoresizingMaskIntoConstraints="NO" id="JFa-GB-3i1">
+                                <rect key="frame" x="177" y="285.5" width="60" height="60"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYe-bF-txW" userLabel="description Label">
+                                <rect key="frame" x="40" y="366.5" width="334" height="173"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="교통사고, 응급환자, 경찰조사">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="AppleSDGothicNeo-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">에 해당하는 경우에만 긴급통역을 신청하세요.
+
+그 외의 경우에는 수어통역을 예약하세요.</string>
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="AppleSDGothicNeo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B07-Sx-Lu4">
+                                <rect key="frame" x="22" y="701" width="370" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="lso-NI-xuQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="수어통역 예약하기">
+                                    <color key="titleColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderwidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerradius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bordercolor">
+                                        <color key="value" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCR-k7-FXK">
+                                <rect key="frame" x="22" y="768" width="370" height="57"/>
+                                <color key="backgroundColor" red="1" green="0.27058823529999998" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="TZi-kz-Lm3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="긴급통역 신청하기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerradius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eCR-k7-FXK" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" constant="-22" id="4CC-QE-I3A"/>
+                            <constraint firstItem="B07-Sx-Lu4" firstAttribute="bottom" secondItem="eCR-k7-FXK" secondAttribute="top" constant="-10" id="7mP-cv-aRf"/>
+                            <constraint firstItem="B07-Sx-Lu4" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" constant="-22" id="AE8-nz-tTL"/>
+                            <constraint firstItem="RYe-bF-txW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="DId-50-vuM"/>
+                            <constraint firstItem="JFa-GB-3i1" firstAttribute="bottom" secondItem="RYe-bF-txW" secondAttribute="top" constant="-21" id="NLB-PU-z3e"/>
+                            <constraint firstItem="eCR-k7-FXK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="22" id="Qwi-Ds-sha"/>
+                            <constraint firstItem="RYe-bF-txW" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="YqB-gW-IGs"/>
+                            <constraint firstItem="B07-Sx-Lu4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="22" id="bDt-tp-SdD"/>
+                            <constraint firstItem="RYe-bF-txW" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" constant="-40" id="lHo-TG-Ha5"/>
+                            <constraint firstItem="RYe-bF-txW" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="lik-1Y-TgY"/>
+                            <constraint firstItem="JFa-GB-3i1" firstAttribute="centerX" secondItem="RYe-bF-txW" secondAttribute="centerX" id="p1Y-qm-2JB"/>
+                            <constraint firstItem="eCR-k7-FXK" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="-37" id="ymG-J0-4yk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emergencyTranslationButton" destination="eCR-k7-FXK" id="QcB-ZY-sJQ"/>
+                        <outlet property="reservationButton" destination="B07-Sx-Lu4" id="BJy-ka-i5Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-45" y="70"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="emergencyIcon" width="60" height="60"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
