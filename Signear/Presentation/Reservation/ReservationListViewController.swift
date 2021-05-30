@@ -82,7 +82,8 @@ extension ReservationListViewController {
     }
     
     private func showReservation(_ reservation: ReservationModel) {
-        // TODO
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "ReservationInfoViewController") as? ReservationInfoViewController else { return }
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     private func makeReservation() {
