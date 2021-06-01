@@ -10,9 +10,7 @@ import RxCocoa
 import RxSwift
 
 protocol MakeReservationTableViewCellDelegate: class {
-    func dateBtnPressed()
-    func startTimeBtnPressed()
-    func endTimeBtnPressed()
+    func pickerPressed(_ pickerType: String)
     func centerBtnPressed()
     func locationTextFieldInput(_ locationText: String)
     func offlineBtnPressed(_ isOfflineSelected: Bool)
@@ -28,19 +26,14 @@ class MakeReservationTableViewCell: UITableViewCell {
     @IBOutlet private weak var startTimeButton: UIButton!
     @IBOutlet private weak var endTimeButton: UIButton!
     @IBOutlet private weak var centerButton: UIButton!
-    
     @IBOutlet private weak var locationTextfield: UITextField!
-    
     @IBOutlet private weak var offlineButton: UIButton!
     @IBOutlet private weak var signLanguageLabel: UILabel!
     @IBOutlet private weak var offlineLabel: UILabel!
-    
     @IBOutlet private weak var onlineButton: UIButton!
     @IBOutlet private weak var visionTranslationLabel: UILabel!
     @IBOutlet private weak var onlineLabel: UILabel!
-    
     @IBOutlet private weak var requestsTextView: UITextView!
-    
     @IBOutlet private weak var makeReservationButton: UIButton!
     
     // MARK: Properties - Private
@@ -65,17 +58,21 @@ class MakeReservationTableViewCell: UITableViewCell {
     }
 }
 
-// MARK: - Internal
+// MARK: - UITextFieldDelegate
 
-extension MakeReservationTableViewCell: UITextFieldDelegate {
+extension MakeReservationTableViewCell {
     func setReservation(_ reservation: MakeReservationModel) {
-        // Example
         dateButton.setTitle(reservation.date, for: .normal)
-
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        delegate?.locationTextFieldInput(textField.text!)
+        startTimeButton.setTitle(reservation.startTime, for: .normal)
+        endTimeButton.setTitle(reservation.endTime, for: .normal)
+        centerButton.setTitle("\(reservation.center)  ", for: .normal)
+        if reservation.type == .offline {
+            offlineButton.setButton(state: .selected)
+            onlineButton.setButton(state: .normal)
+        } else {
+            offlineButton.setButton(state: .normal)
+            onlineButton.setButton(state: .selected)
+        }
     }
 }
 
@@ -83,27 +80,29 @@ extension MakeReservationTableViewCell: UITextFieldDelegate {
 
 extension MakeReservationTableViewCell {
     private func configureUI() {
-        // TODO
         selectionStyle = .none
         
-        locationTextfield.delegate = self
+        requestsTextView.contentOffset = .zero
+        requestsTextView.contentInset = UIEdgeInsets.zero
+        requestsTextView.textContainerInset = UIEdgeInsets(top: 15.0, left: 25.0, bottom: 15.0, right: 25.0)
+        requestsTextView.textContainer.lineFragmentPadding = 0
         
         dateButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] in
-                self?.delegate?.dateBtnPressed()
+                self?.delegate?.pickerPressed("date")
             }).disposed(by: disposeBag)
         
         startTimeButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] in
-                self?.delegate?.startTimeBtnPressed()
+                self?.delegate?.pickerPressed("startTime")
             }).disposed(by: disposeBag)
         
         endTimeButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] in
-                self?.delegate?.endTimeBtnPressed()
+                self?.delegate?.pickerPressed("endTime")
             }).disposed(by: disposeBag)
         
         centerButton.rx.tap
@@ -112,8 +111,10 @@ extension MakeReservationTableViewCell {
                 self?.delegate?.centerBtnPressed()
             }).disposed(by: disposeBag)
         
-        locationTextfield.rx.controlEvent([.editingDidEnd])
+        locationTextfield.rx.controlEvent([.editingChanged])
             .withLatestFrom(locationTextfield.rx.text.orEmpty)
+            .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
             .subscribe(onNext: { text in
                 self.delegate?.locationTextFieldInput(text)
             }).disposed(by: disposeBag)
@@ -134,8 +135,10 @@ extension MakeReservationTableViewCell {
                 self?.delegate?.onlineBtnPressed(false)
             }).disposed(by: disposeBag)
         
-        requestsTextView.rx.didEndEditing
+        requestsTextView.rx.didChangeSelection
             .withLatestFrom(requestsTextView.rx.text.orEmpty)
+            .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
             .subscribe(onNext: { text in
                 self.delegate?.requestsTextViewChanged(text)
             }).disposed(by: disposeBag)

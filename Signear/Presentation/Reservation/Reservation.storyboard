@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="otH-pF-ylS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hxe-GJ-LQA">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -78,10 +78,18 @@
                                 <rect key="frame" x="0.0" y="112" width="414" height="750"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BuP-7R-cXG">
+                                <rect key="frame" x="0.0" y="345" width="414" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pickerView>
                             <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="eRu-6J-Gof">
                                 <rect key="frame" x="0.0" y="277" width="414" height="352"/>
                                 <locale key="locale" localeIdentifier="ko_KR"/>
                             </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eV5-up-Wpa">
+                                <rect key="frame" x="358" y="64" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mCH-7Q-K66"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -89,19 +97,26 @@
                             <constraint firstItem="vX7-0n-RB5" firstAttribute="leading" secondItem="mCH-7Q-K66" secondAttribute="leading" id="0gN-jp-IiD"/>
                             <constraint firstItem="uO6-Zg-QHu" firstAttribute="top" secondItem="mCH-7Q-K66" secondAttribute="top" constant="26" id="0oa-69-IO4"/>
                             <constraint firstItem="uO6-Zg-QHu" firstAttribute="centerX" secondItem="mCH-7Q-K66" secondAttribute="centerX" id="30K-vF-V1m"/>
+                            <constraint firstItem="BuP-7R-cXG" firstAttribute="centerY" secondItem="mCH-7Q-K66" secondAttribute="centerY" id="8ma-5d-dik"/>
                             <constraint firstItem="eRu-6J-Gof" firstAttribute="centerY" secondItem="mCH-7Q-K66" secondAttribute="centerY" id="AoW-AM-y0v"/>
                             <constraint firstItem="vX7-0n-RB5" firstAttribute="top" secondItem="uO6-Zg-QHu" secondAttribute="bottom" constant="10" id="JZv-MH-zlu"/>
                             <constraint firstItem="mCH-7Q-K66" firstAttribute="bottom" secondItem="vX7-0n-RB5" secondAttribute="bottom" id="Lma-8S-w9H"/>
+                            <constraint firstItem="mCH-7Q-K66" firstAttribute="trailing" secondItem="eV5-up-Wpa" secondAttribute="trailing" constant="10" id="P8e-I4-mUp"/>
+                            <constraint firstItem="eV5-up-Wpa" firstAttribute="top" secondItem="mCH-7Q-K66" secondAttribute="top" constant="20" id="PZH-ld-gYx"/>
                             <constraint firstItem="mCH-7Q-K66" firstAttribute="trailing" secondItem="vX7-0n-RB5" secondAttribute="trailing" id="RCh-E3-Vni"/>
                             <constraint firstItem="eRu-6J-Gof" firstAttribute="leading" secondItem="mCH-7Q-K66" secondAttribute="leading" id="WB4-cD-qhf"/>
                             <constraint firstItem="4hm-s4-XQ1" firstAttribute="leading" secondItem="mCH-7Q-K66" secondAttribute="leading" constant="16" id="WiU-uZ-5Eu"/>
+                            <constraint firstItem="BuP-7R-cXG" firstAttribute="width" secondItem="mCH-7Q-K66" secondAttribute="width" id="osd-aD-Kcl"/>
+                            <constraint firstItem="BuP-7R-cXG" firstAttribute="centerX" secondItem="mCH-7Q-K66" secondAttribute="centerX" id="wjr-Vl-Ebj"/>
                             <constraint firstItem="mCH-7Q-K66" firstAttribute="trailing" secondItem="eRu-6J-Gof" secondAttribute="trailing" id="ysN-Ek-Nt5"/>
                             <constraint firstItem="4hm-s4-XQ1" firstAttribute="centerY" secondItem="uO6-Zg-QHu" secondAttribute="centerY" id="zXC-0b-Jje"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="4hm-s4-XQ1" id="Nbf-AA-GWE"/>
+                        <outlet property="centerPickerView" destination="BuP-7R-cXG" id="azU-jV-SGH"/>
                         <outlet property="dateTimePicker" destination="eRu-6J-Gof" id="kw8-hR-0HL"/>
+                        <outlet property="doneButton" destination="eV5-up-Wpa" id="p5f-xA-rdo"/>
                         <outlet property="tableView" destination="vX7-0n-RB5" id="4Pw-KI-vri"/>
                     </connections>
                 </viewController>

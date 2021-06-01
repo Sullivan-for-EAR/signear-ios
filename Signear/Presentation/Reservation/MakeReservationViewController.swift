@@ -36,9 +36,7 @@ class MakeReservationViewController: UIViewController {
         }
     }
     private var centerLists: [String] = ["강남구", "강동구", "강북구", "강서구", "관악구", "광진구", "구로구", "금천구", "노원구", "도봉구", "동대문구", "동작구", "마포구", "서대문구", "서초구", "성동구", "성북구", "송파구", "양천구", "영등포구", "용산구", "은평구", "종로구", "중구", "중랑구"]
-    
-    var MakeReservationModelDict: [String: Any] = [:]
-    
+        
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
@@ -142,39 +140,27 @@ extension MakeReservationViewController {
     
     // MARK: uitest
     private func setPickerResult() {
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "ko_kr")
-        
         if !dateTimePicker.isHidden {
             switch pickerType {
             case .date:
-                let tempDate = self.dateTimePicker.date
-                dateFormatter.dateFormat = "M월 dd일 EEEE"
-                let dateStr = dateFormatter.string(from: tempDate)
-                self.MakeReservationModelDict["date"] = dateStr
-                break
+                let dateStr = DateFormatter.getDateString(date: self.dateTimePicker.date)
+                viewModel?.inputs.updateDate(dateStr)
             case .startTime:
-                dateFormatter.dateFormat = "a hh:mm"
-                let dateStr = dateFormatter.string(from: self.dateTimePicker.date)
-                self.MakeReservationModelDict["startTime"] = dateStr
-                break
+                let startTimeStr = DateFormatter.getTimeString(date: self.dateTimePicker.date)
+                viewModel?.inputs.updateStartTime(startTimeStr)
             case .endTime:
-                dateFormatter.dateFormat = "a hh:mm"
-                let dateStr = dateFormatter.string(from: self.dateTimePicker.date)
-                self.MakeReservationModelDict["endTime"] = dateStr
-                break
+                let endTimeStr = DateFormatter.getTimeString(date: self.dateTimePicker.date)
+                viewModel?.inputs.updateEndTime(endTimeStr)
             default:
                 break
             }
             self.dateTimePicker.isHidden = true
             self.backgroundView.removeFromSuperview()
         } else if !centerPickerView.isHidden {
-            
             self.centerPickerView.isHidden = true
             self.backgroundView.removeFromSuperview()
         }
         print("selected date: \(self.dateTimePicker.date)")
-        print("dict: \(self.MakeReservationModelDict)")
     }
     
     @objc func pressedClose() {
@@ -229,8 +215,7 @@ extension MakeReservationViewController: UIPickerViewDelegate, UIPickerViewDataS
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.MakeReservationModelDict["center"] = centerLists[row]
-        print("selected center: \(centerLists[row])")
+        viewModel?.inputs.updateCenter(centerLists[row])
     }
     
 }
@@ -238,17 +223,17 @@ extension MakeReservationViewController: UIPickerViewDelegate, UIPickerViewDataS
 
 
 extension MakeReservationViewController: MakeReservationTableViewCellDelegate {
-    func dateBtnPressed() {
-        showPicker(type: .date)
-    }
-    
-    func startTimeBtnPressed() {
-        showPicker(type: .startTime)
-    }
-    
-    func endTimeBtnPressed() {
-        showPicker(type: .endTime)
-        self.pickerType = .endTime
+    func pickerPressed(_ pickerType: String) {
+        switch pickerType {
+        case "date":
+            showPicker(type: .date)
+        case "startTime":
+            showPicker(type: .startTime)
+        case "endTime":
+            showPicker(type: .endTime)
+        default:
+            break
+        }
     }
     
     func centerBtnPressed() {
@@ -261,22 +246,25 @@ extension MakeReservationViewController: MakeReservationTableViewCellDelegate {
     func locationTextFieldInput(_ locationText: String) {
         // TODO
         print("장소: \(locationText)")
-        
+        viewModel?.inputs.updateLocation(locationText)
     }
     
     func offlineBtnPressed(_ isOfflineSelected: Bool) {
         // TODO
         print("isOffline: \(isOfflineSelected)")
+        viewModel?.inputs.updateType(.offline)
     }
     
     func onlineBtnPressed(_ isOfflineSelected: Bool) {
         // TODO
         print("isOffline: \(isOfflineSelected)")
+        viewModel?.inputs.updateType(.online)
     }
     
     func requestsTextViewChanged(_ requestText: String) {
         // TODO
         print("요청사항: \(requestText)")
+        viewModel?.inputs.updateRequests(requestText)
     }
     
     func makeReservationBtnPressed() {
