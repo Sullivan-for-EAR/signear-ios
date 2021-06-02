@@ -19,7 +19,6 @@ class MakeReservationViewController: UIViewController {
     
     // MARK: - Properties - UI
     
-    @IBOutlet private weak var backButton: UIButton!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var dateTimePicker: UIDatePicker!
     @IBOutlet private weak var centerPickerView: UIPickerView!
@@ -93,14 +92,8 @@ extension MakeReservationViewController {
         
         doneButton.rx.tap
             .asDriver()
-            .drive(onNext: { [self] in
-                self.setPickerResult()
-            }).disposed(by: disposeBag)
-        
-        backButton.rx.tap
-            .asDriver()
-            .drive(onNext: {
-                //self.dismiss(animated: true, completion: nil)
+            .drive(onNext: { [weak self] in
+                self?.setPickerResult()
             }).disposed(by: disposeBag)
     }
     
@@ -164,7 +157,7 @@ extension MakeReservationViewController {
     }
     
     @objc func pressedClose() {
-        self.dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     
     @objc func keyboardWillShow(_ notification: Notification) {
@@ -244,31 +237,23 @@ extension MakeReservationViewController: MakeReservationTableViewCellDelegate {
     }
     
     func locationTextFieldInput(_ locationText: String) {
-        // TODO
-        print("장소: \(locationText)")
         viewModel?.inputs.updateLocation(locationText)
     }
     
     func offlineBtnPressed(_ isOfflineSelected: Bool) {
-        // TODO
-        print("isOffline: \(isOfflineSelected)")
         viewModel?.inputs.updateType(.offline)
     }
     
-    func onlineBtnPressed(_ isOfflineSelected: Bool) {
-        // TODO
-        print("isOffline: \(isOfflineSelected)")
+    func onlineBtnPressed(_ isOnlineSelected: Bool) {
         viewModel?.inputs.updateType(.online)
     }
     
     func requestsTextViewChanged(_ requestText: String) {
-        // TODO
-        print("요청사항: \(requestText)")
         viewModel?.inputs.updateRequests(requestText)
     }
     
     func makeReservationBtnPressed() {
-        // TODO
+        viewModel?.inputs.makeReservation()
     }
     
     

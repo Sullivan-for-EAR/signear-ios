@@ -14,7 +14,7 @@ protocol MakeReservationTableViewCellDelegate: class {
     func centerBtnPressed()
     func locationTextFieldInput(_ locationText: String)
     func offlineBtnPressed(_ isOfflineSelected: Bool)
-    func onlineBtnPressed(_ isOfflineSelected: Bool)
+    func onlineBtnPressed(_ isOnlineSelected: Bool)
     func requestsTextViewChanged(_ requestText: String)
     func makeReservationBtnPressed()
 }
@@ -58,8 +58,6 @@ class MakeReservationTableViewCell: UITableViewCell {
     }
 }
 
-// MARK: - UITextFieldDelegate
-
 extension MakeReservationTableViewCell {
     func setReservation(_ reservation: MakeReservationModel) {
         dateButton.setTitle(reservation.date, for: .normal)
@@ -86,6 +84,7 @@ extension MakeReservationTableViewCell {
         requestsTextView.contentInset = UIEdgeInsets.zero
         requestsTextView.textContainerInset = UIEdgeInsets(top: 15.0, left: 25.0, bottom: 15.0, right: 25.0)
         requestsTextView.textContainer.lineFragmentPadding = 0
+        requestsTextView.delegate = self
         
         dateButton.rx.tap
             .asDriver()
@@ -132,25 +131,45 @@ extension MakeReservationTableViewCell {
             .drive(onNext: { [weak self] in
                 self?.offlineButton.setButton(state: .normal)
                 self?.onlineButton.setButton(state: .selected)
-                self?.delegate?.onlineBtnPressed(false)
+                self?.delegate?.onlineBtnPressed(true)
             }).disposed(by: disposeBag)
         
-        requestsTextView.rx.didChangeSelection
-            .withLatestFrom(requestsTextView.rx.text.orEmpty)
-            .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
-            .distinctUntilChanged()
-            .subscribe(onNext: { text in
-                self.delegate?.requestsTextViewChanged(text)
-            }).disposed(by: disposeBag)
+//        requestsTextView.rx.didChangeSelection
+//            .withLatestFrom(requestsTextView.rx.text.orEmpty)
+//            .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
+//            .distinctUntilChanged()
+//            .subscribe(onNext: { text in
+//                self.delegate?.requestsTextViewChanged(text)
+//            }).disposed(by: disposeBag)
         
         makeReservationButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] in
                 self?.delegate?.makeReservationBtnPressed()
             }).disposed(by: disposeBag)
+        
     }
     
     private func bindUI() {
         // TODO
+    }
+}
+
+extension MakeReservationTableViewCell: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == "수어통역 목적과 요청사항을 입력하세요" {
+            textView.text = ""
+            textView.textColor = .black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        let str = textView.text.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "\n", with: "")
+        if textView.text.isEmpty || str.count == 0 {
+            textView.text = "수어통역 목적과 요청사항을 입력하세요"
+            textView.textColor = UIColor(rgb: 0xB6B6B6)
+        } else {
+            self.delegate?.requestsTextViewChanged(textView.text)
+        }
     }
 }
