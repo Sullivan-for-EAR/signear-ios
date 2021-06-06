@@ -219,7 +219,7 @@
                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B00-tr-n09">
                         <rect key="frame" x="23" y="451" width="274" height="50"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="수어통역이 필요한 장소를 입력해줏세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vHc-he-akp">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="수어통역이 필요한 장소를 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vHc-he-akp">
                                 <rect key="frame" x="26" y="13.5" width="222" height="23.5"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -519,6 +519,7 @@
                 <outlet property="requestsTextView" destination="nsx-Lw-5hW" id="C2b-mz-nZ8"/>
                 <outlet property="signLanguageLabel" destination="w68-IK-LH5" id="Qc8-vu-HTw"/>
                 <outlet property="startTimeButton" destination="OHI-rC-YW8" id="6l7-6u-1Z0"/>
+                <outlet property="textViewHeightConstraint" destination="7g8-pb-x6L" id="49L-oC-GpA"/>
                 <outlet property="visionTranslationLabel" destination="cYg-y7-EoH" id="lFz-SR-xqW"/>
             </connections>
             <point key="canvasLocation" x="100.00000000000001" y="103.79464285714285"/>

@@ -107,6 +107,8 @@ extension MakeReservationViewController {
     }
     
     private func showPicker(type: PickerType) {
+        view.endEditing(true)
+        doneButton.isHidden = false
         pickerType = type
         if #available(iOS 14.0, *) {
             switch type {
@@ -153,6 +155,7 @@ extension MakeReservationViewController {
             self.centerPickerView.isHidden = true
             self.backgroundView.removeFromSuperview()
         }
+        doneButton.isHidden = true
         print("selected date: \(self.dateTimePicker.date)")
     }
     
@@ -233,7 +236,9 @@ extension MakeReservationViewController: MakeReservationTableViewCellDelegate {
         self.view.addSubview(self.backgroundView)
         self.view.bringSubviewToFront(self.centerPickerView)
         self.view.bringSubviewToFront(self.doneButton)
-        self.centerPickerView.isHidden = false
+        centerPickerView.isHidden = false
+        doneButton.isHidden = false
+        view.endEditing(true)
     }
     
     func locationTextFieldInput(_ locationText: String) {
@@ -253,7 +258,16 @@ extension MakeReservationViewController: MakeReservationTableViewCellDelegate {
     }
     
     func makeReservationBtnPressed() {
-        viewModel?.inputs.makeReservation()
+        view.endEditing(true)
+        if let result = viewModel?.inputs.makeReservation() {
+            // TODO
+            if result {
+                // 예약하기
+            } else {
+                // 파라미터 부족
+            }
+        }
+        
     }
     
     

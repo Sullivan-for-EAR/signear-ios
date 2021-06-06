@@ -20,7 +20,7 @@ class MakeReservationUseCase: MakeReservationUseCaseType {
         let dateStr = formatter.string(from: Date())
         
            
-        let value = [MakeReservationModel(date: dateStr, startTime: "오전 00:00", endTime: "오전 00:00", center: "강동구", location: "", requests: "", type: .offline)]
+        let value = [MakeReservationModel(date: dateStr, startTime: "오전 00:00", endTime: "오전 00:00", center: "강남구", location: "", requests: "", type: .offline)]
         
         return .just(value)
     }

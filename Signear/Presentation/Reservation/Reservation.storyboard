@@ -69,27 +69,30 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BuP-7R-cXG">
-                                <rect key="frame" x="0.0" y="345" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="277" width="414" height="216"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pickerView>
                             <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="eRu-6J-Gof">
                                 <rect key="frame" x="0.0" y="277" width="414" height="352"/>
                                 <locale key="locale" localeIdentifier="ko_KR"/>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eV5-up-Wpa">
-                                <rect key="frame" x="367" y="64" width="37" height="30"/>
-                                <state key="normal" title="Done"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eV5-up-Wpa">
+                                <rect key="frame" x="0.0" y="247" width="414" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                <state key="normal" title="완료"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mCH-7Q-K66"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vX7-0n-RB5" firstAttribute="leading" secondItem="mCH-7Q-K66" secondAttribute="leading" id="0gN-jp-IiD"/>
-                            <constraint firstItem="BuP-7R-cXG" firstAttribute="centerY" secondItem="mCH-7Q-K66" secondAttribute="centerY" id="8ma-5d-dik"/>
+                            <constraint firstItem="eRu-6J-Gof" firstAttribute="top" secondItem="eV5-up-Wpa" secondAttribute="bottom" id="46a-LN-0Ov"/>
                             <constraint firstItem="eRu-6J-Gof" firstAttribute="centerY" secondItem="mCH-7Q-K66" secondAttribute="centerY" id="AoW-AM-y0v"/>
+                            <constraint firstItem="eV5-up-Wpa" firstAttribute="centerX" secondItem="mCH-7Q-K66" secondAttribute="centerX" id="H3W-RZ-pUf"/>
                             <constraint firstItem="mCH-7Q-K66" firstAttribute="bottom" secondItem="vX7-0n-RB5" secondAttribute="bottom" id="Lma-8S-w9H"/>
-                            <constraint firstItem="mCH-7Q-K66" firstAttribute="trailing" secondItem="eV5-up-Wpa" secondAttribute="trailing" constant="10" id="P8e-I4-mUp"/>
-                            <constraint firstItem="eV5-up-Wpa" firstAttribute="top" secondItem="mCH-7Q-K66" secondAttribute="top" constant="20" id="PZH-ld-gYx"/>
+                            <constraint firstItem="eV5-up-Wpa" firstAttribute="width" secondItem="mCH-7Q-K66" secondAttribute="width" id="Nwk-s5-dqB"/>
+                            <constraint firstItem="BuP-7R-cXG" firstAttribute="top" secondItem="eV5-up-Wpa" secondAttribute="bottom" id="OFW-nV-VWQ"/>
                             <constraint firstItem="mCH-7Q-K66" firstAttribute="trailing" secondItem="vX7-0n-RB5" secondAttribute="trailing" id="RCh-E3-Vni"/>
                             <constraint firstItem="eRu-6J-Gof" firstAttribute="leading" secondItem="mCH-7Q-K66" secondAttribute="leading" id="WB4-cD-qhf"/>
                             <constraint firstItem="BuP-7R-cXG" firstAttribute="width" secondItem="mCH-7Q-K66" secondAttribute="width" id="osd-aD-Kcl"/>

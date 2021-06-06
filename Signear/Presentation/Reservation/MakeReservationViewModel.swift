@@ -18,7 +18,7 @@ protocol MakeReservationViewModelInputs {
     func updateLocation(_ location: String)
     func updateRequests(_ requests: String)
     func updateType(_ type: ReservationType)
-    func makeReservation()
+    func makeReservation() -> Bool
 }
 
 protocol MakeReservationViewModelOutputs {
@@ -105,8 +105,14 @@ extension MakeReservationViewModel: MakeReservationViewModelInputs {
         _reservation.accept([reservation])
     }
     
-    func makeReservation() {
-        // TODO
+    func makeReservation() -> Bool {
+        let reservation = _reservation.value[0]
+        print("reservation: \(reservation)")
+        if reservation.location != "" && reservation.requests != "" {
+            return true
+        } else {
+            return false
+        }
     }
 }
 
