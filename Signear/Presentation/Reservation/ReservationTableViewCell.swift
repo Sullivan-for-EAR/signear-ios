@@ -34,7 +34,7 @@ class ReservationTableViewCell: UITableViewCell {
 extension ReservationTableViewCell {
     
     func setReservation(_ reservaion: ReservationModel) {
-        titleLabel.text = reservaion.title
+        titleLabel.text = reservaion.area
         dateLabel.text = reservaion.date
         reservationStatusImageView.image = reservaion.status.getImage()
     }

@@ -46,8 +46,6 @@ class MakeReservationViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewModel?.inputs.fetchReservation()
-        
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(keyboardWillShow),
@@ -103,6 +101,12 @@ extension MakeReservationViewController {
                 cell.delegate = self
                 cell.setReservation(reservation)
                 
+            }).disposed(by: disposeBag)
+        
+        viewModel?.outputs.createReservationResult
+            .filter { $0 }
+            .drive(onNext: { [weak self] _ in
+                self?.navigationController?.popViewController(animated: true)
             }).disposed(by: disposeBag)
     }
     
@@ -193,7 +197,6 @@ extension MakeReservationViewController {
             self!.view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: self!.view.frame.height)
             self!.view.layoutIfNeeded()
         }
-        
     }
 }
 
@@ -211,12 +214,9 @@ extension MakeReservationViewController: UIPickerViewDelegate, UIPickerViewDataS
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        viewModel?.inputs.updateCenter(centerLists[row])
+        viewModel?.inputs.updateArea(centerLists[row])
     }
-    
 }
-
-
 
 extension MakeReservationViewController: MakeReservationTableViewCellDelegate {
     func pickerPressed(_ pickerType: String) {
@@ -246,11 +246,11 @@ extension MakeReservationViewController: MakeReservationTableViewCellDelegate {
     }
     
     func offlineBtnPressed(_ isOfflineSelected: Bool) {
-        viewModel?.inputs.updateType(.offline)
+        viewModel?.inputs.updateType(.sign)
     }
     
     func onlineBtnPressed(_ isOnlineSelected: Bool) {
-        viewModel?.inputs.updateType(.online)
+        viewModel?.inputs.updateType(.video)
     }
     
     func requestsTextViewChanged(_ requestText: String) {
@@ -259,16 +259,6 @@ extension MakeReservationViewController: MakeReservationTableViewCellDelegate {
     
     func makeReservationBtnPressed() {
         view.endEditing(true)
-        if let result = viewModel?.inputs.makeReservation() {
-            // TODO
-            if result {
-                // 예약하기
-            } else {
-                // 파라미터 부족
-            }
-        }
-        
+        viewModel?.inputs.makeReservation()
     }
-    
-    
 }

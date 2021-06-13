@@ -10,19 +10,19 @@ import RxCocoa
 import RxSwift
 
 protocol MakeReservationViewModelInputs {
-    func fetchReservation()
     func updateDate(_ date: String)
     func updateStartTime(_ startTime: String)
     func updateEndTime(_ endTime: String)
-    func updateCenter(_ center: String)
+    func updateArea(_ area: String)
     func updateLocation(_ location: String)
     func updateRequests(_ requests: String)
-    func updateType(_ type: ReservationType)
-    func makeReservation() -> Bool
+    func updateType(_ type: MakeReservationModel.MeetingType)
+    func makeReservation()
 }
 
 protocol MakeReservationViewModelOutputs {
     var reservation: Driver<[MakeReservationModel]> { get }
+    var createReservationResult: Driver<Bool> { get }
 }
 
 protocol MakeReservationViewModelType {
@@ -35,19 +35,19 @@ class MakeReservationViewModel: MakeReservationViewModelType {
     // MARK: Properties - Private
     
     private let disposeBag = DisposeBag()
-    private let useCase: MakeReservationUseCaseType
+    private let useCase: CreateReservationUseCaseType
     private var _reservation: BehaviorRelay<[MakeReservationModel]> = .init(value: [])
+    private var _createReservationResult: PublishRelay<Bool> = .init()
     
     // MARK: - Constructor
     
-    init(useCase: MakeReservationUseCaseType) {
+    init(useCase: CreateReservationUseCaseType) {
         self.useCase = useCase
     }
     
     convenience init() {
-        self.init(useCase: MakeReservationUseCase())
+        self.init(useCase: CreateReservationUseCase())
     }
-    
 }
 
 // MARK: - MakeReservationViewModelInputs
@@ -55,13 +55,6 @@ class MakeReservationViewModel: MakeReservationViewModelType {
 extension MakeReservationViewModel: MakeReservationViewModelInputs {
     
     var inputs: MakeReservationViewModelInputs { return self }
-    
-    func fetchReservation() {
-        useCase.fetchReservation()
-            .catchAndReturn([])
-            .bind(to: _reservation)
-            .disposed(by: disposeBag)
-    }
     
     func updateDate(_ date: String) {
         var reservation = _reservation.value[0]
@@ -81,44 +74,50 @@ extension MakeReservationViewModel: MakeReservationViewModelInputs {
         _reservation.accept([reservation])
     }
 
-    func updateCenter(_ center: String) {
+    func updateArea(_ area: String) {
         var reservation = _reservation.value[0]
-        reservation.center = center
+        reservation.area = area
         _reservation.accept([reservation])
     }
 
-    func updateLocation(_ location: String) {
+    func updateLocation(_ address: String) {
         var reservation = _reservation.value[0]
-        reservation.location = location
+        reservation.address = address
         _reservation.accept([reservation])
     }
 
     func updateRequests(_ requests: String) {
         var reservation = _reservation.value[0]
-        reservation.requests = requests
+        reservation.request = requests
         _reservation.accept([reservation])
     }
 
-    func updateType(_ type: ReservationType) {
+    func updateType(_ meetingType: MakeReservationModel.MeetingType) {
         var reservation = _reservation.value[0]
-        reservation.type = type
+        reservation.meetingType = meetingType
         _reservation.accept([reservation])
     }
     
-    func makeReservation() -> Bool {
+    func makeReservation() {
         let reservation = _reservation.value[0]
-        print("reservation: \(reservation)")
-        if reservation.location != "" && reservation.requests != "" {
-            return true
-        } else {
-            return false
-        }
+        useCase.createReservationUseCase(reservation: reservation)
+            .subscribe(onNext: { [weak self] result in
+                switch result {
+                case .success:
+                    self?._createReservationResult.accept(true)
+                case .failure:
+                    // TODO : API Error
+                    break
+                }
+            }).disposed(by: disposeBag)
     }
 }
 
 // MARK: - MakeReservationViewModelOutputs
 
 extension MakeReservationViewModel: MakeReservationViewModelOutputs {
+    
     var outputs: MakeReservationViewModelOutputs { return self }
     var reservation: Driver<[MakeReservationModel]> { _reservation.asDriver(onErrorJustReturn: [])}
+    var createReservationResult: Driver<Bool> { _createReservationResult.asDriver(onErrorJustReturn: false) }
 }

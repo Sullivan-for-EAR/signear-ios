@@ -10,12 +10,12 @@ import RxCocoa
 import RxSwift
 
 protocol ReservationInfoViewModelInputs {
-    func fetchReservationInfo()
-    func cancelReservation()
+    func fetchReservationInfo(reservationId: String)
+    func cancelReservation(reservationId: String)
 }
 
 protocol ReservationInfoViewModelOutputs {
-    var reservationInfo: Driver<ReservationInfoModel> { get }
+    var reservationInfo: Driver<ReservationInfoModel?> { get }
     var cancelResult: Driver<Bool> { get }
 }
 
@@ -30,8 +30,9 @@ class ReservationInfoViewModel: ReservationInfoViewModelType {
     private let fetchReservationInfoUseCase: FetchReservationInfoUseCaseType
     private let cancelReservationUseCase: CancelReservationUseCaseType
     private let disposeBag = DisposeBag()
-    private var _reservationInfo: PublishRelay<ReservationInfoModel> = .init()
+    private var _reservationInfo: PublishRelay<ReservationInfoModel?> = .init()
     private var _cancelResult: PublishRelay<Bool> = .init()
+    private var reservationId: String?
     
     init(fetchReservationInfoUseCase: FetchReservationInfoUseCaseType,
          cancelReservationUseCase: CancelReservationUseCaseType) {
@@ -51,16 +52,22 @@ extension ReservationInfoViewModel: ReservationInfoViewModelInputs {
     
     var inputs: ReservationInfoViewModelInputs { return self }
     
-    func fetchReservationInfo() {
-        fetchReservationInfoUseCase.fetchReservationInfo()
-            .bind(to: _reservationInfo)
-            .disposed(by: disposeBag)
+    func fetchReservationInfo(reservationId: String) {
+        self.reservationId = reservationId
+        fetchReservationInfoUseCase.fetchReservationInfo(reservationId: reservationId)
+            .subscribe(onNext: { [weak self] result in
+                switch result {
+                case .success(let info):
+                    self?._reservationInfo.accept(info)
+                    break
+                case .failure:
+                    // TODO : API Error 처리
+                    break
+                }
+            }).disposed(by: disposeBag)
     }
     
-    func cancelReservation() {
-        cancelReservationUseCase.cancelReservation()
-            .bind(to: _cancelResult)
-            .disposed(by: disposeBag)
+    func cancelReservation(reservationId: String) {
     }
 }
 
@@ -72,5 +79,5 @@ extension ReservationInfoViewModel: ReservationInfoViewModelOutputs {
     }
     
     var outputs: ReservationInfoViewModelOutputs { return self }
-    var reservationInfo: Driver<ReservationInfoModel> { _reservationInfo.asDriver(onErrorJustReturn: .init()) }
+    var reservationInfo: Driver<ReservationInfoModel?> { _reservationInfo.asDriver(onErrorJustReturn: nil) }
 }

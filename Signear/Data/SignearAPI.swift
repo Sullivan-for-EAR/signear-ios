@@ -30,10 +30,13 @@ class SignearAPI {
         static let createReservationURL = "/reservation/customer/create"
         static let fetchReservationInfoURL = "/reservation/customer"
         static let fetchReservationListURL = "/reservation/customer/list"
+        static let cancelReservationURL = "/reservation/customer/cancle/{reservationId}"
     }
     
     // MARK: Properties - Private
+    
     var token: String?
+    var customerId: Int?
     
     // MARK: - Constructor
     
@@ -87,6 +90,7 @@ extension SignearAPI {
                     switch response.result {
                     case .success(let data):
                         self?.token = data.accessToken
+                        self?.customerId = data.userProfile.customerID
                         observer.onNext(.success(data))
                     case .failure(let error):
                         print(error.localizedDescription)
@@ -118,6 +122,7 @@ extension SignearAPI {
                     switch response.result {
                     case .success(let data):
                         self?.token = data.accessToken
+                        self?.customerId = data.userProfile.customerID
                         observer.onNext(.success(data))
                     case .failure(let error):
                         print(error.localizedDescription)
