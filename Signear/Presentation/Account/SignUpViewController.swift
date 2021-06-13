@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class SignUpViewController: UIViewController {
     
@@ -16,8 +18,13 @@ class SignUpViewController: UIViewController {
     @IBOutlet private weak var phoneTextField: UITextField!
     @IBOutlet private weak var signUpButton: UIButton!
     
+    // MARK : Properties - Internal
+    
+    var email: String!
+    
     // MARK : Properties - Private
     
+    private let disposeBag = DisposeBag()
     private var viewModel: LoginViewModelType? {
         didSet {
             bindUI()
@@ -27,7 +34,9 @@ class SignUpViewController: UIViewController {
     // MARK : Life Cycle
     
     override func viewDidLoad() {
-        initUI()
+        super.viewDidLoad()
+        viewModel = LoginViewModel()
+        configureUI()
     }
 }
 
@@ -35,7 +44,8 @@ class SignUpViewController: UIViewController {
 
 extension SignUpViewController {
     
-    private func initUI() {
+    private func configureUI() {
+        emailTextField.text = email
         initBackgroundColor()
     }
     
@@ -48,7 +58,16 @@ extension SignUpViewController {
     }
     
     private func bindUI() {
-        
+        viewModel?.outputs.loginResult
+            .filter { $0 }
+            .drive(onNext: { [weak self] result in
+                self?.showHelloViewController()
+            }).disposed(by: disposeBag)
+    }
+    
+    private func showHelloViewController() {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "HelloViewController") as? HelloViewController else { return }
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

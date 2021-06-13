@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class InitialViewController: UIViewController {
     
@@ -14,6 +16,7 @@ class InitialViewController: UIViewController {
     
     // MARK : Properties - Private
     
+    private let disposeBag = DisposeBag()
     private var viewModel: InitialViewModelType? {
         didSet {
             bindUI()
@@ -23,7 +26,7 @@ class InitialViewController: UIViewController {
     // MARK : Life Cycle
     
     override func viewDidLoad() {
-        initUI()
+        configureUI()
     }
     
 }
@@ -32,8 +35,13 @@ class InitialViewController: UIViewController {
 
 extension InitialViewController {
     
-    private func initUI() {
+    private func configureUI() {
         initBackgroundColor()
+        startButton.rx.tap
+            .asDriver()
+            .drive(onNext: { [weak self] in
+                self?.showEmailCheckViewController()
+            }).disposed(by: disposeBag)
     }
     
     private func initBackgroundColor() {
@@ -46,5 +54,10 @@ extension InitialViewController {
     
     private func bindUI() {
         
+    }
+    
+    private func showEmailCheckViewController() {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "EmailCheckViewController") as? EmailCheckViewController else { return }
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class EmailCheckViewController: UIViewController {
     
@@ -17,6 +19,7 @@ class EmailCheckViewController: UIViewController {
     
     // MARK : Properties - Private
     
+    private let disposeBag = DisposeBag()
     private var viewModel: EmailCheckViewModelType? {
         didSet {
             bindUI()
@@ -26,7 +29,9 @@ class EmailCheckViewController: UIViewController {
     // MARK : Life Cycle
     
     override func viewDidLoad() {
-        initUI()
+        super.viewDidLoad()
+        viewModel = EmailCheckViewModel()
+        configureUI()
     }
     
 }
@@ -35,8 +40,22 @@ class EmailCheckViewController: UIViewController {
 
 extension EmailCheckViewController {
     
-    private func initUI() {
+    private func configureUI() {
+        #if DEBUG
+        emailTextField.text = "wjdtjq90@naver.com"
+        #endif
+        
         initBackgroundColor()
+        
+        nextButton.rx.tap
+            .asDriver()
+            .drive(onNext: { [weak self] in
+                guard let self = self,
+                      let email = self.emailTextField.text else {
+                    return
+                }
+                self.viewModel?.inputs.checkEmail(email)
+            }).disposed(by: disposeBag)
     }
     
     private func initBackgroundColor() {
@@ -48,6 +67,25 @@ extension EmailCheckViewController {
     }
     
     private func bindUI() {
-        
+        viewModel?.outputs.checkEmailResult
+            .drive(onNext: { [weak self] existAccount in
+                if existAccount {
+                    self?.showLoginViewController()
+                } else {
+                    self?.showSignUpViewController()
+                }
+            }).disposed(by: disposeBag)
+    }
+    
+    private func showLoginViewController() {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
+        vc.email = emailTextField.text
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func showSignUpViewController() {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController else { return }
+        vc.email = emailTextField.text
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

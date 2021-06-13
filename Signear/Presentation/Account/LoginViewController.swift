@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class LoginViewController: UIViewController {
     
@@ -17,8 +19,13 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var nextButton: UIButton!
     @IBOutlet private weak var findAccountLabel: UILabel!
     
+    // MARK : Properties - Internal
+    
+    var email: String!
+    
     // MARK : Properties - Private
     
+    private let disposeBag = DisposeBag()
     private var viewModel: LoginViewModelType? {
         didSet {
             bindUI()
@@ -28,7 +35,9 @@ class LoginViewController: UIViewController {
     // MARK : Life Cycle
     
     override func viewDidLoad() {
-        initUI()
+        super.viewDidLoad()
+        viewModel = LoginViewModel()
+        configureUI()
     }
 }
 
@@ -36,8 +45,19 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController {
     
-    private func initUI() {
+    private func configureUI() {
+        emailTextField.text = email
         initBackgroundColor()
+        nextButton.rx.tap
+            .asDriver()
+            .drive(onNext: { [weak self] in
+                guard let self = self,
+                      let email = self.emailTextField.text,
+                      let password = self.passwordTextField.text else {
+                    return
+                }
+                self.viewModel?.inputs.login(email: email, password: password)
+            }).disposed(by: disposeBag)
     }
     
     private func initBackgroundColor() {
@@ -49,6 +69,15 @@ extension LoginViewController {
     }
     
     private func bindUI() {
-        
+        viewModel?.outputs.loginResult
+            .filter { $0 }
+            .drive(onNext: { [weak self] result in
+                self?.showResevationListViewController()
+            }).disposed(by: disposeBag)
+    }
+    
+    private func showResevationListViewController() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.switchRootViewToReservationListView()
     }
 }
