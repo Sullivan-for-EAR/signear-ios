@@ -25,7 +25,7 @@ class SignearAPI {
     enum Constants {
         static let baseURL = "http://3.35.204.9:80"
         static let checkEmailURL = "/customer/check"
-        static let signUpURL = "/customer/check"
+        static let signUpURL = "/customer/login"
         static let loginURL = "/customer/login"
         static let createReservationURL = "/reservation/customer/create"
         static let fetchReservationInfoURL = "/reservation/customer"
@@ -101,7 +101,7 @@ extension SignearAPI {
     }
     
     func signUp(email: String, password: String, phone: String) -> Observable<Result<SignUpDTO.Response, APIError>> {
-        let url = Constants.baseURL + Constants.loginURL
+        let url = Constants.baseURL + Constants.signUpURL
         return Observable.create { observer in
             let request =
                 AF.request(url,

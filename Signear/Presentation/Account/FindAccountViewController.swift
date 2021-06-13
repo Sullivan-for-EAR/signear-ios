@@ -9,20 +9,20 @@ import UIKit
 
 class FindAccountViewController: UIViewController {
     
-    // MARK : UI
+    // MARK: - Properteis - UI
     
     @IBOutlet private weak var backImageView: UIImageView!
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var nextButton: UIButton!
     
-    // MARK : Life Cycle
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         initUI()
     }
 }
 
-// MARK : Private
+// MARK: Private
 
 extension FindAccountViewController {
     

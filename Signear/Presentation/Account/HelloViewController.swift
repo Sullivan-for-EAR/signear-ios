@@ -11,11 +11,11 @@ import RxSwift
 
 class HelloViewController: UIViewController {
     
-    // MARK : Properties - UI
+    // MARK: - Properties - UI
     
     @IBOutlet private weak var startButton: UIButton!
     
-    // MARK : Properties - Private
+    // MARK: - Properties - Private
     
     private let disposeBag = DisposeBag()
     private var viewModel: HelloViewModelType? {
@@ -24,14 +24,14 @@ class HelloViewController: UIViewController {
         }
     }
     
-    // MARK : Life Cycle
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         configureUI()
     }
 }
 
-// MARK : Private
+// MARK: Private
 
 extension HelloViewController {
     
