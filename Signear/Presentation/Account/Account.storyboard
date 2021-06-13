@@ -552,7 +552,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="signUpButton" destination="p3m-Nn-dqe" id="tRq-GS-tq5"/>
                         <outlet property="startButton" destination="p3m-Nn-dqe" id="9ox-b9-J5a"/>
                     </connections>
                 </viewController>

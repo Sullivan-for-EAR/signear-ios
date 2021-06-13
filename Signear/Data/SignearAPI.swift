@@ -25,7 +25,7 @@ class SignearAPI {
     enum Constants {
         static let baseURL = "http://3.35.204.9:80"
         static let checkEmailURL = "/customer/check"
-        static let signUpURL = "/customer/login"
+        static let signUpURL = "/user/customer/create"
         static let loginURL = "/customer/login"
         static let createReservationURL = "/reservation/customer/create"
         static let fetchReservationInfoURL = "/reservation/customer"
