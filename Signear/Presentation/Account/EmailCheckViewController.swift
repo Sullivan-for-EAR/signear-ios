@@ -11,13 +11,13 @@ import RxSwift
 
 class EmailCheckViewController: UIViewController {
     
-    // MARK : ProPerties - UI
+    // MARK: - ProPerties - UI
     @IBOutlet private weak var backImageView: UIImageView!
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var nextButton: UIButton!
     @IBOutlet private weak var findAccountLabel: UILabel!
     
-    // MARK : Properties - Private
+    // MARK: - Properties - Private
     
     private let disposeBag = DisposeBag()
     private var viewModel: EmailCheckViewModelType? {
@@ -26,7 +26,7 @@ class EmailCheckViewController: UIViewController {
         }
     }
     
-    // MARK : Life Cycle
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class EmailCheckViewController: UIViewController {
     
 }
 
-// MARK : Private
+// MARK: Private
 
 extension EmailCheckViewController {
     

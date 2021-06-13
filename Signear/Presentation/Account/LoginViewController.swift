@@ -11,7 +11,7 @@ import RxSwift
 
 class LoginViewController: UIViewController {
     
-    // MARK : Properties - UI
+    // MARK: - Properties - UI
     
     @IBOutlet weak var backImageView: UIImageView!
     @IBOutlet private weak var emailTextField: UITextField!
@@ -19,11 +19,11 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var nextButton: UIButton!
     @IBOutlet private weak var findAccountLabel: UILabel!
     
-    // MARK : Properties - Internal
+    // MARK: - Properties - Internal
     
     var email: String!
     
-    // MARK : Properties - Private
+    // MARK: - Properties - Private
     
     private let disposeBag = DisposeBag()
     private var viewModel: LoginViewModelType? {
@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    // MARK : Life Cycle
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +41,7 @@ class LoginViewController: UIViewController {
     }
 }
 
-// MARK : Private
+// MARK: Private
 
 extension LoginViewController {
     

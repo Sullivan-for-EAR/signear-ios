@@ -601,7 +601,7 @@
                                             <constraint firstAttribute="height" constant="57" id="4r6-xK-KiQ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="다음">
+                                        <state key="normal" title="로그인하기">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>

@@ -11,10 +11,10 @@ import RxSwift
 
 class InitialViewController: UIViewController {
     
-    // MARK : Properties - UI
+    // MARK: - Properties - UI
     @IBOutlet private weak var startButton: UIButton!
     
-    // MARK : Properties - Private
+    // MARK: - Properties - Private
     
     private let disposeBag = DisposeBag()
     private var viewModel: InitialViewModelType? {
@@ -23,7 +23,7 @@ class InitialViewController: UIViewController {
         }
     }
     
-    // MARK : Life Cycle
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         configureUI()
@@ -31,7 +31,7 @@ class InitialViewController: UIViewController {
     
 }
 
-// MARK : Private
+// MARK: Private
 
 extension InitialViewController {
     

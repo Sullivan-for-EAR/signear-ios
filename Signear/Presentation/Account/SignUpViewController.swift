@@ -11,42 +11,54 @@ import RxSwift
 
 class SignUpViewController: UIViewController {
     
-    // MARK : Properties - UI
+    // MARK: - Properties - UI
     @IBOutlet private weak var backImageView: UIImageView!
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var phoneTextField: UITextField!
     @IBOutlet private weak var signUpButton: UIButton!
     
-    // MARK : Properties - Internal
+    // MARK: - Properties - Internal
     
     var email: String!
     
-    // MARK : Properties - Private
+    // MARK: - Properties - Private
     
     private let disposeBag = DisposeBag()
-    private var viewModel: LoginViewModelType? {
+    private var viewModel: SignUpViewModelType? {
         didSet {
             bindUI()
         }
     }
     
-    // MARK : Life Cycle
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = LoginViewModel()
+        viewModel = SignUpViewModel()
         configureUI()
     }
 }
 
-// MARK : Private
+// MARK: Private
 
 extension SignUpViewController {
     
     private func configureUI() {
         emailTextField.text = email
         initBackgroundColor()
+        
+        signUpButton.rx.tap
+            .asDriver()
+            .drive(onNext: { [weak self] in
+                guard let self = self,
+                      let email = self.emailTextField.text,
+                      let password = self.passwordTextField.text,
+                      let phoneNumber = self.phoneTextField.text else {
+                    return
+                }
+                self.viewModel?.inputs.signUp(email: email, password: password, phoneNumber: phoneNumber)
+            }).disposed(by: disposeBag)
     }
     
     private func initBackgroundColor() {
@@ -58,7 +70,7 @@ extension SignUpViewController {
     }
     
     private func bindUI() {
-        viewModel?.outputs.loginResult
+        viewModel?.outputs.signUpResult
             .filter { $0 }
             .drive(onNext: { [weak self] result in
                 self?.showHelloViewController()
