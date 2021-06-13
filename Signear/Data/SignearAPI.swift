@@ -36,7 +36,7 @@ class SignearAPI {
     // MARK: Properties - Private
     
     var token: String?
-    var customerId: String?
+    var customerId: Int?
     
     // MARK: - Constructor
     

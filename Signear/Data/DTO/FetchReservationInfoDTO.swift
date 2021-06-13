@@ -10,7 +10,7 @@ import Foundation
 enum FetchReservationInfoDTO {
     
     struct Request: Codable {
-        let customerId: String
+        let customerId: Int
         
         enum CodingKeys: String, CodingKey {
             case customerId = "customer_id"

@@ -25,6 +25,6 @@ enum SignUpDTO {
     }
     
     struct userProfile: Codable {
-        let customerID: String
+        let customerID: Int
     }
 }

@@ -9,7 +9,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-protocol MakeReservationTableViewCellDelegate: class {
+protocol MakeReservationTableViewCellDelegate: AnyObject {
     func pickerPressed(_ pickerType: String)
     func centerBtnPressed()
     func locationTextFieldInput(_ locationText: String)
@@ -64,8 +64,8 @@ extension MakeReservationTableViewCell {
         dateButton.setTitle(reservation.date, for: .normal)
         startTimeButton.setTitle(reservation.startTime, for: .normal)
         endTimeButton.setTitle(reservation.endTime, for: .normal)
-        centerButton.setTitle("\(reservation.center)  ", for: .normal)
-        if reservation.type == .offline {
+        centerButton.setTitle("\(reservation.area)  ", for: .normal)
+        if reservation.meetingType == .sign {
             offlineButton.setButton(state: .selected)
             onlineButton.setButton(state: .normal)
         } else {

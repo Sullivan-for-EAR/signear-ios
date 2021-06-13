@@ -24,6 +24,6 @@ enum LoginDTO {
     }
     
     struct userProfile: Codable {
-        let customerID: String
+        let customerID: Int
     }
 }
