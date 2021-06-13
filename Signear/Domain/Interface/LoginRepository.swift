@@ -9,5 +9,5 @@ import Foundation
 import RxSwift
 
 protocol LoginRepository {
-    func login(email: String, password: String) -> Observable<LoginDTO.ResponseDTO>
+    func login(email: String, password: String)
 }

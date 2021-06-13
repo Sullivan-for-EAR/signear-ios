@@ -10,21 +10,26 @@ import UIKit
 struct ReservationModel: Equatable {
     let title: String
     let date: String
-    let status: ReservationStatus
+    let status: Status
 }
 
-// MARK: - Reservation Status
-
-enum ReservationStatus {
-    case unread
-    case check
-    case confirm
-    case reject
+extension ReservationModel {
+    enum MeetingType {
+        case sign
+        case video
+    }
+    
+    enum Status {
+        case unread
+        case check
+        case confirm
+        case reject
+    }
 }
 
 // MARK: - ReservationStatus Image
 
-extension ReservationStatus {
+extension ReservationModel.Status {
     func getImage() -> UIImage? {
         switch self {
         case .unread:
