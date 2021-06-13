@@ -9,12 +9,20 @@ import Foundation
 import RxSwift
 
 protocol CancelReservationUseCaseType {
-    func cancelReservation() -> Observable<Bool>
+    func cancelReservation(reservationId: String) -> Observable<Result<Bool, APIError>>
 }
 
 class CancelReservationUseCase: CancelReservationUseCaseType {
-    func cancelReservation() -> Observable<Bool> {
-        // TODO : API
-        return .just(true)
+    func cancelReservation(reservationId: String) -> Observable<Result<Bool, APIError>> {
+        return SignearAPI.shared.cancelReservation(reservationId: reservationId)
+            .map { response in
+                switch response {
+                case .success(_):
+                    return .success(true)
+                case .failure(let error):
+                    return .failure(error)
+                }
+            }
     }
+    
 }

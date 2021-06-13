@@ -16,9 +16,15 @@ enum SignUpDTO {
     
     struct Response: Codable {
         let accessToken: String
+        let userProfile: userProfile
         
         enum CodingKeys: String, CodingKey {
             case accessToken = "access_token"
+            case userProfile
         }
+    }
+    
+    struct userProfile: Codable {
+        let customerID: String
     }
 }

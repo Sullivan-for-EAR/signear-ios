@@ -21,6 +21,10 @@ class ReservationInfoViewController: UIViewController {
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var cancelButton: UIButton!
     
+    // MARK: - Properties - Internal
+    
+    var reservationId: String?
+    
     // MARK: - Properties - Private
     
     private let disposeBag = DisposeBag()
@@ -40,7 +44,7 @@ class ReservationInfoViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewModel?.inputs.fetchReservationInfo()
+        fetchReservationInfo()
     }
 }
 
@@ -57,6 +61,8 @@ extension ReservationInfoViewController {
     
     private func bindUI() {
         viewModel?.outputs.reservationInfo
+            .filter { $0 != nil }
+            .map { $0! }
             .drive(onNext: { [weak self] reservationInfo in
                 self?.setReservationInfo(reservationInfo)
             }).disposed(by: disposeBag)
@@ -72,12 +78,7 @@ extension ReservationInfoViewController {
     private func setReservationInfo(_ reservationInfo: ReservationInfoModel) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            self.LocationLabel.text = reservationInfo.location
-            self.centerLabel.text = reservationInfo.center
-            self.dateLabel.text = reservationInfo.date
-            self.timeLabel.text = reservationInfo.time
-            self.typeLabel.text = reservationInfo.type
-            self.descriptionLabel.text = reservationInfo.description
+            self.LocationLabel.text = reservationInfo.area
         }
     }
     
@@ -86,10 +87,17 @@ extension ReservationInfoViewController {
                                       message: "수어통역 예약을 정말 취소하시나요?",
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "예약 취소", style: .destructive, handler: { [weak self] _ in
-            self?.viewModel?.inputs.cancelReservation()
+            guard let self = self,
+                  let reservationId = self.reservationId else { return }
+            self.viewModel?.inputs.cancelReservation(reservationId: reservationId)
         }))
         alert.addAction(UIAlertAction(title: "닫기", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func fetchReservationInfo() {
+        guard let reservationId = reservationId else { return }
+        viewModel?.inputs.fetchReservationInfo(reservationId: reservationId)
     }
     
     private func showRejectAlertView() {

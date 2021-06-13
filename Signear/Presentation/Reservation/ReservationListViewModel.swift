@@ -49,9 +49,15 @@ extension ReservationListViewModel: ReservationListViewModelInputs {
     
     func fetchReservations() {
         useCase.fetchReservations()
-            .catchAndReturn([])
-            .bind(to: _reservations)
-            .disposed(by: disposeBag)
+            .subscribe(onNext: { [weak self] result in
+                switch result {
+                case .success(let reservations):
+                    self?._reservations.accept(reservations)
+                case .failure:
+                    // TODO : error 처리
+                    break
+                }
+            }).disposed(by: disposeBag)
     }
     
 }
