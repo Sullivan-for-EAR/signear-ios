@@ -31,6 +31,7 @@ class SignearAPI {
         static let fetchReservationInfoURL = "/reservation/customer"
         static let fetchReservationListURL = "/reservation/customer/list"
         static let cancelReservationURL = "/reservation/customer/cancle/{reservationId}"
+        static let createEmergencyURL = "/reservation/emergency/create"
     }
     
     // MARK: Properties - Private
