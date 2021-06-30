@@ -14,14 +14,15 @@ protocol CreateReservationUseCaseType {
 
 class CreateReservationUseCase: CreateReservationUseCaseType {
     func createReservationUseCase(reservation: MakeReservationModel) -> Observable<Result<Bool, APIError>> {
-        return SignearAPI.shared.createReservation(reservation: reservation)
-            .map { result in
-                switch result {
-                case .success(_):
-                    return .success(true)
-                case .failure(let error):
-                    return .failure(error)
-                }
-            }
+        return .just(.success(true))
+//        return SignearAPI.shared.createReservation(reservation: reservation)
+//            .map { result in
+//                switch result {
+//                case .success(_):
+//                    return .success(true)
+//                case .failure(let error):
+//                    return .failure(error)
+//                }
+//            }
     }
 }

@@ -54,7 +54,7 @@ extension ReservationListViewModel: ReservationListViewModelInputs {
                 case .success(let reservations):
                     self?._reservations.accept(reservations)
                 case .failure:
-                    // TODO : error 처리
+                    self?._reservations.accept([])
                     break
                 }
             }).disposed(by: disposeBag)

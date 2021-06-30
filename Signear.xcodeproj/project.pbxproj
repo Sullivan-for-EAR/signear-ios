@@ -20,6 +20,9 @@
 		28009D742680CE9400BA08DD /* SignearAPI+Emergency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28009D732680CE9400BA08DD /* SignearAPI+Emergency.swift */; };
 		28009D762680CF1D00BA08DD /* CreateEmergencyDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28009D752680CF1D00BA08DD /* CreateEmergencyDTO.swift */; };
 		28009D782680D40600BA08DD /* CreateEmergencyCallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28009D772680D40600BA08DD /* CreateEmergencyCallUseCase.swift */; };
+		2848E15C268B160800C5A01B /* FetchAreaUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848E15B268B160800C5A01B /* FetchAreaUseCase.swift */; };
+		28516B7D268A14FA007AF417 /* CreateReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28516B7C268A14FA007AF417 /* CreateReservationViewController.swift */; };
+		28516B7F268A1511007AF417 /* CreateReservationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28516B7E268A1511007AF417 /* CreateReservationViewModel.swift */; };
 		287CB91B266E62C700B51F0D /* SignearAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287CB91A266E62C700B51F0D /* SignearAPI.swift */; };
 		287CB91D266E632B00B51F0D /* CheckEmailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287CB91C266E632B00B51F0D /* CheckEmailRepository.swift */; };
 		287CB920266F95DB00B51F0D /* CheckEmailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287CB91F266F95DB00B51F0D /* CheckEmailDTO.swift */; };
@@ -127,6 +130,9 @@
 		28009D732680CE9400BA08DD /* SignearAPI+Emergency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignearAPI+Emergency.swift"; sourceTree = "<group>"; };
 		28009D752680CF1D00BA08DD /* CreateEmergencyDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEmergencyDTO.swift; sourceTree = "<group>"; };
 		28009D772680D40600BA08DD /* CreateEmergencyCallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEmergencyCallUseCase.swift; sourceTree = "<group>"; };
+		2848E15B268B160800C5A01B /* FetchAreaUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAreaUseCase.swift; sourceTree = "<group>"; };
+		28516B7C268A14FA007AF417 /* CreateReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReservationViewController.swift; sourceTree = "<group>"; };
+		28516B7E268A1511007AF417 /* CreateReservationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReservationViewModel.swift; sourceTree = "<group>"; };
 		287CB91A266E62C700B51F0D /* SignearAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignearAPI.swift; sourceTree = "<group>"; };
 		287CB91C266E632B00B51F0D /* CheckEmailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckEmailRepository.swift; sourceTree = "<group>"; };
 		287CB91F266F95DB00B51F0D /* CheckEmailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckEmailDTO.swift; sourceTree = "<group>"; };
@@ -255,6 +261,7 @@
 				18F0EEC42CA211B89E6DAC74AEA2FBCA /* FetchReservationHistoryUseCase.swift */,
 				481A2BBEB31A0C927043AFA05F2DA9C3 /* FetchReservationInfoUseCase.swift */,
 				CF81E39E2D1BC5FC40F64DA0DE3E3185 /* FetchReservationsUseCase.swift */,
+				2848E15B268B160800C5A01B /* FetchAreaUseCase.swift */,
 				976449BF5DB9B201357AA81142405CEB /* LoginUseCase.swift */,
 				BED2C7B3FFD59803D73004575C8FB0E6 /* LostEmailUseCase.swift */,
 				287CB93B2676311200B51F0D /* CreateReservationUseCase.swift */,
@@ -411,6 +418,8 @@
 				D1F8091C6292B4AA12FD16BC11A1F48B /* MakeReservationViewController.swift */,
 				37720F258A8D9DA1706898194F44742F /* MakeReservationViewModel.swift */,
 				9153FAFB2FA9BBE87ADAF13F94E0878E /* Reservation.storyboard */,
+				28516B7C268A14FA007AF417 /* CreateReservationViewController.swift */,
+				28516B7E268A1511007AF417 /* CreateReservationViewModel.swift */,
 				E09BF31FC148D62BB3E672A22BC6D0C8 /* ReservationBackgroundView.xib */,
 				AC77C0092FDB0E3F1C16189A9455A084 /* ReservationInfoViewController.swift */,
 				EE8FF32CFE10EC78D9C433674C8B7B7C /* ReservationInfoViewModel.swift */,
@@ -818,6 +827,7 @@
 				03C8575640D45F060C58D448B9E9F26F /* FindAccountViewModel.swift in Sources */,
 				43158C320522EC91D8DF73522152DC4C /* HelloViewController.swift in Sources */,
 				287CB9382675DC6300B51F0D /* SignearAPI+Reservation.swift in Sources */,
+				2848E15C268B160800C5A01B /* FetchAreaUseCase.swift in Sources */,
 				51A78F3114CA9DF3BC2BBA45C1C55CC5 /* HelloViewModel.swift in Sources */,
 				287CB928266FA6DA00B51F0D /* CreateReservationDTO.swift in Sources */,
 				72D7060CA2AA8730BD941196AB0472C3 /* InitialViewController.swift in Sources */,
@@ -856,6 +866,8 @@
 				E43711AEB7CB397E09BF26BECCCCEC7C /* SceneDelegate.swift in Sources */,
 				FEF807652D2B13B21DC2C0F11163F87B /* SendEmailViewController.swift in Sources */,
 				287CB924266FA0BC00B51F0D /* SignUpDTO.swift in Sources */,
+				28516B7F268A1511007AF417 /* CreateReservationViewModel.swift in Sources */,
+				28516B7D268A14FA007AF417 /* CreateReservationViewController.swift in Sources */,
 				F44563EAF43720B1C8C4F3E22D99ABF0 /* SendEmailViewModel.swift in Sources */,
 				EED7C329944D60EEF81440E00BBE3FF3 /* SignUpUseCase.swift in Sources */,
 				CC41309A08036977D7C472DFF0D6EB9F /* SignUpViewController.swift in Sources */,
@@ -1060,7 +1072,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 84CPTZ438W;
 				INFOPLIST_FILE = signear/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1147,7 +1159,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 84CPTZ438W;
 				INFOPLIST_FILE = signear/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -14,14 +14,15 @@ protocol EmailCheckUseCaseType {
 
 class EmailCheckUseCase: EmailCheckUseCaseType {
     func emailCheck(with email: String) -> Observable<Result<Bool, APIError>> {
-        return SignearAPI.shared.checkEmail(email)
-            .map { result in
-                switch result {
-                case .success(let isExsit):
-                    return .success(isExsit.isNext)
-                case .failure(let error):
-                    return .failure(error)
-                }
-            }
+        return .just(.success(true))
+//        return SignearAPI.shared.checkEmail(email)
+//            .map { result in
+//                switch result {
+//                case .success(let isExsit):
+//                    return .success(isExsit.isNext)
+//                case .failure(let error):
+//                    return .failure(error)
+//                }
+//            }
     }
 }

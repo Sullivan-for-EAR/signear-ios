@@ -7,8 +7,7 @@
 
 import UIKit
 
-struct MakeReservationModel: Equatable {
-    var rsID: Int
+struct MakeReservationModel {
     var date: String
     var startTime: String
     var endTime: String

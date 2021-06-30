@@ -21,8 +21,8 @@ class MakeReservationViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var dateTimePicker: UIDatePicker!
-    @IBOutlet private weak var centerPickerView: UIPickerView!
-    @IBOutlet private weak var doneButton: UIButton!
+//    @IBOutlet private weak var centerPickerView: UIPickerView!
+//    @IBOutlet private weak var doneButton: UIButton!
     
     // MARK: Properties - Private
     
@@ -77,8 +77,8 @@ extension MakeReservationViewController {
         
         dateTimePicker.locale = Locale(identifier: "ko_kr")
         
-        centerPickerView.delegate = self
-        centerPickerView.dataSource = self
+//        centerPickerView.delegate = self
+//        centerPickerView.dataSource = self
         
         tableView.register(UINib(nibName: "MakeReservationTableViewCell", bundle: nil), forCellReuseIdentifier: "MakeReservationTableViewCell")
         tableView.estimatedRowHeight = UITableView.automaticDimension
@@ -88,11 +88,11 @@ extension MakeReservationViewController {
                 // TODO
             }).disposed(by: disposeBag)
         
-        doneButton.rx.tap
-            .asDriver()
-            .drive(onNext: { [weak self] in
-                self?.setPickerResult()
-            }).disposed(by: disposeBag)
+//        doneButton.rx.tap
+//            .asDriver()
+//            .drive(onNext: { [weak self] in
+//                self?.setPickerResult()
+//            }).disposed(by: disposeBag)
     }
     
     private func bindUI() {
@@ -112,7 +112,7 @@ extension MakeReservationViewController {
     
     private func showPicker(type: PickerType) {
         view.endEditing(true)
-        doneButton.isHidden = false
+//        doneButton.isHidden = false
         pickerType = type
         if #available(iOS 14.0, *) {
             switch type {
@@ -128,7 +128,7 @@ extension MakeReservationViewController {
             }
             view.addSubview(backgroundView)
             view.bringSubviewToFront(dateTimePicker)
-            view.bringSubviewToFront(doneButton)
+//            view.bringSubviewToFront(doneButton)
             dateTimePicker.isHidden = false
             dateTimePicker.backgroundColor = .white
         } else {
@@ -155,11 +155,12 @@ extension MakeReservationViewController {
             }
             self.dateTimePicker.isHidden = true
             self.backgroundView.removeFromSuperview()
-        } else if !centerPickerView.isHidden {
-            self.centerPickerView.isHidden = true
-            self.backgroundView.removeFromSuperview()
         }
-        doneButton.isHidden = true
+//        } else if !centerPickerView.isHidden {
+//            self.centerPickerView.isHidden = true
+//            self.backgroundView.removeFromSuperview()
+//        }
+//        doneButton.isHidden = true
         print("selected date: \(self.dateTimePicker.date)")
     }
     
@@ -234,10 +235,10 @@ extension MakeReservationViewController: MakeReservationTableViewCellDelegate {
     
     func centerBtnPressed() {
         self.view.addSubview(self.backgroundView)
-        self.view.bringSubviewToFront(self.centerPickerView)
-        self.view.bringSubviewToFront(self.doneButton)
-        centerPickerView.isHidden = false
-        doneButton.isHidden = false
+//        self.view.bringSubviewToFront(self.centerPickerView)
+//        self.view.bringSubviewToFront(self.doneButton)
+//        centerPickerView.isHidden = false
+//        doneButton.isHidden = false
         view.endEditing(true)
     }
     
