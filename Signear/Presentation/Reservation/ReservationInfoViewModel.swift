@@ -10,8 +10,8 @@ import RxCocoa
 import RxSwift
 
 protocol ReservationInfoViewModelInputs {
-    func fetchReservationInfo(reservationId: String)
-    func cancelReservation(reservationId: String)
+    func fetchReservationInfo(reservationId: Int)
+    func cancelReservation(reservationId: Int)
 }
 
 protocol ReservationInfoViewModelOutputs {
@@ -32,7 +32,7 @@ class ReservationInfoViewModel: ReservationInfoViewModelType {
     private let disposeBag = DisposeBag()
     private var _reservationInfo: PublishRelay<ReservationInfoModel?> = .init()
     private var _cancelResult: PublishRelay<Bool> = .init()
-    private var reservationId: String?
+    private var reservationId: Int?
     
     init(fetchReservationInfoUseCase: FetchReservationInfoUseCaseType,
          cancelReservationUseCase: CancelReservationUseCaseType) {
@@ -52,7 +52,7 @@ extension ReservationInfoViewModel: ReservationInfoViewModelInputs {
     
     var inputs: ReservationInfoViewModelInputs { return self }
     
-    func fetchReservationInfo(reservationId: String) {
+    func fetchReservationInfo(reservationId: Int) {
         self.reservationId = reservationId
         fetchReservationInfoUseCase.fetchReservationInfo(reservationId: reservationId)
             .subscribe(onNext: { [weak self] result in
@@ -67,7 +67,18 @@ extension ReservationInfoViewModel: ReservationInfoViewModelInputs {
             }).disposed(by: disposeBag)
     }
     
-    func cancelReservation(reservationId: String) {
+    func cancelReservation(reservationId: Int) {
+        cancelReservationUseCase.cancelReservation(reservationId: reservationId)
+            .subscribe(onNext: { [weak self] result in
+                switch result {
+                case .success(let result):
+                    self?._cancelResult.accept(result)
+                    break
+                case .failure(_):
+                    // TODO : API Error 처리
+                    break
+                }
+            }).disposed(by: disposeBag)
     }
 }
 

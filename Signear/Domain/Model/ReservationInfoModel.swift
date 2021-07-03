@@ -10,14 +10,14 @@ import Foundation
 struct ReservationInfoModel: Equatable {
     let rsID: Int
     let date: String
-    let startTime: String
-    let endTime: String
-    let area: String
-    let address: String
+    let startTime: String?
+    let endTime: String?
+    let area: String?
+    let address: String?
     let method: MeetingType
     let status: Status
     let type: CallType
-    let request: String
+    let request: String?
     let reject: String?
 }
 

@@ -60,7 +60,12 @@ extension ReservationListViewController {
     
         tableView.rx.modelSelected(ReservationModel.self)
             .subscribe(onNext: { [weak self] reservation in
-                self?.showReservation(reservation)
+                guard let self = self else { return }
+                if reservation.type == .emergency {
+                    self.showCancelEmergencyCallAlertView(reservation)
+                } else {
+                    self.showReservation(reservation)
+                }
             }).disposed(by: disposeBag)
         
         reservationButton.rx.tap
@@ -83,7 +88,19 @@ extension ReservationListViewController {
     
     private func showReservation(_ reservation: ReservationModel) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "ReservationInfoViewController") as? ReservationInfoViewController else { return }
+        vc.reservationId = reservation.rsID
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func showCancelEmergencyCallAlertView(_ reservation: ReservationModel) {
+        let alert = UIAlertController(title: "긴급통역 취소",
+                                      message: "긴급통역 연결을 정말 취소하시나요?",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "연결 취소", style: .destructive, handler: { [weak self] _ in
+            self?.viewModel?.inputs.cancelEmergencyCall(reservationId: reservation.rsID)
+        }))
+        alert.addAction(UIAlertAction(title: "닫기", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     private func makeReservation() {

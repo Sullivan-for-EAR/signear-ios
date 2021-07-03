@@ -22,7 +22,7 @@ extension SignearAPI {
                 AF.request(url,
                            method: .post,
                            parameters: CreateReservationDTO.Request(reservation: reservation, customerId: customerId).toDictionary,
-                           encoding: URLEncoding.queryString,
+                           encoding: JSONEncoding.default,
                            headers: .init(token: token))
                 .responseString { response in
                     printServerMessage(data: response.data)
@@ -54,7 +54,7 @@ extension SignearAPI {
             let request =
                 AF.request(url,
                            method: .get,
-                           parameters: FetchReservationInfoDTO.Request(customerId: customerId).toDictionary,
+                           parameters: FetchReservationsDTO.Request(customerId: customerId).toDictionary,
                            encoding: URLEncoding.queryString,
                            headers: .init(token: token))
                 .responseString { response in
@@ -76,18 +76,17 @@ extension SignearAPI {
         }
     }
     
-    func fetchReservationInfo(reservationId: String) -> Observable<Result<FetchReservationInfoDTO.Response, APIError>> {
-        let url = Constants.baseURL + Constants.fetchReservationListURL
+    func fetchReservationInfo(reservationId: Int) -> Observable<Result<FetchReservationInfoDTO.Response, APIError>> {
+        let url = Constants.baseURL + Constants.fetchReservationInfoURL
         return Observable.create { [weak self] observer in
             guard let self = self,
-                  let token = self.token,
-                  let customerId = self.customerId else {
+                  let token = self.token else {
                 return Disposables.create()
             }
             let request =
                 AF.request(url,
                            method: .get,
-                           parameters: FetchReservationInfoDTO.Request(customerId: customerId).toDictionary,
+                           parameters: FetchReservationInfoDTO.Request(reservationId: reservationId).toDictionary,
                            encoding: URLEncoding.queryString,
                            headers: .init(token: token))
                 .responseString { response in
@@ -109,8 +108,8 @@ extension SignearAPI {
         }
     }
     
-    func cancelReservation(reservationId: String) -> Observable<Result<CancelReservationDTO.Response, APIError>> {
-        let url = Constants.baseURL + Constants.cancelReservationURL.replacingOccurrences(of: "{reservationId}", with: reservationId)
+    func cancelReservation(reservationId: Int) -> Observable<Result<CancelReservationDTO.Response, APIError>> {
+        let url = Constants.baseURL + Constants.cancelReservationURL.replacingOccurrences(of: "{reservationId}", with: "\(reservationId)")
         return Observable.create { [weak self] observer in
             guard let self = self,
                   let token = self.token else {
@@ -118,7 +117,7 @@ extension SignearAPI {
             }
             let request =
                 AF.request(url,
-                           method: .get,
+                           method: .post,
                            parameters: nil,
                            encoding: URLEncoding.queryString,
                            headers: .init(token: token))

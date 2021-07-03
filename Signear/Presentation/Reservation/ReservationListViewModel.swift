@@ -11,6 +11,7 @@ import RxSwift
 
 protocol ReservationListViewModelInputs {
     func fetchReservations()
+    func cancelEmergencyCall(reservationId: Int)
 }
 
 protocol ReservationListViewModelOutputs {
@@ -27,17 +28,21 @@ class ReservationListViewModel: ReservationListViewModelType {
     // MARK: - Properties : Private
     
     private let disposeBag = DisposeBag()
-    private let useCase: FetchReservationsUseCaseType
+    private let fetchReservationsuseCase: FetchReservationsUseCaseType
+    private let cancelEmergencyCallUseCase: CancelEmergencyCallUseCaseType
     private var _reservations: PublishRelay<[ReservationModel]> = .init()
     
     // MARK: - Constructor
     
-    init(useCase: FetchReservationsUseCaseType) {
-        self.useCase = useCase
+    init(fetchReservationsuseCase: FetchReservationsUseCaseType,
+         cancelEmergencyCallUseCase: CancelEmergencyCallUseCaseType) {
+        self.fetchReservationsuseCase = fetchReservationsuseCase
+        self.cancelEmergencyCallUseCase = cancelEmergencyCallUseCase
     }
     
     convenience init() {
-        self.init(useCase: FetchReservationsUseCase())
+        self.init(fetchReservationsuseCase: FetchReservationsUseCase(),
+                  cancelEmergencyCallUseCase: CancelEmergencyCallUseCase())
     }
 }
 
@@ -48,7 +53,7 @@ extension ReservationListViewModel: ReservationListViewModelInputs {
     var inputs: ReservationListViewModelInputs { return self }
     
     func fetchReservations() {
-        useCase.fetchReservations()
+        fetchReservationsuseCase.fetchReservations()
             .subscribe(onNext: { [weak self] result in
                 switch result {
                 case .success(let reservations):
@@ -60,6 +65,18 @@ extension ReservationListViewModel: ReservationListViewModelInputs {
             }).disposed(by: disposeBag)
     }
     
+    func cancelEmergencyCall(reservationId: Int) {
+        cancelEmergencyCallUseCase.cancel(reservationId: reservationId)
+            .subscribe(onNext: { [weak self] result in
+                switch result {
+                case .success(_):
+                    self?.fetchReservations()
+                case .failure:
+                    // TODO : 예외처리
+                    break
+                }
+            }).disposed(by: disposeBag)
+    }
 }
 
 // MARK: - ReservationListViewModelOutputs

@@ -28,10 +28,11 @@ class SignearAPI {
         static let signUpURL = "/user/customer/create"
         static let loginURL = "/customer/login"
         static let createReservationURL = "/reservation/customer/create"
-        static let fetchReservationInfoURL = "/reservation/customer"
+        static let fetchReservationInfoURL = "/reservation/customer/"
         static let fetchReservationListURL = "/reservation/customer/list"
         static let cancelReservationURL = "/reservation/customer/cancle/{reservationId}"
-        static let createEmergencyURL = "/reservation/emergency/create"
+        static let createEmergencyCallURL = "/reservation/emergency/create"
+        static let cancelEmergencyCallURL = "/reservation/emergency/cancle/{reservationId}"
     }
     
     // MARK: Properties - Private

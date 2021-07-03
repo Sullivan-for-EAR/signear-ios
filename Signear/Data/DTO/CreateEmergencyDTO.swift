@@ -29,12 +29,12 @@ enum CreateEmergencyDTO {
         let date: String
         let startTime: String
         let endTime: String
-        let area: String
-        let address: String
-        let method: Int
+        let area: String?
+        let address: String?
+        let method: Int?
         let status: Int
         let type: Int
-        let request: String
+        let request: String?
         let reject: String?
         let customerUser: CustomerUser
         
