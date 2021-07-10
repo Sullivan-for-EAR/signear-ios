@@ -40,6 +40,12 @@ class MyPageViewController: UIViewController {
         viewModel = MyPageViewModel()
         configureUI()
     }
+    
+    // MARK: - Actions
+    
+    @objc private func didTappedBackButton(_ button: UINavigationItem) {
+        navigationController?.popViewController(animated: true)
+    }
 }
 
 // MARK: - Private
@@ -47,6 +53,11 @@ class MyPageViewController: UIViewController {
 extension MyPageViewController {
     
     private func configureUI() {
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.shadowImage = .init()
+        navigationItem.leftBarButtonItem = .init(image: .init(named: "leftArrowIcon"), style: .plain, target: self, action: #selector(didTappedBackButton(_:)))
+        
         tableView.register(.init(nibName: "ProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileTableViewCell")
         tableView.register(.init(nibName: "EmergencyTableViewCell", bundle: nil), forCellReuseIdentifier: "EmergencyTableViewCell")
         tableView.register(.init(nibName: "MyPageTableViewCell", bundle: nil), forCellReuseIdentifier: "MyPageTableViewCell")
@@ -63,10 +74,11 @@ extension MyPageViewController {
     }
     
     private func showEmergencyCall() {
-        let storyboard = UIStoryboard.init(name: "Emergency", bundle: nil)
-        guard let vc = storyboard.instantiateViewController(withIdentifier: "EmergencyViewController") as? EmergencyViewController else {
-            return }
-        navigationController?.pushViewController(vc, animated: true)
+        let alert = UIAlertController(title: nil,
+                                      message: "현재 개발 중입니다.\n곧 이어 드릴게요 :-)",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "확인", style: .default))
+        self.present(alert, animated: true, completion: nil)
     }
     
     private func showReservationHistory() {

@@ -45,6 +45,10 @@ class ReservationListViewController: UIViewController {
 extension ReservationListViewController {
     
     private func configureUI() {
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.shadowImage = .init()
+        
         let profileNavigationItem = UIBarButtonItem(image: .init(named: "profileIcon"), style: .plain, target: self, action: nil)
         navigationItem.rightBarButtonItem = profileNavigationItem
         profileNavigationItem.rx.tap

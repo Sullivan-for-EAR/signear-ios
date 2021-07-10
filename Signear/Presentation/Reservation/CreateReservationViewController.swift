@@ -103,6 +103,10 @@ class CreateReservationViewController: UIViewController {
     @objc private func didPurposeTextViewDoneButtonPressed() {
         view.endEditing(true)
     }
+    
+    @objc private func didTappedBackButton(_ button: UINavigationItem) {
+        navigationController?.popViewController(animated: true)
+    }
 }
 
 // MARK: - Private
@@ -110,6 +114,11 @@ class CreateReservationViewController: UIViewController {
 extension CreateReservationViewController {
     
     private func configureUI() {
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.shadowImage = .init()
+        navigationItem.leftBarButtonItem = .init(image: .init(named: "leftArrowIcon"), style: .plain, target: self, action: #selector(didTappedBackButton(_:)))
+        
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(keyboardWillShow),
@@ -246,6 +255,7 @@ extension CreateReservationViewController {
     }
     
     private func configureTranslationTypeButton() {
+        signTranslationButton.isSelected = true
         signTranslationButton.rx.tap
             .subscribe(onNext: { [weak self] in
                 guard let self = self else {
@@ -257,6 +267,7 @@ extension CreateReservationViewController {
                 self.updateButtonStatus()
             }).disposed(by: disposeBag)
         
+        onlineTranslationButton.isSelected = false
         onlineTranslationButton.rx.tap
             .subscribe(onNext: { [weak self] in
                 guard let self = self else {
@@ -267,6 +278,7 @@ extension CreateReservationViewController {
                 self.onlineTranslationButton.isSelected = true
                 self.updateButtonStatus()
             }).disposed(by: disposeBag)
+        updateButtonStatus()
     }
     
     private func updateButtonStatus() {

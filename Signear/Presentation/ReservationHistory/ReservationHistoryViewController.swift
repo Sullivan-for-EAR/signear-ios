@@ -36,6 +36,12 @@ class ReservationHistoryViewController: UIViewController {
         super.viewWillAppear(animated)
         viewModel?.inputs.fetchReservationHistory()
     }
+    
+    // MARK: - Actions
+    
+    @objc private func didTappedBackButton(_ button: UINavigationItem) {
+        navigationController?.popViewController(animated: true)
+    }
 }
 
 // MARK: - Private
@@ -43,6 +49,11 @@ class ReservationHistoryViewController: UIViewController {
 extension ReservationHistoryViewController {
     
     private func configureUI() {
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.shadowImage = .init()
+        navigationItem.leftBarButtonItem = .init(image: .init(named: "leftArrowIcon"), style: .plain, target: self, action: #selector(didTappedBackButton(_:)))
+        
         tableView.register(.init(nibName: "ReservationHistoryTableViewCell", bundle: nil), forCellReuseIdentifier: "ReservationHistoryTableViewCell")
         
         tableView.rx.modelSelected(ReservationHistoryModel.self)
