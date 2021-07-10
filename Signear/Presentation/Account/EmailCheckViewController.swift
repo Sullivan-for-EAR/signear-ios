@@ -11,7 +11,8 @@ import RxSwift
 
 class EmailCheckViewController: UIViewController {
     
-    // MARK: - ProPerties - UI
+    // MARK: - Properties - UI
+    
     @IBOutlet private weak var backImageView: UIImageView!
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var nextButton: UIButton!
@@ -32,6 +33,21 @@ class EmailCheckViewController: UIViewController {
         super.viewDidLoad()
         viewModel = EmailCheckViewModel()
         configureUI()
+        
+        #if DEBUG
+        emailTextField.text = "wjdtjq90@naver.com"
+        nextButton.isEnabled = true
+        #endif
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.isHidden = false
     }
     
 }
@@ -41,12 +57,19 @@ class EmailCheckViewController: UIViewController {
 extension EmailCheckViewController {
     
     private func configureUI() {
-        #if DEBUG
-        emailTextField.text = "wjdtjq90@naver.com"
-        #endif
+        configureBackgroundColor()
+        configureBackImageView()
         
-        initBackgroundColor()
+        emailTextField.rx.text.orEmpty
+            .asDriver()
+            .drive(onNext: { [weak self] text in
+                self?.nextButton.isEnabled = text.isValidEmail()
+            }).disposed(by: disposeBag)
         
+        nextButton.clipsToBounds = true
+        nextButton.layer.cornerRadius = 5
+        nextButton.setBackgroundColor(.init(rgb: 0x222222), for: .normal)
+        nextButton.setBackgroundColor(.init(rgb: 0xB6B6B6), for: .disabled)
         nextButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] in
@@ -56,14 +79,32 @@ extension EmailCheckViewController {
                 }
                 self.viewModel?.inputs.checkEmail(email)
             }).disposed(by: disposeBag)
+        
+        let tapGenture = UITapGestureRecognizer(target: self, action: nil)
+        tapGenture.rx.event
+            .asDriver()
+            .drive(onNext: { [weak self] _ in
+                self?.showFindPasswordViewController()
+            }).disposed(by: disposeBag)
+        findAccountLabel.addGestureRecognizer(tapGenture)
     }
     
-    private func initBackgroundColor() {
+    private func configureBackgroundColor() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.view.bounds
         gradientLayer.colors = [UIColor.init(r: 10, g: 132, b: 255).cgColor,
                                 UIColor.init(r: 0, g: 178, b: 255).cgColor]
         self.view.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    private func configureBackImageView() {
+        let backGenture = UITapGestureRecognizer(target: self, action: nil)
+        backGenture.rx.event
+            .asDriver()
+            .drive(onNext: { [weak self] _ in
+                self?.navigationController?.popViewController(animated: false)
+            }).disposed(by: disposeBag)
+        backImageView.addGestureRecognizer(backGenture)
     }
     
     private func bindUI() {
@@ -80,12 +121,20 @@ extension EmailCheckViewController {
     private func showLoginViewController() {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
         vc.email = emailTextField.text
-        navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: false)
     }
     
     private func showSignUpViewController() {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController else { return }
         vc.email = emailTextField.text
-        navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: false)
+    }
+    
+    private func showFindPasswordViewController() {
+        let alert = UIAlertController(title: nil,
+                                      message: "현재 개발 중입니다.\n곧 이어 드릴게요 :-)",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "확인", style: .default))
+        self.present(alert, animated: true, completion: nil)
     }
 }

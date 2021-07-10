@@ -5,11 +5,28 @@
 //  Created by 홍필화 on 2021/05/22.
 //
 
-import Foundation
 import UIKit
 
-@IBDesignable extension UIView {
+extension UIView {
     
+    func roundTopCorners(radius: CGFloat) {
+        self.clipsToBounds = true
+        self.layer.cornerRadius = radius
+        self.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner] // Top right corner, Top left corner respectively
+     }
+    
+    @IBInspectable
+    var topCornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            clipsToBounds = true
+            layer.cornerRadius = newValue
+            layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        }
+    }
+
     @IBInspectable
     var cornerRadius: CGFloat {
         get {

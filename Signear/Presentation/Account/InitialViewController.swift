@@ -26,7 +26,18 @@ class InitialViewController: UIViewController {
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         configureUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.isHidden = false
     }
     
 }
@@ -58,6 +69,6 @@ extension InitialViewController {
     
     private func showEmailCheckViewController() {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "EmailCheckViewController") as? EmailCheckViewController else { return }
-        navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: false)
     }
 }

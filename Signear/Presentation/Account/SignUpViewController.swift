@@ -38,6 +38,16 @@ class SignUpViewController: UIViewController {
         viewModel = SignUpViewModel()
         configureUI()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.isHidden = false
+    }
 }
 
 // MARK: Private
@@ -48,6 +58,8 @@ extension SignUpViewController {
         emailTextField.text = email
         initBackgroundColor()
         
+        signUpButton.clipsToBounds = true
+        signUpButton.layer.cornerRadius = 5
         signUpButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] in

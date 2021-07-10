@@ -8,7 +8,6 @@
 import Foundation
 import RxSwift
 import Alamofire
-import RxAlamofire
 
 enum APIError: Error {
     case internalError(message: String)
@@ -23,7 +22,7 @@ class SignearAPI {
     // MARK: - Properties - Internal
     
     enum Constants {
-        static let baseURL = "http://3.35.204.9:80"
+        static let baseURL = "http://49.50.166.181:8088"
         static let checkEmailURL = "/customer/check"
         static let signUpURL = "/user/customer/create"
         static let loginURL = "/customer/login"

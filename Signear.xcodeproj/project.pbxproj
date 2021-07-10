@@ -26,6 +26,7 @@
 		2848E15C268B160800C5A01B /* FetchAreaUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848E15B268B160800C5A01B /* FetchAreaUseCase.swift */; };
 		28516B7D268A14FA007AF417 /* CreateReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28516B7C268A14FA007AF417 /* CreateReservationViewController.swift */; };
 		28516B7F268A1511007AF417 /* CreateReservationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28516B7E268A1511007AF417 /* CreateReservationViewModel.swift */; };
+		286734772691C9BA00878CEA /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286734762691C9BA00878CEA /* String+Extension.swift */; };
 		287CB91B266E62C700B51F0D /* SignearAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287CB91A266E62C700B51F0D /* SignearAPI.swift */; };
 		287CB91D266E632B00B51F0D /* CheckEmailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287CB91C266E632B00B51F0D /* CheckEmailRepository.swift */; };
 		287CB920266F95DB00B51F0D /* CheckEmailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287CB91F266F95DB00B51F0D /* CheckEmailDTO.swift */; };
@@ -135,6 +136,7 @@
 		2848E15B268B160800C5A01B /* FetchAreaUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAreaUseCase.swift; sourceTree = "<group>"; };
 		28516B7C268A14FA007AF417 /* CreateReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReservationViewController.swift; sourceTree = "<group>"; };
 		28516B7E268A1511007AF417 /* CreateReservationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReservationViewModel.swift; sourceTree = "<group>"; };
+		286734762691C9BA00878CEA /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		287CB91A266E62C700B51F0D /* SignearAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignearAPI.swift; sourceTree = "<group>"; };
 		287CB91C266E632B00B51F0D /* CheckEmailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckEmailRepository.swift; sourceTree = "<group>"; };
 		287CB91F266F95DB00B51F0D /* CheckEmailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckEmailDTO.swift; sourceTree = "<group>"; };
@@ -531,6 +533,7 @@
 				8746528048E2B09824BCF57691B29031 /* UIView+Extension.swift */,
 				287CB92F2675AABB00B51F0D /* Encodable+Extension.swift */,
 				287CB9312675B29400B51F0D /* Observable+Extension.swift */,
+				286734762691C9BA00878CEA /* String+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -865,6 +868,7 @@
 				2830F1FE26903DE400307713 /* CancelEmergencyCallUseCase.swift in Sources */,
 				28516B7D268A14FA007AF417 /* CreateReservationViewController.swift in Sources */,
 				F44563EAF43720B1C8C4F3E22D99ABF0 /* SendEmailViewModel.swift in Sources */,
+				286734772691C9BA00878CEA /* String+Extension.swift in Sources */,
 				EED7C329944D60EEF81440E00BBE3FF3 /* SignUpUseCase.swift in Sources */,
 				CC41309A08036977D7C472DFF0D6EB9F /* SignUpViewController.swift in Sources */,
 				DC7D381EF54471BE85FBFBF4936A6F32 /* SignUpViewModel.swift in Sources */,
