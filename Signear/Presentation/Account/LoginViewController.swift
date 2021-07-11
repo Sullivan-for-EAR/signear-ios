@@ -38,6 +38,11 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         viewModel = LoginViewModel()
         configureUI()
+        
+        #if DEBUG
+        passwordTextField.text = "123123"
+        loginButton.isEnabled = true
+        #endif
     }
     
     override func viewWillAppear(_ animated: Bool) {
