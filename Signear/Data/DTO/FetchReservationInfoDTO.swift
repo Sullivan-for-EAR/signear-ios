@@ -89,4 +89,18 @@ extension FetchReservationInfoDTO.Response {
                      request: request,
                      reject: reject)
     }
+    
+    func toDomain() -> ReservationHistoryModel {
+        return .init(rsID: rsID,
+                     date: date,
+                     startTime: startTime ?? "",
+                     endTime: endTime ?? "",
+                     area: area,
+                     address: address,
+                     method: .init(rawValue: method) ?? ReservationHistoryModel.MeetingType.error,
+                     status: .init(rawValue: status) ?? ReservationHistoryModel.Status.error,
+                     type: .init(rawValue: type) ?? ReservationHistoryModel.CallType.error,
+                     request: request,
+                     reject: reject)
+    }
 }

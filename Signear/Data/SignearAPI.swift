@@ -32,6 +32,8 @@ class SignearAPI {
         static let cancelReservationURL = "/reservation/customer/cancle/{reservationId}"
         static let createEmergencyCallURL = "/reservation/emergency/create"
         static let cancelEmergencyCallURL = "/reservation/emergency/cancle/{reservationId}"
+        static let fetchReservationHistoryURL = "/management/customer/list"
+        static let deleteReservationHistoryURL = "/management/delete"
         static let getUserInfoURL = "/user/customer/"
     }
     

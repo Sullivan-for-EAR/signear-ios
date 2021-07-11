@@ -65,11 +65,16 @@ extension ReservationHistoryViewController {
     private func bindUI() {
         viewModel?.outputs.reservationHistory
             .drive(tableView.rx.items(cellIdentifier: "ReservationHistoryTableViewCell", cellType: ReservationHistoryTableViewCell.self)) ({ index, history, cell in
-                cell.setReservationHistory(history)
+                cell.setHistory(history)
             }).disposed(by: disposeBag)
     }
     
     private func showHistory(_ history: ReservationHistoryModel) {
-        // TODO
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "ReservationHistoryInfoViewController") as? ReservationHistoryInfoViewController else { return }
+        vc.view.backgroundColor = .init(rgb: 000000, alpha: 0.5)
+        vc.definesPresentationContext = true
+        vc.modalPresentationStyle = .overFullScreen
+        vc.history = history
+        present(vc, animated: false)
     }
 }

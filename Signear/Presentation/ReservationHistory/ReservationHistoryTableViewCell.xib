@@ -29,7 +29,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="translateCancelIcon" translatesAutoresizingMaskIntoConstraints="NO" id="2AK-yD-Atf">
-                        <rect key="frame" x="307.5" y="30.5" width="63" height="25"/>
+                        <rect key="frame" x="310" y="30.5" width="63" height="25"/>
                     </imageView>
                 </subviews>
                 <constraints>
@@ -43,9 +43,9 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="addressLabel" destination="19j-vf-tUg" id="R53-9T-sGx"/>
                 <outlet property="dateLabel" destination="Sdh-eZ-ADk" id="cs0-Az-NVz"/>
                 <outlet property="statusImageView" destination="2AK-yD-Atf" id="Itb-C9-9MD"/>
-                <outlet property="titleLabel" destination="19j-vf-tUg" id="R53-9T-sGx"/>
             </connections>
             <point key="canvasLocation" x="-406" y="36"/>
         </tableViewCell>

@@ -26,38 +26,41 @@ class ReservationHistoryViewModel: ReservationHistoryViewModelType {
     
     // MARK: - Properties - Private
     
-    private let useCase: FetchReservationHistoryUseCaseType
     private let disposeBag = DisposeBag()
-    private var _reservationHistory: PublishRelay<[ReservationHistoryModel]> = .init()
+    private let _reservationHistory: BehaviorRelay<[ReservationHistoryModel]> = .init(value: [])
+    private let fetchReservationHistoryUseCase: FetchReservationHistoryUseCaseType
     
-    // MARK: - Constructor
+    // MARK: - Life Cycle
     
-    init(useCase: FetchReservationHistoryUseCaseType) {
-        self.useCase = useCase
+    init(fetchReservationHistoryUseCase: FetchReservationHistoryUseCaseType) {
+        self.fetchReservationHistoryUseCase = fetchReservationHistoryUseCase
     }
     
     convenience init() {
-        self.init(useCase: FetchReservationHistoryUseCase())
+        self.init(fetchReservationHistoryUseCase: FetchReservationHistoryUseCase())
     }
-    
 }
 
-// MARK: - ReservationHistoryViewModelInputs
-
 extension ReservationHistoryViewModel: ReservationHistoryViewModelInputs {
+    
     var inputs: ReservationHistoryViewModelInputs { return self }
     
     func fetchReservationHistory() {
-        useCase.fetchReservationHistory()
-            .catchAndReturn([])
-            .bind(to: _reservationHistory)
-            .disposed(by: disposeBag)
+        fetchReservationHistoryUseCase.fetchReservationHistory()
+            .subscribe(onNext: { [weak self] result in
+                switch result {
+                case .success(let history):
+                    self?._reservationHistory.accept(history)
+                case .failure(_):
+                    // TODO : API Error
+                    break
+                }
+            }).disposed(by: disposeBag)
     }
 }
 
-// MARK: - ReservationHistoryViewModelOutputs
-
 extension ReservationHistoryViewModel: ReservationHistoryViewModelOutputs {
+    
     var outputs: ReservationHistoryViewModelOutputs { return self }
     var reservationHistory: Driver<[ReservationHistoryModel]> { _reservationHistory.asDriver(onErrorJustReturn: []) }
 }

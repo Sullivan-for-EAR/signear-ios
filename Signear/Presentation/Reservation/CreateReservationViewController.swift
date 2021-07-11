@@ -18,7 +18,7 @@ class CreateReservationViewController: UIViewController {
     @IBOutlet private weak var startTimeTextField: UITextField!
     @IBOutlet private weak var endTimeTextField: UITextField!
     @IBOutlet private weak var areaTextField: UITextField!
-    @IBOutlet private weak var locationTextField: UITextField!
+    @IBOutlet private weak var addressTextField: UITextField!
     @IBOutlet private weak var signTranslationButton: UIButton!
     @IBOutlet private weak var onlineTranslationButton: UIButton!
     @IBOutlet private weak var purposeTextView: UITextView!
@@ -146,7 +146,7 @@ extension CreateReservationViewController {
             startTimeTextField.rx.text,
             endTimeTextField.rx.text,
             areaTextField.rx.text,
-            locationTextField.rx.text,
+            addressTextField.rx.text,
             purposeTextView.rx.text
         ).merge()
         .subscribe(onNext: { [weak self] _ in
@@ -224,9 +224,9 @@ extension CreateReservationViewController {
         let doneButon = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(didAddressTextFieldDoneButtonPressed))
         toolbar.setItems([doneButon], animated: true)
  
-        locationTextField.inputAccessoryView = toolbar
-        locationTextField.delegate = self
-        locationTextField.rx.text.orEmpty
+        addressTextField.inputAccessoryView = toolbar
+        addressTextField.delegate = self
+        addressTextField.rx.text.orEmpty
             .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
             .distinctUntilChanged()
             .subscribe(onNext: { [weak self] address in
@@ -351,7 +351,7 @@ extension CreateReservationViewController {
             startTimeTextField.text?.isEmpty == true ||
             endTimeTextField.text?.isEmpty == true ||
             areaTextField.text?.isEmpty == true ||
-            locationTextField.text?.isEmpty == true ||
+            addressTextField.text?.isEmpty == true ||
             purposeTextView.text.isEmpty ||
             purposeTextView.text == Constants.purposeTextViewPlaceholder {
             reservationButton.isEnabled = false

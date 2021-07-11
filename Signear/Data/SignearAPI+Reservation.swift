@@ -139,4 +139,68 @@ extension SignearAPI {
             }
         }
     }
+    
+    func fetchReservationHistory() -> Observable<Result<[FetchReservationInfoDTO.Response], APIError>> {
+        let url = Constants.baseURL + Constants.fetchReservationHistoryURL
+        return Observable.create { [weak self] observer in
+            guard let self = self,
+                  let token = self.token,
+                  let customerId = self.customerId else {
+                return Disposables.create()
+            }
+            let request =
+                AF.request(url,
+                           method: .get,
+                           parameters: FetchReservationHistoryDTO.Request(customerId: "\(customerId)").toDictionary,
+                           encoding: URLEncoding.queryString,
+                           headers: .init(token: token))
+                .responseString { response in
+                    printServerMessage(data: response.data)
+                }
+                .responseDecodable(of: [FetchReservationInfoDTO.Response].self) { response in
+                    switch response.result {
+                    case .success(let data):
+                        observer.onNext(.success(data))
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                        observer.onNext(.failure(.internalError(message: error.localizedDescription)))
+                    }
+                }
+            
+            return Disposables.create {
+                request.cancel()
+            }
+        }
+    }
+    
+    func deleteReservationHistory(reservationId: Int) -> Observable<Result<Bool, APIError>> {
+        let url = Constants.baseURL + Constants.deleteReservationHistoryURL + "/\(reservationId)"
+        return Observable.create { [weak self] observer in
+            guard let self = self,
+                  let token = self.token else {
+                return Disposables.create()
+            }
+            let request =
+                AF.request(url,
+                           method: .post,
+                           encoding: JSONEncoding.default,
+                           headers: .init(token: token))
+                .responseString { response in
+                    printServerMessage(data: response.data)
+                }
+                .responseData(emptyResponseCodes: [200]) { response in
+                    switch response.result {
+                    case .success(_):
+                        observer.onNext(.success(true))
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                        observer.onNext(.failure(.internalError(message: error.localizedDescription)))
+                    }
+                }
+            
+            return Disposables.create {
+                request.cancel()
+            }
+        }
+    }
 }

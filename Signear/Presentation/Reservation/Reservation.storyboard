@@ -519,10 +519,10 @@ Cg
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addressTextField" destination="61n-uJ-g1q" id="Q9y-DV-MQ4"/>
                         <outlet property="areaTextField" destination="4yH-aP-Log" id="XJi-wR-jET"/>
                         <outlet property="dateTextField" destination="Rzx-Kz-f3d" id="2jU-hy-o7x"/>
                         <outlet property="endTimeTextField" destination="Mlk-Im-OYD" id="EyG-9v-jGb"/>
-                        <outlet property="locationTextField" destination="61n-uJ-g1q" id="Q9y-DV-MQ4"/>
                         <outlet property="onlineTranslationButton" destination="Yy5-ve-dbp" id="lkL-Sx-cgy"/>
                         <outlet property="purposeTextView" destination="3PP-Hp-2bE" id="bQ9-5N-IKZ"/>
                         <outlet property="reservationButton" destination="7PN-Jk-HzX" id="CnF-yK-zfA"/>

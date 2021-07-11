@@ -23,6 +23,11 @@
 		2802DD82269A9B37001DAC01 /* SignearAPI+MyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2802DD81269A9B37001DAC01 /* SignearAPI+MyPage.swift */; };
 		2802DD84269A9B4D001DAC01 /* UserInfoDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2802DD83269A9B4D001DAC01 /* UserInfoDTO.swift */; };
 		2802DD86269AA0FE001DAC01 /* SuccessReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2802DD85269AA0FE001DAC01 /* SuccessReservationViewController.swift */; };
+		2802DD88269ACBCF001DAC01 /* FetchReservationHistoryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2802DD87269ACBCF001DAC01 /* FetchReservationHistoryDTO.swift */; };
+		2802DD8A269ACCED001DAC01 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2802DD89269ACCED001DAC01 /* Date+Extension.swift */; };
+		2802DD8E269AD275001DAC01 /* ReservationHistoryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2802DD8D269AD275001DAC01 /* ReservationHistoryInfoViewController.swift */; };
+		2802DD92269ADA76001DAC01 /* DeleteReservationHistoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2802DD91269ADA76001DAC01 /* DeleteReservationHistoryUseCase.swift */; };
+		2802DD94269ADAAC001DAC01 /* ReservationHistoryInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2802DD93269ADAAC001DAC01 /* ReservationHistoryInfoViewModel.swift */; };
 		281FF069268DC3CA00F7A086 /* FetchReservationsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281FF068268DC3CA00F7A086 /* FetchReservationsDTO.swift */; };
 		2830F1FE26903DE400307713 /* CancelEmergencyCallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F1FD26903DE400307713 /* CancelEmergencyCallUseCase.swift */; };
 		2830F20026903E8300307713 /* CancelEmergencyCallDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F1FF26903E8300307713 /* CancelEmergencyCallDTO.swift */; };
@@ -134,6 +139,11 @@
 		2802DD81269A9B37001DAC01 /* SignearAPI+MyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignearAPI+MyPage.swift"; sourceTree = "<group>"; };
 		2802DD83269A9B4D001DAC01 /* UserInfoDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoDTO.swift; sourceTree = "<group>"; };
 		2802DD85269AA0FE001DAC01 /* SuccessReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessReservationViewController.swift; sourceTree = "<group>"; };
+		2802DD87269ACBCF001DAC01 /* FetchReservationHistoryDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchReservationHistoryDTO.swift; sourceTree = "<group>"; };
+		2802DD89269ACCED001DAC01 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		2802DD8D269AD275001DAC01 /* ReservationHistoryInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationHistoryInfoViewController.swift; sourceTree = "<group>"; };
+		2802DD91269ADA76001DAC01 /* DeleteReservationHistoryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteReservationHistoryUseCase.swift; sourceTree = "<group>"; };
+		2802DD93269ADAAC001DAC01 /* ReservationHistoryInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationHistoryInfoViewModel.swift; sourceTree = "<group>"; };
 		281FF068268DC3CA00F7A086 /* FetchReservationsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchReservationsDTO.swift; sourceTree = "<group>"; };
 		2830F1FD26903DE400307713 /* CancelEmergencyCallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelEmergencyCallUseCase.swift; sourceTree = "<group>"; };
 		2830F1FF26903E8300307713 /* CancelEmergencyCallDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelEmergencyCallDTO.swift; sourceTree = "<group>"; };
@@ -271,6 +281,7 @@
 				2830F1FD26903DE400307713 /* CancelEmergencyCallUseCase.swift */,
 				DF91755246920FD74DB459861DD3BD24 /* SignUpUseCase.swift */,
 				287CB9352675CC0300B51F0D /* ResetPasswordUseCase.swift */,
+				2802DD91269ADA76001DAC01 /* DeleteReservationHistoryUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -349,6 +360,7 @@
 				281FF068268DC3CA00F7A086 /* FetchReservationsDTO.swift */,
 				287CB929266FAA8700B51F0D /* FetchReservationInfoDTO.swift */,
 				287CB939267604FC00B51F0D /* CancelReservationDTO.swift */,
+				2802DD87269ACBCF001DAC01 /* FetchReservationHistoryDTO.swift */,
 				2802DD83269A9B4D001DAC01 /* UserInfoDTO.swift */,
 			);
 			path = DTO;
@@ -402,6 +414,8 @@
 				36694D0CFADDA0282DA3884E7986B3B1 /* ReservationHistoryTableViewCell.xib */,
 				D9FB6414525490DD68A901FD0D331CC3 /* ReservationHistoryViewController.swift */,
 				C3885CC1BEF29F6BAEB034BAE50CC23F /* ReservationHistoryViewModel.swift */,
+				2802DD8D269AD275001DAC01 /* ReservationHistoryInfoViewController.swift */,
+				2802DD93269ADAAC001DAC01 /* ReservationHistoryInfoViewModel.swift */,
 			);
 			path = ReservationHistory;
 			sourceTree = "<group>";
@@ -537,6 +551,7 @@
 				287CB92F2675AABB00B51F0D /* Encodable+Extension.swift */,
 				287CB9312675B29400B51F0D /* Observable+Extension.swift */,
 				286734762691C9BA00878CEA /* String+Extension.swift */,
+				2802DD89269ACCED001DAC01 /* Date+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -813,6 +828,7 @@
 				A5D1045850EC4A44D353F0AF20F7C4CD /* CancelReservationUseCase.swift in Sources */,
 				3985C1861F84F9E674F01FE0DF6572A0 /* DateFormatter+Extension.swift in Sources */,
 				28009D782680D40600BA08DD /* CreateEmergencyCallUseCase.swift in Sources */,
+				2802DD94269ADAAC001DAC01 /* ReservationHistoryInfoViewModel.swift in Sources */,
 				287CB93A267604FC00B51F0D /* CancelReservationDTO.swift in Sources */,
 				F0B35AA0E1746782DB31D939C11040C7 /* EmailCheckUseCase.swift in Sources */,
 				85BDCDF29105310CA82ECCBBA8EBE476 /* EmailCheckViewController.swift in Sources */,
@@ -823,6 +839,7 @@
 				2830F20026903E8300307713 /* CancelEmergencyCallDTO.swift in Sources */,
 				F908D298AB48EE35B2B0404C9F143E0C /* EmergencyViewModel.swift in Sources */,
 				F5A3F86C1663D64A64E7401BB7CF85E4 /* FetchProfileUseCase.swift in Sources */,
+				2802DD8A269ACCED001DAC01 /* Date+Extension.swift in Sources */,
 				F65C460FF4726CB79D870E344E669ABA /* FetchReservationHistoryUseCase.swift in Sources */,
 				287CB922266F9AF400B51F0D /* LoginDTO.swift in Sources */,
 				C0510DAEB63D0F9631763D0693DC580B /* FetchReservationInfoUseCase.swift in Sources */,
@@ -839,6 +856,7 @@
 				1DC2CAEC17906E26358C83B97294B1E0 /* LoginRepository.swift in Sources */,
 				28009D742680CE9400BA08DD /* SignearAPI+Emergency.swift in Sources */,
 				190B3C05857A13D732D2A2E9F86778C3 /* LoginUseCase.swift in Sources */,
+				2802DD88269ACBCF001DAC01 /* FetchReservationHistoryDTO.swift in Sources */,
 				E2FCB1213B7142D064C737148E336C44 /* LoginViewController.swift in Sources */,
 				C7C8C419215D6D2791A7FD149D4838D8 /* LoginViewModel.swift in Sources */,
 				2802DD84269A9B4D001DAC01 /* UserInfoDTO.swift in Sources */,
@@ -851,6 +869,7 @@
 				270086DCAE7CB7208D3D5ED259BFFFD0 /* MyPageViewController.swift in Sources */,
 				60CBBD6614232DB895C065EC25565B3E /* MyPageViewModel.swift in Sources */,
 				357ED405F653E08B6CC0EBBE7E26A76F /* ProfileModel.swift in Sources */,
+				2802DD8E269AD275001DAC01 /* ReservationHistoryInfoViewController.swift in Sources */,
 				287CB91D266E632B00B51F0D /* CheckEmailRepository.swift in Sources */,
 				4B3AFB16ADA2DAB35BD718A603D2FFC6 /* ReservationHistoryModel.swift in Sources */,
 				28009D762680CF1D00BA08DD /* CreateEmergencyDTO.swift in Sources */,
@@ -869,6 +888,7 @@
 				FEF807652D2B13B21DC2C0F11163F87B /* SendEmailViewController.swift in Sources */,
 				287CB924266FA0BC00B51F0D /* SignUpDTO.swift in Sources */,
 				28516B7F268A1511007AF417 /* CreateReservationViewModel.swift in Sources */,
+				2802DD92269ADA76001DAC01 /* DeleteReservationHistoryUseCase.swift in Sources */,
 				2830F1FE26903DE400307713 /* CancelEmergencyCallUseCase.swift in Sources */,
 				28516B7D268A14FA007AF417 /* CreateReservationViewController.swift in Sources */,
 				F44563EAF43720B1C8C4F3E22D99ABF0 /* SendEmailViewModel.swift in Sources */,
