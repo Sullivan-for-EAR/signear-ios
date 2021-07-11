@@ -19,7 +19,7 @@ extension DateFormatter {
     static let getTime: DateFormatter = {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "ko_kr")
-        formatter.dateFormat = "a hh:mm"
+        formatter.dateFormat = "a h:mm"
         return formatter
     }()
     

@@ -71,7 +71,7 @@ extension ReservationTableViewCell {
         dateFormatter.locale = Locale(identifier:"ko_KR")
         dateFormatter.dateFormat = "HHmm"
         let convertDate = dateFormatter.date(from: time) ?? Date()
-        dateFormatter.dateFormat = "a H시 mm분"
+        dateFormatter.dateFormat = "a h시 mm분"
         return dateFormatter.string(from: convertDate)
     }
 }
