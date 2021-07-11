@@ -20,6 +20,8 @@
 		28009D742680CE9400BA08DD /* SignearAPI+Emergency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28009D732680CE9400BA08DD /* SignearAPI+Emergency.swift */; };
 		28009D762680CF1D00BA08DD /* CreateEmergencyDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28009D752680CF1D00BA08DD /* CreateEmergencyDTO.swift */; };
 		28009D782680D40600BA08DD /* CreateEmergencyCallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28009D772680D40600BA08DD /* CreateEmergencyCallUseCase.swift */; };
+		2802DD82269A9B37001DAC01 /* SignearAPI+MyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2802DD81269A9B37001DAC01 /* SignearAPI+MyPage.swift */; };
+		2802DD84269A9B4D001DAC01 /* UserInfoDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2802DD83269A9B4D001DAC01 /* UserInfoDTO.swift */; };
 		281FF069268DC3CA00F7A086 /* FetchReservationsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281FF068268DC3CA00F7A086 /* FetchReservationsDTO.swift */; };
 		2830F1FE26903DE400307713 /* CancelEmergencyCallUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F1FD26903DE400307713 /* CancelEmergencyCallUseCase.swift */; };
 		2830F20026903E8300307713 /* CancelEmergencyCallDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2830F1FF26903E8300307713 /* CancelEmergencyCallDTO.swift */; };
@@ -49,7 +51,6 @@
 		4644A82448E21718041F7EF252607E1B /* Pods_signearTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE05C9B1AA34F367DC4DA75116E08DD /* Pods_signearTests.framework */; };
 		4B1CBE9010C6A66857CC3D35EDD808FF /* ReservationHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175864A064EDEC754F697BDFE3201F54 /* ReservationHistory.storyboard */; };
 		4B3AFB16ADA2DAB35BD718A603D2FFC6 /* ReservationHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA1C10D13AA65D51330FDAF4833554 /* ReservationHistoryModel.swift */; };
-		5038F00BB6B1A2DA6E54E4D124861C7F /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07E655CE3F009B6DE62CAA60EC4CD4 /* ProfileTableViewCell.swift */; };
 		51A78F3114CA9DF3BC2BBA45C1C55CC5 /* HelloViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D47F6A69D798BDFF0C2B1ECB10A6B1 /* HelloViewModel.swift */; };
 		578B7885F7779090F346DCD67650F7B6 /* signearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C4246A20D251AAFF7A925397BBE94C /* signearTests.swift */; };
 		60CBBD6614232DB895C065EC25565B3E /* MyPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D9FA23B8C60512360E8EA167521382 /* MyPageViewModel.swift */; };
@@ -80,7 +81,6 @@
 		C7C8C419215D6D2791A7FD149D4838D8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E65A1E91197BDB214E4D804113A0E2 /* LoginViewModel.swift */; };
 		C91D19803AB54E6A31F113472CB9E7EA /* signearUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB278AB68F9871641EC4F6758C56E67 /* signearUITests.swift */; };
 		CC41309A08036977D7C472DFF0D6EB9F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6365C6C387580EEC98D4DE402C826A7D /* SignUpViewController.swift */; };
-		CDE9DFF2603AE81C548323D721C2C1E8 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECDBE7B59839686F365B700729C32B2F /* ProfileTableViewCell.xib */; };
 		DC7D381EF54471BE85FBFBF4936A6F32 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D484994687164CDBD13B8C52317F6 /* SignUpViewModel.swift */; };
 		DF2520A6D3E7DD50241615B919E3A847 /* ReservationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4226BD575979DF2683F21FFEDD44BE /* ReservationListViewModel.swift */; };
 		E2FCB1213B7142D064C737148E336C44 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36EC3122CE8AC23FA4B8E0E88E580B5 /* LoginViewController.swift */; };
@@ -130,6 +130,8 @@
 		28009D732680CE9400BA08DD /* SignearAPI+Emergency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignearAPI+Emergency.swift"; sourceTree = "<group>"; };
 		28009D752680CF1D00BA08DD /* CreateEmergencyDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEmergencyDTO.swift; sourceTree = "<group>"; };
 		28009D772680D40600BA08DD /* CreateEmergencyCallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEmergencyCallUseCase.swift; sourceTree = "<group>"; };
+		2802DD81269A9B37001DAC01 /* SignearAPI+MyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignearAPI+MyPage.swift"; sourceTree = "<group>"; };
+		2802DD83269A9B4D001DAC01 /* UserInfoDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoDTO.swift; sourceTree = "<group>"; };
 		281FF068268DC3CA00F7A086 /* FetchReservationsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchReservationsDTO.swift; sourceTree = "<group>"; };
 		2830F1FD26903DE400307713 /* CancelEmergencyCallUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelEmergencyCallUseCase.swift; sourceTree = "<group>"; };
 		2830F1FF26903E8300307713 /* CancelEmergencyCallDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelEmergencyCallDTO.swift; sourceTree = "<group>"; };
@@ -195,7 +197,6 @@
 		C15BABD1EB65B8B12469BF32B15DA524 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C3885CC1BEF29F6BAEB034BAE50CC23F /* ReservationHistoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationHistoryViewModel.swift; sourceTree = "<group>"; };
 		CC53EA3D4D0124A831C1B8ADEF6DCF8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE07E655CE3F009B6DE62CAA60EC4CD4 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		CE49E4082FB8726A3A682A2C9AADAD8C /* HelloViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
 		CF6EA73599CC9A4D34E09C8B2DA361D4 /* ReservationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationTableViewCell.xib; sourceTree = "<group>"; };
 		CF81E39E2D1BC5FC40F64DA0DE3E3185 /* FetchReservationsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchReservationsUseCase.swift; sourceTree = "<group>"; };
@@ -211,7 +212,6 @@
 		E9DCEFCDE630E489CFBE071B0FF15548 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA4226BD575979DF2683F21FFEDD44BE /* ReservationListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationListViewModel.swift; sourceTree = "<group>"; };
 		EA6B3A3A206C1092600D19BA1A75439B /* Pods_signear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_signear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ECDBE7B59839686F365B700729C32B2F /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
 		EE0D484994687164CDBD13B8C52317F6 /* SignUpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		EE8FF32CFE10EC78D9C433674C8B7B7C /* ReservationInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationInfoViewModel.swift; sourceTree = "<group>"; };
 		F040257CF1CF27D2205DFE8C99F94E28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -347,6 +347,7 @@
 				281FF068268DC3CA00F7A086 /* FetchReservationsDTO.swift */,
 				287CB929266FAA8700B51F0D /* FetchReservationInfoDTO.swift */,
 				287CB939267604FC00B51F0D /* CancelReservationDTO.swift */,
+				2802DD83269A9B4D001DAC01 /* UserInfoDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -451,8 +452,6 @@
 				D1814C65AC782BC0985FBEFADE1306CB /* MyPageTableViewCell.xib */,
 				A9B78FA5766EF015A3F008D2F2F682FF /* MyPageViewController.swift */,
 				E0D9FA23B8C60512360E8EA167521382 /* MyPageViewModel.swift */,
-				CE07E655CE3F009B6DE62CAA60EC4CD4 /* ProfileTableViewCell.swift */,
-				ECDBE7B59839686F365B700729C32B2F /* ProfileTableViewCell.xib */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -520,6 +519,7 @@
 				287CB91A266E62C700B51F0D /* SignearAPI.swift */,
 				287CB9372675DC6200B51F0D /* SignearAPI+Reservation.swift */,
 				28009D732680CE9400BA08DD /* SignearAPI+Emergency.swift */,
+				2802DD81269A9B37001DAC01 /* SignearAPI+MyPage.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -668,7 +668,6 @@
 				FBC192600D033E5E1019EEA87505C6CA /* LaunchScreen.storyboard in Resources */,
 				C17829B03CB049939DA150FF5261B9C2 /* MyPage.storyboard in Resources */,
 				4117E2C1F43A9861EE431D7562D12C84 /* MyPageTableViewCell.xib in Resources */,
-				CDE9DFF2603AE81C548323D721C2C1E8 /* ProfileTableViewCell.xib in Resources */,
 				7F1D9FC02203F29B57675241AA230176 /* Reservation.storyboard in Resources */,
 				36EA48E012B3BDADAB0A83E87B2C5E19 /* ReservationBackgroundView.xib in Resources */,
 				4B1CBE9010C6A66857CC3D35EDD808FF /* ReservationHistory.storyboard in Resources */,
@@ -838,7 +837,9 @@
 				190B3C05857A13D732D2A2E9F86778C3 /* LoginUseCase.swift in Sources */,
 				E2FCB1213B7142D064C737148E336C44 /* LoginViewController.swift in Sources */,
 				C7C8C419215D6D2791A7FD149D4838D8 /* LoginViewModel.swift in Sources */,
+				2802DD84269A9B4D001DAC01 /* UserInfoDTO.swift in Sources */,
 				94BF951A2BF56959EF966D1E22D3FF9A /* LostEmailUseCase.swift in Sources */,
+				2802DD82269A9B37001DAC01 /* SignearAPI+MyPage.swift in Sources */,
 				18F9011BA3C1B8E2C567116A65CF8F32 /* MakeReservationModel.swift in Sources */,
 				C02C0321A155F8B9835A5E1C6C767AFF /* MyPageTableViewCell.swift in Sources */,
 				287CB920266F95DB00B51F0D /* CheckEmailDTO.swift in Sources */,
@@ -846,7 +847,6 @@
 				270086DCAE7CB7208D3D5ED259BFFFD0 /* MyPageViewController.swift in Sources */,
 				60CBBD6614232DB895C065EC25565B3E /* MyPageViewModel.swift in Sources */,
 				357ED405F653E08B6CC0EBBE7E26A76F /* ProfileModel.swift in Sources */,
-				5038F00BB6B1A2DA6E54E4D124861C7F /* ProfileTableViewCell.swift in Sources */,
 				287CB91D266E632B00B51F0D /* CheckEmailRepository.swift in Sources */,
 				4B3AFB16ADA2DAB35BD718A603D2FFC6 /* ReservationHistoryModel.swift in Sources */,
 				28009D762680CF1D00BA08DD /* CreateEmergencyDTO.swift in Sources */,
