@@ -23,7 +23,7 @@ protocol CreateReservationViewModelInputs {
 
 protocol CreateReservationViewModelOutputs {
     var area: Driver<[String]> { get }
-    var reservationResult: Driver<Bool> { get }
+    var reservationResult: Driver<MakeReservationModel?> { get }
 }
 
 protocol CreateReservationViewModelType {
@@ -37,7 +37,7 @@ class CreateReservationViewModel: CreateReservationViewModelType {
     
     private let disposeBag = DisposeBag()
     private var _area: PublishRelay<[String]> = .init()
-    private var _reservationResult: PublishRelay<Bool> = .init()
+    private var _reservationResult: PublishRelay<MakeReservationModel?> = .init()
     private var selectedDate: String?
     private var selectedStartTime: String?
     private var selectedEndTime: String?
@@ -135,5 +135,5 @@ extension CreateReservationViewModel: CreateReservationViewModelInputs {
 extension CreateReservationViewModel: CreateReservationViewModelOutputs {
     var outputs: CreateReservationViewModelOutputs { return self }
     var area: Driver<[String]> { _area.asDriver(onErrorJustReturn: []) }
-    var reservationResult: Driver<Bool> { _reservationResult.asDriver(onErrorJustReturn: false) }
+    var reservationResult: Driver<MakeReservationModel?> { _reservationResult.asDriver(onErrorJustReturn: nil) }
 }

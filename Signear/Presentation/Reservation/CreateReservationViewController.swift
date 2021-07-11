@@ -308,11 +308,20 @@ extension CreateReservationViewController {
             }).disposed(by: disposeBag)
         
         viewModel?.outputs.reservationResult
-            .drive(onNext: { [weak self] isSucceed in
-                if isSucceed {
-                    self?.navigationController?.popViewController(animated: true)
-                }
+            .filter { $0 != nil }
+            .map { $0! }
+            .drive(onNext: { [weak self] model in
+                self?.showSuccessView(model: model)
             }).disposed(by: disposeBag)
+    }
+    
+    private func showSuccessView(model: MakeReservationModel) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "SuccessReservationViewController") as? SuccessReservationViewController else { return }
+        vc.model = model
+        vc.view.backgroundColor = .init(rgb: 000000, alpha: 0.5)
+        vc.definesPresentationContext = true
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: false)
     }
 }
 
@@ -320,6 +329,10 @@ extension CreateReservationViewController {
 
 extension CreateReservationViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == areaTextField && areaTextField.text?.isEmpty == true {
+            areaTextField.text = "강남구"
+        }
+        
         let point = CGPoint(x: .zero, y: textField.frame.origin.y - 10)
         scrollView.setContentOffset(point, animated: true)
     }

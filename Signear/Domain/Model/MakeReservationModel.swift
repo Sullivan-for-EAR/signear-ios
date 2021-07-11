@@ -23,6 +23,17 @@ extension MakeReservationModel {
         case error = 0
         case sign = 1
         case video = 2
+        
+        var getString: String {
+            switch self {
+            case .error:
+                return ""
+            case .sign:
+                return "수어통역"
+            case .video:
+                return "화상통역"
+            }
+        }
     }
 }
 
