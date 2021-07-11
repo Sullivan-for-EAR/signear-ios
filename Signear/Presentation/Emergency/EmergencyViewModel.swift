@@ -26,17 +26,17 @@ class EmergencyViewModel: EmergencyViewModelType {
     
     // MARK: - Properties - Private
     private let disposeBag = DisposeBag()
-    private let useCase: RequestEmergencyTranslationUseCaseType
+    private let useCase: CreateEmergencyCallUseCaseType
     private var _result: PublishRelay<Bool> = .init()
     
     // MARK: - Constructor
     
-    init(useCase: RequestEmergencyTranslationUseCaseType) {
+    init(useCase: CreateEmergencyCallUseCaseType) {
         self.useCase = useCase
     }
     
     convenience init() {
-        self.init(useCase: RequestEmergencyTranslationUseCase())
+        self.init(useCase: CreateEmergencyCallUseCase())
     }
     
 }
@@ -48,10 +48,15 @@ extension EmergencyViewModel: EmergencyViewModelInputs {
     var inputs: EmergencyViewModelInputs { return self }
     
     func requestEmergencyTranslation() {
-        useCase.requestEmergencyTranslation()
-            .catchAndReturn(false)
-            .bind(to: _result)
-            .disposed(by: disposeBag)
+        useCase.call()
+            .subscribe(onNext: { [weak self] result in
+                switch result {
+                case .success(_):
+                    self?._result.accept(true)
+                case .failure(_):
+                    break
+                }
+            }).disposed(by: disposeBag)
     }
 }
 

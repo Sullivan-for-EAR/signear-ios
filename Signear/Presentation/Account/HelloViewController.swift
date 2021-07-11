@@ -29,6 +29,16 @@ class HelloViewController: UIViewController {
     override func viewDidLoad() {
         configureUI()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.isHidden = false
+    }
 }
 
 // MARK: Private
@@ -37,6 +47,9 @@ extension HelloViewController {
     
     private func configureUI() {
         initBackgroundColor()
+        
+        startButton.clipsToBounds = true
+        startButton.layer.cornerRadius = 5
         startButton.rx.tap
             .subscribe(onNext: { [weak self] in
                 self?.showReservationListViewController()

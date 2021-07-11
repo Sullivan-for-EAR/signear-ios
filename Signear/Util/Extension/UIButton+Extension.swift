@@ -8,20 +8,15 @@
 import UIKit
 
 extension UIButton {
-    func setButton(state: UIControl.State) {
-        switch state {
-        case .selected:
-            self.backgroundColor = UIColor(rgb: 0x0A84FF, alpha: 0.05)
-            self.layer.borderWidth = 2.0
-            self.layer.borderColor = UIColor(rgb: 0x0A84FF, alpha: 1).cgColor
-            break
-        case .normal:
-            self.layer.borderWidth = 1.0
-            self.layer.borderColor = UIColor(rgb: 0xD6D6D6, alpha: 1).cgColor
-            self.backgroundColor = .clear
-            break
-        default:
-            break
-        }
+    func setBackgroundColor(_ color: UIColor, for state: UIControl.State) {
+        UIGraphicsBeginImageContext(CGSize(width: 1.0, height: 1.0))
+        guard let context = UIGraphicsGetCurrentContext() else { return }
+        context.setFillColor(color.cgColor)
+        context.fill(CGRect(x: 0.0, y: 0.0, width: 1.0, height: 1.0))
+        
+        let backgroundImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+         
+        self.setBackgroundImage(backgroundImage, for: state)
     }
 }

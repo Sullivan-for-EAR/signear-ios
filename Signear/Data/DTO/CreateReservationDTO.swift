@@ -50,6 +50,18 @@ enum CreateReservationDTO {
             self.request = reservation.request
            self.customerUser = CustomerUser(customerID: customerId)
         }
+        
+        enum CodingKeys: String, CodingKey {
+            case date
+            case startTime = "start_time"
+            case endTime = "end_time"
+            case area
+            case address
+            case method
+            case type
+            case request
+            case customerUser
+        }
     }
     
     struct Response: Codable {

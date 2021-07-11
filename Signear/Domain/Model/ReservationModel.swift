@@ -10,14 +10,14 @@ import UIKit
 struct ReservationModel: Equatable {
     let rsID: Int
     let date: String
-    let startTime: String
-    let endTime: String
-    let area: String
-    let address: String
-    let method: MeetingType
+    let startTime: String?
+    let endTime: String?
+    let area: String?
+    let address: String?
+    let method: MeetingType?
     let status: Status
     let type: CallType
-    let request: String
+    let request: String?
     let reject: String?
 }
 
@@ -66,6 +66,8 @@ extension ReservationModel.Status {
             return UIImage.init(named: "confirmReservationIcon")
         case .reject:
             return UIImage.init(named: "rejectReservationIcon")
+        case .cancel:
+            return UIImage.init(named: "reservationCancelIcon")
         default:
             return nil
         }

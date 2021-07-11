@@ -34,9 +34,18 @@ class ReservationTableViewCell: UITableViewCell {
 extension ReservationTableViewCell {
     
     func setReservation(_ reservaion: ReservationModel) {
-        titleLabel.text = reservaion.area
-        dateLabel.text = reservaion.date
-        reservationStatusImageView.image = reservaion.status.getImage()
+        if reservaion.type == .emergency {
+            titleLabel.text = "긴급통역 연결 중"
+            titleLabel.textColor = .init(rgb: 0xFF453A)
+            dateLabel.text = "\(convertDate(date: reservaion.date)) \(convertDate(time: reservaion.startTime ?? ""))"
+            reservationStatusImageView.image = reservaion.status.getImage()
+            
+        } else {
+            titleLabel.text = reservaion.address
+            titleLabel.textColor = .black
+            dateLabel.text = "\(convertDate(date: reservaion.date)) \(convertDate(time: reservaion.startTime ?? ""))"
+            reservationStatusImageView.image = reservaion.status.getImage()
+        }
     }
 }
 
@@ -46,6 +55,24 @@ extension ReservationTableViewCell {
     
     func configureUI() {
         // TODO
+    }
+    
+    private func convertDate(date: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier:"ko_KR")
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let convertDate = dateFormatter.date(from: date) ?? Date()
+        dateFormatter.dateFormat = "MMM dd일 EEEE"
+        return dateFormatter.string(from: convertDate)
+    }
+    
+    private func convertDate(time: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier:"ko_KR")
+        dateFormatter.dateFormat = "HHmm"
+        let convertDate = dateFormatter.date(from: time) ?? Date()
+        dateFormatter.dateFormat = "a H시 mm분"
+        return dateFormatter.string(from: convertDate)
     }
 }
 

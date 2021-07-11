@@ -5,40 +5,61 @@
 //  Created by 홍필화 on 2021/05/22.
 //
 
-import Foundation
 import UIKit
 
-@IBDesignable extension UIView {
+extension UIView {
     
-    @IBInspectable var borderwidth: CGFloat {
-        set {
-            layer.borderWidth = newValue
-        }
-        get {
-            return layer.borderWidth
-        }
-    }
+    func roundTopCorners(radius: CGFloat) {
+        self.clipsToBounds = true
+        self.layer.cornerRadius = radius
+        self.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner] // Top right corner, Top left corner respectively
+     }
     
-    @IBInspectable var cornerradius: CGFloat {
-        set {
-            layer.cornerRadius = newValue
-        }
+    @IBInspectable
+    var topCornerRadius: CGFloat {
         get {
             return layer.cornerRadius
         }
-    }
-    
-    @IBInspectable var bordercolor: UIColor? {
         set {
-            guard let uiColor = newValue else { return }
-            layer.borderColor = uiColor.cgColor
-        }
-        get {
-            guard let color = layer.borderColor else { return nil }
-            return UIColor(cgColor: color)
+            clipsToBounds = true
+            layer.cornerRadius = newValue
+            layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         }
     }
-    
+
+    @IBInspectable
+    var cornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.masksToBounds = true
+            layer.cornerRadius = newValue
+        }
+    }
+
+    @IBInspectable
+    var borderWidth: CGFloat {
+        get {
+            return layer.borderWidth
+        }
+        set {
+            layer.masksToBounds = true
+            layer.borderWidth = newValue
+        }
+    }
+
+    @IBInspectable
+    var borderColor: UIColor? {
+        get {
+            let color = UIColor.init(cgColor: layer.borderColor!)
+            return color
+        }
+        set {
+            layer.borderColor = newValue?.cgColor
+        }
+    }
+
     @IBInspectable
     var shadowRadius: CGFloat {
         get {
@@ -48,41 +69,36 @@ import UIKit
             layer.shadowRadius = newValue
         }
     }
-    
     @IBInspectable
-    var shadowOpacity: Float {
-        get {
-            return layer.shadowOpacity
-        }
-        set {
-            layer.shadowOpacity = newValue
-        }
-    }
-    
-    @IBInspectable
-    var shadowOffset: CGSize {
-        get {
+    var shadowOffset : CGSize{
+
+        get{
             return layer.shadowOffset
-        }
-        set {
+        }set{
+
             layer.shadowOffset = newValue
         }
     }
-    
+
     @IBInspectable
-    var shadowColor: UIColor? {
-        get {
-            if let color = layer.shadowColor {
-                return UIColor(cgColor: color)
-            }
-            return nil
+    var shadowColor : UIColor{
+        get{
+            return UIColor.init(cgColor: layer.shadowColor!)
         }
         set {
-            if let color = newValue {
-                layer.shadowColor = color.cgColor
-            } else {
-                layer.shadowColor = nil
-            }
+            layer.shadowColor = newValue.cgColor
+        }
+    }
+    @IBInspectable
+    var shadowOpacity : Float {
+
+        get{
+            return layer.shadowOpacity
+        }
+        set {
+
+            layer.shadowOpacity = newValue
+
         }
     }
 }

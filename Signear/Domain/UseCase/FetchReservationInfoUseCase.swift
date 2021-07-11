@@ -9,11 +9,11 @@ import Foundation
 import RxSwift
 
 protocol FetchReservationInfoUseCaseType {
-    func fetchReservationInfo(reservationId: String) -> Observable<Result<ReservationInfoModel, APIError>>
+    func fetchReservationInfo(reservationId: Int) -> Observable<Result<ReservationInfoModel, APIError>>
 }
 
 class FetchReservationInfoUseCase: FetchReservationInfoUseCaseType {
-    func fetchReservationInfo(reservationId: String) -> Observable<Result<ReservationInfoModel, APIError>> {
+    func fetchReservationInfo(reservationId: Int) -> Observable<Result<ReservationInfoModel, APIError>> {
         return SignearAPI.shared.fetchReservationInfo(reservationId: reservationId)
             .map { response in
                 switch response {

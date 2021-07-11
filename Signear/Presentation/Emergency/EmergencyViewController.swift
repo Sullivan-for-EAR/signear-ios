@@ -39,6 +39,9 @@ class EmergencyViewController: UIViewController {
 extension EmergencyViewController {
     
     private func configureUI() {
+        reservationButton.layer.borderWidth = 2
+        reservationButton.layer.borderColor = UIColor(rgb: 0x222222).cgColor
+        reservationButton.layer.cornerRadius = 5
         reservationButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] in
@@ -65,7 +68,7 @@ extension EmergencyViewController {
     
     private func createReservation() {
         let storyboard = UIStoryboard.init(name: "Reservation", bundle: nil)
-        guard let vc = storyboard.instantiateViewController(withIdentifier: "MakeReservationViewController") as? MakeReservationViewController else { return }
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "CreateReservationViewController") as? CreateReservationViewController else { return }
         navigationController?.pushViewController(vc, animated: true)
     }
     
