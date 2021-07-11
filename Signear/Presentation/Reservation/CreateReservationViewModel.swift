@@ -43,7 +43,7 @@ class CreateReservationViewModel: CreateReservationViewModelType {
     private var selectedEndTime: String?
     private var selectedArea: String?
     private var selectedAddress: String?
-    private var selectedmeetingType: MakeReservationModel.MeetingType?
+    private var selectedmeetingType: MakeReservationModel.MeetingType? = .sign
     private var selectedRequest: String?
     
     private let fetchAreaUseCase = FetchAreaUseCase()

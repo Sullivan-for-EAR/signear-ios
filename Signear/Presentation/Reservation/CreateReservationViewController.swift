@@ -141,6 +141,27 @@ extension CreateReservationViewController {
         configureTranslationTypeButton()
         navigationItem.title = "예약하기"
         
+        Observable.of(
+            dateTextField.rx.text,
+            startTimeTextField.rx.text,
+            endTimeTextField.rx.text,
+            areaTextField.rx.text,
+            locationTextField.rx.text,
+            purposeTextView.rx.text
+        ).merge()
+        .subscribe(onNext: { [weak self] _ in
+            self?.updateUI()
+        }).disposed(by: disposeBag)
+        
+        dateTextField.rx.text.asDriver()
+            .drive(onNext: { [weak self] text in
+                self?.updateUI()
+            }).disposed(by: disposeBag)
+    
+        reservationButton.clipsToBounds = true
+        reservationButton.layer.cornerRadius = 5
+        reservationButton.setBackgroundColor(.init(rgb: 0x222222), for: .normal)
+        reservationButton.setBackgroundColor(.init(rgb: 0xB6B6B6), for: .disabled)
         reservationButton.rx.tap
             .asDriver()
             .drive(onNext: { [weak self] in
@@ -204,6 +225,7 @@ extension CreateReservationViewController {
         toolbar.setItems([doneButon], animated: true)
  
         locationTextField.inputAccessoryView = toolbar
+        locationTextField.delegate = self
         locationTextField.rx.text.orEmpty
             .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
             .distinctUntilChanged()
@@ -322,6 +344,20 @@ extension CreateReservationViewController {
         vc.definesPresentationContext = true
         vc.modalPresentationStyle = .overFullScreen
         self.present(vc, animated: false)
+    }
+    
+    private func updateUI() {
+        if dateTextField.text?.isEmpty == true ||
+            startTimeTextField.text?.isEmpty == true ||
+            endTimeTextField.text?.isEmpty == true ||
+            areaTextField.text?.isEmpty == true ||
+            locationTextField.text?.isEmpty == true ||
+            purposeTextView.text.isEmpty ||
+            purposeTextView.text == Constants.purposeTextViewPlaceholder {
+            reservationButton.isEnabled = false
+        } else {
+            reservationButton.isEnabled = true
+        }
     }
 }
 
